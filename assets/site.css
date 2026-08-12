@@ -569,3 +569,13 @@ section{padding-block:clamp(4rem,12vw,8.5rem)}
 /* current page marker in the nav */
 .site__nav a[aria-current="page"]{color:var(--sh); border-bottom:2px solid var(--sh); padding-bottom:2px}
 .site__home{display:inline-flex; text-decoration:none}
+
+/* a stage we have no photograph for — stated, not faked */
+.flow__fig--none{background:var(--petrol-deep)}
+.noimg{aspect-ratio:4/3; display:grid; align-content:center; gap:.4rem;
+  padding:1.5rem; text-align:center; border:1px dashed rgba(218,181,98,.35)}
+.noimg__t{font-family:var(--mono); font-size:.6875rem; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--gold); margin:0}
+.noimg__b{font-family:var(--display); font-size:1.15rem; line-height:1.25;
+  color:var(--onDarkSoft); margin:0; max-width:22ch; justify-self:center}
+@media (min-width:900px){ .noimg{aspect-ratio:3/4} }
