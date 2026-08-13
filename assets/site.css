@@ -353,6 +353,78 @@ body{background:#fff}
 .site__nav a:hover{color:var(--petrol)}
 @media (min-width:760px){ .site__nav{display:flex} }
 
+/* skip link — first tab stop, invisible until focused */
+.skip{position:absolute; left:.75rem; top:-4rem; z-index:80;
+  background:var(--petrol); color:#F4F8F7; padding:.7rem 1.1rem;
+  font-family:var(--mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase;
+  text-decoration:none; transition:top 140ms ease-out}
+.skip:focus{top:.75rem}
+
+/* ---------- MOBILE MENU ----------
+   Under 760px the inline nav is gone, so the whole site map lives here. The
+   panel enters and leaves along the same path (§7) and the scrim is pulled out
+   of the tree while closed so nothing behind it is focusable. */
+.burger{display:inline-flex; align-items:center; gap:.6rem; min-height:44px;
+  padding:0 .25rem 0 .75rem; margin-right:-.25rem;
+  background:none; border:0; cursor:pointer; color:var(--ink);
+  font-family:var(--mono); font-size:.6875rem; letter-spacing:.16em; text-transform:uppercase}
+.burger__t{padding-bottom:1px}
+.burger__box{display:grid; gap:5px; width:22px}
+.burger__box i{display:block; height:1.5px; background:currentColor;
+  transition:transform 200ms ease-out, opacity 120ms ease-out}
+.burger[aria-expanded="true"] .burger__box i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger[aria-expanded="true"] .burger__box i:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] .burger__box i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.burger:focus-visible{outline:3px solid var(--gold); outline-offset:3px}
+@media (min-width:760px){ .burger{display:none} }
+
+html.no-scroll,html.no-scroll body{overflow:hidden}
+
+/* the visibility flip is delayed by the panel's travel time, otherwise the
+   closing slide is cut off the instant the class comes off */
+.drawer{position:fixed; inset:0; z-index:70; visibility:hidden; pointer-events:none;
+  overflow:hidden; transition:visibility 0s linear 260ms}
+.drawer.is-open{visibility:visible; pointer-events:auto; transition-delay:0s}
+.drawer__scrim{position:absolute; inset:0; background:rgba(0,20,25,.55);
+  opacity:0; transition:opacity 240ms ease-out}
+.drawer.is-open .drawer__scrim{opacity:1}
+.drawer__panel{position:absolute; inset:0 0 0 auto; width:min(86vw,400px);
+  display:flex; flex-direction:column; gap:1.5rem; overflow-y:auto; overscroll-behavior:contain;
+  background:var(--petrol); color:var(--onDark);
+  padding:1rem var(--gut) calc(2rem + env(safe-area-inset-bottom));
+  transform:translateX(100%); transition:transform 260ms cubic-bezier(.32,.72,0,1)}
+.drawer.is-open .drawer__panel{transform:translateX(0)}
+
+.drawer__head{display:flex; align-items:center; justify-content:space-between;
+  gap:1rem; padding-block:.4rem; position:sticky; top:0; background:var(--petrol); z-index:1}
+.drawer__home{font-family:var(--display); font-size:1.35rem; color:var(--onDark); text-decoration:none}
+.drawer__x{width:44px; height:44px; margin-right:-.6rem; display:grid; place-items:center;
+  background:none; border:0; color:var(--onDark); cursor:pointer}
+.drawer__x svg{width:22px; height:22px}
+.drawer__x:focus-visible,.drawer a:focus-visible{outline:3px solid var(--gold); outline-offset:3px}
+
+.dnav{display:grid; gap:1.6rem}
+.dnav__h{font-family:var(--mono); font-size:.625rem; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--gold); margin:0 0 .35rem; font-weight:600}
+.dnav__l{list-style:none; margin:0; padding:0; display:flex; flex-direction:column}
+.dnav__l a{display:flex; align-items:center; min-height:46px;
+  color:var(--onDark); text-decoration:none; font-size:1.0625rem;
+  border-bottom:1px solid rgba(218,181,98,.18)}
+.dnav__l a[aria-current="page"]{color:var(--gold)}
+.dnav__l a[aria-current="page"]::after{content:"— you are here"; margin-left:.6rem;
+  font-family:var(--mono); font-size:.5875rem; letter-spacing:.14em; text-transform:uppercase}
+
+.drawer__cta{display:grid; gap:.6rem; margin-top:.4rem}
+.drawer__cta .btn--ink{border-color:rgba(232,238,238,.55); color:var(--onDark)}
+.drawer__meta{font-family:var(--mono); font-size:.6875rem; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--onDarkSoft); margin:0}
+
+@media (prefers-reduced-motion:reduce){
+  .drawer__panel{transform:none; transition:opacity 120ms linear; opacity:0}
+  .drawer.is-open .drawer__panel{opacity:1}
+  .burger__box i{transition:none}
+}
+
 /* section headings get a visible marker so sections don't blur together on white */
 .eyebrow{position:relative; padding-top:1.15rem; font-size:.72rem; letter-spacing:.22em}
 .eyebrow::before{content:""; position:absolute; top:0; left:0; width:48px; height:3px; background:currentColor}
@@ -539,13 +611,18 @@ section{padding-block:clamp(4rem,12vw,8.5rem)}
 .pick__g{font-family:var(--mono); font-size:.625rem; letter-spacing:.16em; text-transform:uppercase; color:var(--sh)}
 @media (min-width:760px){ .picks{grid-template-columns:repeat(3,1fr); gap:1rem} }
 
+/* The three-column grind chart does not fit a phone, and a sideways-scrolling
+   table clips mid-word. Under 640px each row becomes its own block and the
+   column headings move onto the cells as labels. Above it, a normal table. */
 .tablewrap{overflow-x:auto; -webkit-overflow-scrolling:touch}
-.gt{border-collapse:collapse; width:100%; min-width:520px; font-size:.9375rem}
+.gt{border-collapse:collapse; width:100%; font-size:.9375rem}
 .gt th,.gt td{text-align:left; padding:.85rem 1rem .85rem 0; border-bottom:1px solid rgba(218,181,98,.24)}
 .gt thead th{font-family:var(--mono); font-size:.5875rem; letter-spacing:.18em; text-transform:uppercase;
   color:var(--gold); border-bottom-color:var(--gold)}
 .gt tbody th{font-weight:600; white-space:nowrap}
 .gt__feel{color:var(--onDarkSoft); font-family:var(--mono); font-size:.8125rem}
+
+@media (min-width:640px){ .gt{min-width:520px} }
 
 /* press */
 .cuts{display:grid; gap:clamp(2rem,5vw,3rem)}
@@ -588,6 +665,21 @@ section{padding-block:clamp(4rem,12vw,8.5rem)}
 .pick__g{padding-bottom:1rem}
 .gt tbody th{display:flex; align-items:center; gap:.85rem; padding-right:1.5rem}
 .gt__sw{width:58px; height:35px; object-fit:cover; flex:none; border:1px solid rgba(218,181,98,.3)}
+
+/* stacked-row form of the grind chart — must sit after .gt tbody th above */
+@media (max-width:639px){
+  .gt thead{position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%)}
+  .gt,.gt tbody,.gt tr,.gt th,.gt td{display:block; width:auto}
+  .gt tr{padding-bottom:1.1rem; margin-bottom:1.1rem; border-bottom:1px solid rgba(218,181,98,.24)}
+  .gt tr:last-child{margin-bottom:0; border-bottom:0; padding-bottom:0}
+  .gt th,.gt td{border-bottom:0; padding:0}
+  .gt tbody th{white-space:normal; font-family:var(--display); font-weight:400;
+    font-size:1.5rem; line-height:1.1; margin-bottom:.75rem}
+  .gt td{display:grid; grid-template-columns:5.5rem 1fr; gap:.75rem;
+    align-items:baseline; padding-block:.3rem}
+  .gt td::before{content:attr(data-l); font-family:var(--mono); font-size:.5875rem;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--gold)}
+}
 
 /* brewer line drawings */
 .brew__icon{width:64px; height:64px; margin-bottom:.9rem}

@@ -1,14 +1,86 @@
 [
- {"file":"home.html","slug":"index.html","title":"Cauvery Peak — coffee, from the estate itself","desc":"Coffee grown, processed and roasted at 4,600 ft in the Shevaroy Hills, Yercaud. A working single-estate plantation farmed by the same family for five generations."},
- {"file":"estate.html","slug":"estate.html","title":"Grower to Connoisseur — Cauvery Peak","desc":"Nine stages from seed to cup, every one of them on our own estate in the Shevaroy Hills. This is what single estate actually means."},
- {"file":"visit.html","slug":"visit.html","title":"Visit the estate — Cauvery Peak, Yercaud","desc":"Walk a 150-year-old working coffee plantation in Yercaud. A 75-minute guided tour through the mills and roasting room, ending with a tasting."},
- {"file":"coffee.html","slug":"coffee.html","title":"The coffee — Cauvery Peak","desc":"Three single estates at three elevations in the Shevaroy Hills, and two blends made from them. Estate grown, estate processed, estate roasted."},
- {"file":"cafes.html","slug":"cafes.html","title":"Our cafés — Cauvery Peak, Yercaud","desc":"Three places to drink our coffee in Yercaud: the estate café on the plantation, Lake View Village on the main road, and the Glenfell kiosk on the ghat."},
- {"file":"history.html","slug":"history.html","title":"A legacy of 150 years — Cauvery Peak","desc":"From an 1867 land assignment in the Shevaroy Hills to five generations of the Rajes family growing coffee at Cauvery Peak, Shevaroys and Glenfell."},
- {"file":"story.html","slug":"story.html","title":"The people behind the estate — Cauvery Peak","desc":"MSP Plantations is a family-owned coffee business in the Shevaroy Hills. We grow it, process it, roast it and send it to you."},
- {"file":"environment.html","slug":"environment.html","title":"The ecosystem behind the coffee — Cauvery Peak","desc":"Two tiers of shade, harvested rainwater, vermicompost and a resident population of birds and mammals. How the estate physically works."},
- {"file":"brewing.html","slug":"brewing.html","title":"Brew better coffee — Cauvery Peak","desc":"Six ways to brew estate coffee: Indian filter, pour over, moka pot, French press, cold brew and AeroPress. Doses, temperatures and timings."},
- {"file":"grind.html","slug":"grind.html","title":"Find your grind — Cauvery Peak","desc":"Match your grind size to your brewing method. A guide from extra coarse for cold brew to extra fine for Turkish coffee."},
- {"file":"press.html","slug":"press.html","title":"In the press — Cauvery Peak","desc":"The Shevaroy Hills in print since 1922, and Cauvery Peak in Indian Coffee Magazine, Discover India and Kenneth Davids' writing on coffee."},
- {"file":"contact.html","slug":"contact.html","title":"Contact — Cauvery Peak","desc":"Come and visit the estate, book a tour, or talk to us about wholesale. MSP Plantations, Yercaud, Tamil Nadu."}
+ {
+  "file": "home.html",
+  "slug": "index.html",
+  "title": "Cauvery Peak — coffee, from the estate itself",
+  "desc": "Coffee grown, processed and roasted at 4,600 ft in the Shevaroy Hills, Yercaud. A working single-estate plantation farmed by the same family for five generations.",
+  "og": "og-index.jpg"
+ },
+ {
+  "file": "estate.html",
+  "slug": "estate.html",
+  "title": "Grower to Connoisseur — Cauvery Peak",
+  "desc": "Nine stages from seed to cup, every one of them on our own estate in the Shevaroy Hills. This is what single estate actually means.",
+  "og": "og-estate.jpg"
+ },
+ {
+  "file": "visit.html",
+  "slug": "visit.html",
+  "title": "Visit the estate — Cauvery Peak, Yercaud",
+  "desc": "Walk a 150-year-old working coffee plantation in Yercaud. A 75-minute guided tour through the mills and roasting room, ending with a tasting.",
+  "og": "og-visit.jpg"
+ },
+ {
+  "file": "coffee.html",
+  "slug": "coffee.html",
+  "title": "The coffee — Cauvery Peak",
+  "desc": "Three single estates at three elevations in the Shevaroy Hills, and two blends made from them. Estate grown, estate processed, estate roasted.",
+  "og": "og-coffee.jpg"
+ },
+ {
+  "file": "cafes.html",
+  "slug": "cafes.html",
+  "title": "Our cafés — Cauvery Peak, Yercaud",
+  "desc": "Three places to drink our coffee in Yercaud: the estate café on the plantation, Lake View Village on the main road, and the Glenfell kiosk on the ghat.",
+  "og": "og-cafes.jpg"
+ },
+ {
+  "file": "history.html",
+  "slug": "history.html",
+  "title": "A legacy of 150 years — Cauvery Peak",
+  "desc": "From an 1867 land assignment in the Shevaroy Hills to five generations of the Rajes family growing coffee at Cauvery Peak, Shevaroys and Glenfell.",
+  "og": "og-history.jpg"
+ },
+ {
+  "file": "story.html",
+  "slug": "story.html",
+  "title": "The people behind the estate — Cauvery Peak",
+  "desc": "MSP Plantations is a family-owned coffee business in the Shevaroy Hills. We grow it, process it, roast it and send it to you.",
+  "og": "og-story.jpg"
+ },
+ {
+  "file": "environment.html",
+  "slug": "environment.html",
+  "title": "The ecosystem behind the coffee — Cauvery Peak",
+  "desc": "Two tiers of shade, harvested rainwater, vermicompost and a resident population of birds and mammals. How the estate physically works.",
+  "og": "og-environment.jpg"
+ },
+ {
+  "file": "brewing.html",
+  "slug": "brewing.html",
+  "title": "Brew better coffee — Cauvery Peak",
+  "desc": "Six ways to brew estate coffee: Indian filter, pour over, moka pot, French press, cold brew and AeroPress. Doses, temperatures and timings.",
+  "og": "og-brewing.jpg"
+ },
+ {
+  "file": "grind.html",
+  "slug": "grind.html",
+  "title": "Find your grind — Cauvery Peak",
+  "desc": "Match your grind size to your brewing method. A guide from extra coarse for cold brew to extra fine for Turkish coffee.",
+  "og": "og-grind.jpg"
+ },
+ {
+  "file": "press.html",
+  "slug": "press.html",
+  "title": "In the press — Cauvery Peak",
+  "desc": "The Shevaroy Hills in print since 1922, and Cauvery Peak in Indian Coffee Magazine, Discover India and Kenneth Davids' writing on coffee.",
+  "og": "og-press.jpg"
+ },
+ {
+  "file": "contact.html",
+  "slug": "contact.html",
+  "title": "Contact — Cauvery Peak",
+  "desc": "Come and visit the estate, book a tour, or talk to us about wholesale. MSP Plantations, Yercaud, Tamil Nadu.",
+  "og": "og-contact.jpg"
+ }
 ]

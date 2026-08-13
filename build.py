@@ -1,14 +1,19 @@
 #!/usr/bin/env python3
 """Assemble the Cauvery Peak review site.
 
-Pages are content fragments in pages/. This wraps each one in the shared
-document, header and footer so there is exactly one copy of the chrome.
-Assets are real files, not data URIs, so the browser caches them across pages.
+Pages are content fragments in _src_pages/. This wraps each one in the shared
+document, header, mobile drawer and footer so there is exactly one copy of the
+chrome. Assets are real files, not data URIs, so the browser caches them across
+pages.
 """
 import os, re, sys, json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = HERE
+SRC = os.path.join(HERE, "_src_pages")
+
+# where this build is actually served from — used for canonical + og:url
+BASE = "https://thecozycod3r.github.io/cauvery-peak-homepage"
 
 NAV = [
     ("Coffee",   "coffee.html"),
@@ -28,6 +33,18 @@ FOOT = [
                 ("In the press","press.html"),("Contact","contact.html")]),
 ]
 
+# real destinations on the live store — no placeholder hrefs anywhere on the site
+LEGAL = [
+    ("Privacy",  "https://cauverypeakestate.com/policies/privacy-policy"),
+    ("Terms",    "https://cauverypeakestate.com/policies/terms-of-service"),
+    ("Shipping", "https://cauverypeakestate.com/policies/shipping-policy"),
+    ("Returns",  "https://cauverypeakestate.com/policies/refund-policy"),
+]
+
+# Instagram is confirmed. Facebook and WhatsApp are omitted rather than linked
+# to "#" — the WhatsApp number is one of the disputed ones (see README).
+SOCIAL = [("Instagram", "https://www.instagram.com/cauverypeakcoffee/")]
+
 PLACES = [
     ("cp", "Cauvery Peak Estate Caf&eacute;", "On the plantation, 15 km from Yercaud town."),
     ("sh", "Lake View Village Caf&eacute;",   "Yercaud Main Road. Parking available."),
@@ -35,24 +52,58 @@ PLACES = [
 ]
 
 IG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4zm0 10.9A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.1a1.5 1.5 0 1 1-1.6-1.6 1.5 1.5 0 0 1 1.6 1.6z"/></svg>'
-FB = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V7c0-.7.5-.9.8-.9h2V3.2h-2.7C11 3.2 10.3 5.4 10.3 6.8v1.7H8.5v3h1.8V21H14v-9.5h2.4l.3-3H14z"/></svg>'
-WA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.6 14.2c-.2.6-1.3 1.2-1.8 1.3-.5.1-1.1.1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-3.9-4.6-4-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4-.1.6.5.2.5.8 1.9.8 2s.1.3 0 .5c-.1.2-.2.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.7 1.1 1.5 1.8 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.6.7 1.8.9.2.1.4.2.5.3.1.1.1.6-.1 1.3z"/></svg>'
+SOCIAL_SVG = {"Instagram": IG}
 
 
 def header(active):
     links = "\n".join(
         f'      <a href="{href}"{" aria-current=\"page\"" if href == active else ""}>{label}</a>'
         for label, href in NAV)
-    return f'''<header class="site">
+    return f'''<a class="skip" href="#main">Skip to content</a>
+<header class="site">
   <div class="site__in">
     <a href="index.html" class="site__home" aria-label="Cauvery Peak, home">
-      <img class="site__logo" src="assets/logo_dark.webp" alt="Cauvery Peak" width="900" height="718">
+      <img class="site__logo" src="assets/logo_dark.webp" alt="Cauvery Peak" width="300" height="239" fetchpriority="high">
     </a>
     <nav class="site__nav" aria-label="Main">
 {links}
     </nav>
+    <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="sitemenu">
+      <span class="burger__box" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="burger__t">Menu</span>
+    </button>
   </div>
 </header>'''
+
+
+def drawer(active):
+    groups = "\n".join(
+        '      <div class="dnav__g">\n        <h2 class="dnav__h">%s</h2>\n        <ul class="dnav__l">\n%s\n        </ul>\n      </div>' % (
+            title,
+            "\n".join(
+                '          <li><a href="%s"%s>%s</a></li>' % (
+                    h, ' aria-current="page"' if h.split("#")[0] == active else "", t)
+                for t, h in items))
+        for title, items in FOOT)
+    return f'''<div class="drawer" id="sitemenu">
+  <div class="drawer__scrim" data-close hidden></div>
+  <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+    <div class="drawer__head">
+      <a href="index.html" class="drawer__home">Cauvery Peak</a>
+      <button class="drawer__x" type="button" data-close aria-label="Close menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+      </button>
+    </div>
+    <nav class="dnav" aria-label="All pages">
+{groups}
+    </nav>
+    <div class="drawer__cta">
+      <a class="btn btn--gold" href="visit.html">Book the tour</a>
+      <a class="btn btn--ink" href="coffee.html">Shop coffee</a>
+    </div>
+    <p class="drawer__meta">MSP Plantations &middot; Yercaud, Tamil Nadu</p>
+  </div>
+</div>'''
 
 
 def footer():
@@ -66,11 +117,15 @@ def footer():
         <p class="foot__pd">{desc}</p>
         <a class="foot__pl" href="cafes.html">More &rarr;</a>
       </div>''' for c, name, desc in PLACES)
+    legal = "".join(f'<li><a href="{h}" rel="noopener">{t}</a></li>' for t, h in LEGAL)
+    social = "\n".join(
+        f'        <a href="{h}" aria-label="{n}" rel="me noopener" target="_blank">{SOCIAL_SVG[n]}</a>'
+        for n, h in SOCIAL)
     return f'''<footer class="foot">
   <div class="foot__in">
     <div class="foot__top">
       <div class="foot__brand">
-        <img class="foot__logo" src="assets/logo_light.webp" alt="Cauvery Peak" width="900" height="718">
+        <img class="foot__logo" src="assets/logo_light.webp" alt="Cauvery Peak" width="300" height="239" loading="lazy">
         <p class="foot__tag">Growing since 1867</p>
         <p class="foot__blurb">A working coffee estate in the Shevaroy Hills, farmed by the same family for five generations.</p>
       </div>
@@ -82,15 +137,9 @@ def footer():
 {places}
     </div>
     <div class="foot__bar">
-      <ul class="foot__legal">
-        <li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li>
-        <li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li>
-        <li><a href="#">Careers</a></li>
-      </ul>
+      <ul class="foot__legal">{legal}</ul>
       <div class="foot__social">
-        <a href="#" aria-label="Instagram">{IG}</a>
-        <a href="#" aria-label="Facebook">{FB}</a>
-        <a href="#" aria-label="WhatsApp">{WA}</a>
+{social}
       </div>
       <p class="foot__co">MSP Plantations &middot; Yercaud, Tamil Nadu</p>
     </div>
@@ -103,8 +152,89 @@ STICKY = '''<div class="sticky">
   <a class="btn btn--ghost" href="coffee.html">Shop coffee</a>
 </div>'''
 
+# Small enough to inline. Runs on every page; the drawer is inert until opened.
+MENU_JS = '''<script>
+(function(){
+  var b=document.getElementById('burger'), d=document.getElementById('sitemenu');
+  if(!b||!d) return;
+  var panel=d.querySelector('.drawer__panel'), scrim=d.querySelector('.drawer__scrim'), last=null;
+  var Q='a[href],button:not([disabled])';
+  function open(){
+    last=document.activeElement;
+    scrim.hidden=false;
+    d.classList.add('is-open'); b.setAttribute('aria-expanded','true');
+    document.documentElement.classList.add('no-scroll');
+    (panel.querySelector(Q)||panel).focus();
+    document.addEventListener('keydown',key,true);
+  }
+  function close(){
+    d.classList.remove('is-open'); b.setAttribute('aria-expanded','false');
+    document.documentElement.classList.remove('no-scroll');
+    document.removeEventListener('keydown',key,true);
+    if(last) last.focus();
+    // keep the scrim in the tree until the panel has travelled back out
+    var ms=matchMedia('(prefers-reduced-motion:reduce)').matches?0:260;
+    setTimeout(function(){ if(!d.classList.contains('is-open')) scrim.hidden=true; },ms);
+  }
+  function key(e){
+    if(e.key==='Escape'){ e.preventDefault(); close(); return; }
+    if(e.key!=='Tab') return;
+    var f=[].slice.call(panel.querySelectorAll(Q)).filter(function(el){return el.offsetParent!==null});
+    if(!f.length) return;
+    var first=f[0], lastEl=f[f.length-1];
+    if(e.shiftKey && document.activeElement===first){ e.preventDefault(); lastEl.focus(); }
+    else if(!e.shiftKey && document.activeElement===lastEl){ e.preventDefault(); first.focus(); }
+  }
+  b.addEventListener('click',function(){ d.classList.contains('is-open')?close():open(); });
+  d.addEventListener('click',function(e){ if(e.target.closest('[data-close]')) close(); });
+  // a viewport that grows past the breakpoint must not leave the drawer stuck open
+  matchMedia('(min-width:760px)').addEventListener('change',function(e){ if(e.matches) close(); });
+})();
+</script>'''
 
-def document(slug, title, desc, body):
+
+def jsonld(slug, title, desc, og):
+    org = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Cauvery Peak",
+        "legalName": "MSP Plantations",
+        "url": BASE + "/",
+        "logo": BASE + "/assets/logo_dark.webp",
+        "foundingDate": "1867",
+        "sameAs": [h for _, h in SOCIAL] + ["https://cauverypeakestate.com"],
+        "address": {"@type": "PostalAddress", "addressLocality": "Yercaud",
+                    "addressRegion": "Tamil Nadu", "addressCountry": "IN"},
+    }
+    blocks = [org]
+    if slug == "index.html":
+        blocks.append({"@context": "https://schema.org", "@type": "WebSite",
+                       "name": "Cauvery Peak", "url": BASE + "/"})
+    else:
+        blocks.append({
+            "@context": "https://schema.org", "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
+                {"@type": "ListItem", "position": 2, "name": re.sub(r"\s+—.*$", "", title),
+                 "item": f"{BASE}/{slug}"},
+            ]})
+    if slug in ("cafes.html", "visit.html", "contact.html"):
+        blocks.append({
+            "@context": "https://schema.org", "@type": "TouristAttraction",
+            "name": "Cauvery Peak Estate", "url": f"{BASE}/visit.html",
+            "description": "A working 150-year-old coffee plantation in the Shevaroy Hills, open for guided tours.",
+            "image": f"{BASE}/assets/{og}",
+            "address": {"@type": "PostalAddress", "addressLocality": "Yercaud",
+                        "addressRegion": "Tamil Nadu", "addressCountry": "IN"},
+            "geo": {"@type": "GeoCoordinates", "latitude": 11.7753, "longitude": 78.2095},
+        })
+    return "\n".join(
+        '<script type="application/ld+json">%s</script>' % json.dumps(b, separators=(",", ":"))
+        for b in blocks)
+
+
+def document(slug, title, desc, og, body):
+    canonical = f"{BASE}/" if slug == "index.html" else f"{BASE}/{slug}"
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -114,27 +244,42 @@ def document(slug, title, desc, body):
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="{canonical}">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Cauvery Peak">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="{canonical}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
+<meta property="og:image" content="{BASE}/assets/{og}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{desc[:110]}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/lane.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
+{jsonld(slug, title, desc, og)}
 </head>
 <body>
 {header(slug)}
+{drawer(slug)}
+<main id="main">
 {body}
+</main>
 {footer()}
 {STICKY}
+{MENU_JS}
 </body>
 </html>
 '''
 
 
 def build():
-    pages = json.load(open(os.path.join(HERE, "pages", "pages.json")))
+    pages = json.load(open(os.path.join(SRC, "pages.json")))
     made = []
     for p in pages:
-        frag = open(os.path.join(HERE, "pages", p["file"])).read()
-        html = document(p["slug"], p["title"], p["desc"], frag)
+        frag = open(os.path.join(SRC, p["file"])).read()
+        html = document(p["slug"], p["title"], p["desc"], p.get("og", "og-default.jpg"), frag)
         out = os.path.join(OUT, p["slug"])
         open(out, "w").write(html)
         made.append((p["slug"], os.path.getsize(out)))
