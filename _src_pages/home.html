@@ -1,235 +1,403 @@
-<header class="hero">
-  <!-- Served as a normal file, exactly as it will be from the Shopify CDN.
-       Falls back to the poster frame anywhere the source can't load. -->
-  <video class="hero__v" autoplay muted loop playsinline preload="auto"
-         poster="assets/poster.webp" aria-hidden="true" src="assets/hero_v.mp4"></video>
-  <div class="wrap stack">
-    <p class="brandline">Growing since 1867</p>
-    <h1 class="d1">Coffee, from the estate itself.</h1>
-    <p class="lede">Grown, processed and roasted at 4,600 ft in the Shevaroy Hills. Then sent straight to you.</p>
-    <div class="btns">
-      <a class="btn btn--gold" href="coffee.html">Shop the coffee</a>
-      <a class="btn btn--ghost" href="visit.html">Visit the estate</a>
-    </div>
-  </div>
-</header>
-
-<section class="stats">
-  <div class="wrap">
-    <div class="stats__grid">
-      <div class="stat"><div class="stat__n">150</div><div class="stat__l">Years growing coffee</div></div>
-      <div class="stat"><div class="stat__n">4,600 ft</div><div class="stat__l">Above sea level</div></div>
-      <div class="stat"><div class="stat__n">5</div><div class="stat__l">Generations, one family</div></div>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <img class="hero__m" src="assets/poster.webp" alt="The Shevaroy Hills above the estate" width="1100" height="581" fetchpriority="high">
+  <div class="hero__in sheet">
+    <ul class="survey">
+      <li>Shevaroy Hills</li>
+      <li>11&deg;46&prime;N 78&deg;12&prime;E</li>
+      <li>4,100&ndash;4,800 ft</li>
+      <li>Assigned 1867</li>
+    </ul>
+    <h1 class="d1">Coffee, from<br>the estate itself.</h1>
+    <p class="lede">Grown, pulped, dried, milled and roasted inside one boundary in Yercaud. Nothing leaves until it is packed against your order.</p>
+    <div class="btns" style="margin-top:1.75rem">
+      <a class="btn btn--fill" href="#coffees">See the coffees</a>
+      <a class="btn btn--ghost" href="#visit">Book the estate tour</a>
     </div>
   </div>
 </section>
 
-<section id="estate">
-  <div class="wrap split">
-    <figure class="figure">
-      <img src="assets/road.webp" alt="Mist over the estate road through the plantation" width="736" height="459" loading="lazy">
-      <figcaption class="figcap">The estate road &middot; Shevaroy Hills, Yercaud</figcaption>
-    </figure>
-    <div class="stack">
-      <p class="eyebrow">Nurtured by generations of wisdom</p>
-      <h2 class="d2">Most coffee brands tell you where the coffee came from.</h2>
-      <p class="body">We can show you. Cauvery Peak is a working plantation farmed by the same family for five generations. Bauxite-rich soil, two tiers of shade trees, and mist that sits on the hills most mornings. That is what the cup tastes of.</p>
-      <p class="body">Every stage happens here. Nothing leaves the estate until it is roasted and packed against your order.</p>
-      <div class="btns"><a class="btn btn--ink" href="estate.html">See how it is made</a></div>
+<!-- ============ I — THE RECORD ============ -->
+<section class="band" id="record">
+  <div class="sheet ruled">
+    <div class="ruled__mark">
+      <span class="ruled__i num">I</span>
+      <span class="ruled__l">The record</span>
+    </div>
+    <div>
+      <p class="mark">Five generations, one boundary</p>
+      <h2 class="d2">Most estate brands<br>cannot tell you where<br>the coffee came from.</h2>
+      <p class="lede" style="margin-top:1.25rem">We can. Every figure below is a fact about this plantation, not a claim about coffee in general.</p>
+
+      <ul class="ledger" style="margin-top:clamp(2rem,4vw,3rem)">
+        <li><span class="ledger__k">Growing since</span><span class="ledger__d"></span><span class="ledger__v num">1867</span></li>
+        <li><span class="ledger__k">Elevation range</span><span class="ledger__d"></span><span class="ledger__v num">4,100&ndash;4,800<sup>FT</sup></span></li>
+        <li><span class="ledger__k">Generations farming it</span><span class="ledger__d"></span><span class="ledger__v num">5</span></li>
+        <li><span class="ledger__k">Stages done on the estate</span><span class="ledger__d"></span><span class="ledger__v num">9<sup>OF 9</sup></span></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="flow" id="journey">
-  <div class="wrap flow__head stack">
-    <p class="eyebrow">Grower to Connoisseur</p>
-    <h2 class="d2">From seed to cup, without leaving the estate.</h2>
-    <p class="lede">Every stage below happens on this plantation. That is what single estate actually means.</p>
-  </div>
-  <div class="wrap">
-    <ol class="flow__steps">
-      <li class="flow__step" style="--c:var(--sh)">
-        <figure class="flow__fig">
-          <img src="assets/nursery.webp" alt="Planting on the estate" width="760" height="570">
-          <span class="flow__n">01</span>
-        </figure>
-        <div class="flow__copy">
-          <h3 class="flow__t">Planting</h3>
-          <p class="flow__b">Seed taken from selected mother plants, raised in the estate nursery. Three years pass before a first crop.</p>
-        </div>
-      </li>
-      <li class="flow__step" style="--c:var(--cp)">
-        <figure class="flow__fig">
-          <img src="assets/picking.webp" alt="Harvesting on the estate" width="760" height="570">
-          <span class="flow__n">02</span>
-        </figure>
-        <div class="flow__copy">
-          <h3 class="flow__t">Harvesting</h3>
-          <p class="flow__b">Only fully ripe red cherry, hand-picked across several selective rounds through the season.</p>
-        </div>
-      </li>
-      <li class="flow__step" style="--c:var(--gf)">
-        <figure class="flow__fig">
-          <img src="assets/cherrypour.webp" alt="Pulping on the estate" width="700" height="1050">
-          <span class="flow__n">03</span>
-        </figure>
-        <div class="flow__copy">
-          <h3 class="flow__t">Pulping</h3>
-          <p class="flow__b">Sorted and pulped the same day it comes off the tree — nothing waits overnight in cherry.</p>
-        </div>
-      </li>
-      <li class="flow__step" style="--c:var(--sh)">
-        <figure class="flow__fig">
-          <img src="assets/channel.webp" alt="Washing on the estate" width="1000" height="528">
-          <span class="flow__n">04</span>
-        </figure>
-        <div class="flow__copy">
-          <h3 class="flow__t">Washing</h3>
-          <p class="flow__b">Fermented overnight in tanks, then the mucilage is washed clean.</p>
-        </div>
-      </li>
-      <li class="flow__step" style="--c:var(--cp)">
-        <figure class="flow__fig">
-          <img src="assets/terraces.webp" alt="Drying on the estate" width="1100" height="456">
-          <span class="flow__n">05</span>
-        </figure>
-        <div class="flow__copy">
-          <h3 class="flow__t">Drying</h3>
-          <p class="flow__b">Sun-dried on concrete terraces, turned by hand, down to under 12% moisture.</p>
-        </div>
-      </li>
-      <li class="flow__step" style="--c:var(--gf)">
-        <figure class="flow__fig">
-          <img src="assets/sorting.webp" alt="Milling &amp; grading on the estate" width="760" height="507">
-          <span class="flow__n">06</span>
-        </figure>
-        <div class="flow__copy">
-          <h3 class="flow__t">Milling &amp; grading</h3>
-          <p class="flow__b">Remaining skins removed, then graded and sorted for defects by hand.</p>
-        </div>
-      </li>
-      <li class="flow__step" style="--c:var(--sh)">
-        <figure class="flow__fig flow__fig--none">
-          <div class="noimg">
-            <p class="noimg__t">Photograph to come</p>
-            <p class="noimg__b">We haven't put someone else's roastery here.</p>
-          </div>
-          <span class="flow__n">07</span>
-        </figure>
-        <div class="flow__copy">
-          <h3 class="flow__t">Roasting</h3>
-          <p class="flow__b">Roasted after your order is placed. Never before, never to sit in a warehouse.</p>
-        </div>
-      </li>
-      <li class="flow__step" style="--c:var(--cp)">
-        <figure class="flow__fig">
-          <img src="assets/millyard.webp" alt="Packed &amp; shipped on the estate" width="1100" height="580">
-          <span class="flow__n">08</span>
-        </figure>
-        <div class="flow__copy">
-          <h3 class="flow__t">Packed &amp; shipped</h3>
-          <p class="flow__b">Rested 24 hours to cool, packed, and sent from the estate itself.</p>
-        </div>
-      </li>
-    </ol>
-    <div class="btns" style="margin-top:2rem"><a class="btn btn--ink" href="estate.html">Read the full process</a></div>
-  </div>
-</section>
-
-
-<section id="coffee">
-  <div class="wrap stack">
-    <p class="eyebrow">The coffee</p>
-    <h2 class="d2">Taste the difference of place.</h2>
-    <p class="body">Three estates, three elevations, three cups &mdash; and two blends made from them.</p>
-    <div class="btns"><a class="btn btn--ink" href="coffee.html">See the coffees</a></div>
-  </div>
-</section>
-
-<section class="visit" id="visit">
-  <div class="wrap">
-    <div class="stack" style="margin-bottom:1.75rem">
-      <p class="eyebrow">Visit</p>
-      <h2 class="d2">Come and see where your coffee begins.</h2>
-      <p class="body">You can buy Arabica from hundreds of brands. You cannot walk their plantation, watch the mill run, and drink the coffee where it grew.</p>
+<!-- ============ II — THE COFFEES ============ -->
+<section id="coffees">
+  <div class="sheet ruled">
+    <div class="ruled__mark">
+      <span class="ruled__i num">II</span>
+      <span class="ruled__l">The coffees</span>
     </div>
-    <div class="tourcard">
-      <img src="assets/gate.webp" alt="The estate gate at Glenfell" loading="lazy" width="900" height="600">
-      <div class="tourcard__body">
-        <div class="pills"><span class="pill">75 minutes</span><span class="pill">Guided</span><span class="pill">Tasting included</span></div>
-        <h3 class="d3" style="color:#F4F8F7">The Coffee Experience Tour</h3>
-        <p style="margin:.4rem 0 1rem; color:rgba(244,248,247,.88); font-size:.9375rem; max-width:44ch">Wet mill, dry mill, roasting room, the estate museum &mdash; ending with a cup at the caf&eacute;.</p>
-        <div class="btns"><a class="btn btn--gold" href="visit.html">Book the tour</a></div>
-      </div>
-    </div>
-    <div class="places">
-      <div class="place" style="--c:var(--cp)"><h4 class="place__n">Cauvery Peak Estate Caf&eacute;</h4><p class="place__d">On the plantation, 15 km from Yercaud town. Coffee, retail and the tour.</p></div>
-      <div class="place" style="--c:var(--sh)"><h4 class="place__n">Lake View Village Caf&eacute;</h4><p class="place__d">On Yercaud Main Road. Coffee, food and parking.</p></div>
-      <div class="place" style="--c:var(--gf)"><h4 class="place__n">Glenfell Kiosk</h4><p class="place__d">17th hairpin bend, Salem&ndash;Yercaud ghat road. Valley views.</p></div>
-    </div>
-  </div>
-</section>
+    <div>
+      <p class="mark">Three estates &middot; two blends</p>
+      <h2 class="d2">One hill,<br>three heights.</h2>
+      <p class="lede" style="margin-top:1.25rem">Height changes how slowly the cherry ripens, and that changes the cup. Not better or worse &mdash; different. The middle elevation is the one we call well balanced.</p>
 
-<section id="heritage">
-  <div class="wrap split split--rev">
-    <figure class="figure">
-      <img src="assets/sunset.webp" alt="Sunset over the Shevaroy Hills" loading="lazy" width="900" height="569">
-      <figcaption class="figcap">Shevaroy Hills &middot; MSP Plantations</figcaption>
-    </figure>
-    <div class="stack">
-      <p class="eyebrow">Heritage</p>
-      <h2 class="d2">150 years. Five generations. One estate.</h2>
-      <div class="years"><b>1867</b><span>&rarr;</span><b>Today</b></div>
-      <p class="body">The estate was first assigned in 1867. The family bought Glenfell in 1937 and Cauvery Peak in 1957. In 1965 MSP Rajes travelled to Costa Rica and brought back the Hawaiian Red Caturra seed the estate still grows today.</p>
-      <div class="btns"><a class="btn btn--ink" href="history.html">Our story</a></div>
-    </div>
-  </div>
-</section>
+      <!-- Survey section: three equal marks on one landform. -->
+      <figure class="section">
+        <svg viewBox="0 0 1200 430" role="img" aria-label="Schematic section through the Shevaroy Hills showing Glenfell at 4,100 feet, Cauvery Peak at 4,600 feet and Shevaroys at 4,800 feet.">
+          <defs>
+            <pattern id="hatch" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="0" y2="9" class="sv-hatch"/>
+            </pattern>
+            <clipPath id="ground">
+              <path d="M0,392 C70,384 140,344 210,318 C300,285 350,268 420,238 C500,203 545,180 600,164 C700,136 810,114 880,106 C915,102 940,101 960,102 C1050,107 1130,140 1200,186 L1200,430 L0,430 Z"/>
+            </clipPath>
+          </defs>
 
-<section class="env">
-  <div class="wrap">
-    <div class="stack">
-      <p class="eyebrow eyebrow--d">The ecosystem</p>
-      <h2 class="d2">Coffee that grows with the forest.</h2>
-      <p class="lede">Not a sustainability claim. This is how the estate physically works.</p>
-    </div>
-    <div class="envgrid">
-      <div class="envcard"><img src="assets/canopy.webp" alt="Two-tier shade canopy over coffee" loading="lazy" width="900" height="506"><h3>Shade</h3><p>Two tiers of native and exotic trees regulate sun, rain and temperature.</p></div>
-      <div class="envcard"><img src="assets/lake.webp" alt="Harvested rainwater held on the estate" loading="lazy" width="900" height="600"><h3>Water</h3><p>Rainwater channelled through stone-lined drains and harvested across the estate.</p></div>
-      <div class="envcard"><img src="assets/leaves.webp" alt="Coffee foliage" loading="lazy" width="620" height="827"><h3>Soil</h3><p>Vermicompost made on site supplies 40% of the estate's fertiliser.</p></div>
-      <div class="envcard"><img src="assets/cherries.webp" alt="Ripe cherry from the estate" loading="lazy" width="900" height="600"><h3>Biodiversity</h3><p>Rare birds, mammals, fish and reptiles share the shade and the water bodies.</p></div>
-    </div>
-    <div class="btns" style="margin-top:2rem"><a class="btn btn--ghost" href="environment.html">Explore the estate</a></div>
-  </div>
-</section>
+          <!-- altitude grid -->
+          <g class="sv-grid">
+            <line x1="70" y1="40"  x2="1200" y2="40"/>
+            <line x1="70" y1="194" x2="1200" y2="194"/>
+            <line x1="70" y1="349" x2="1200" y2="349"/>
+          </g>
+          <g class="sv-glabel">
+            <text x="62" y="44"  text-anchor="end">5,000 FT</text>
+            <text x="62" y="198" text-anchor="end">4,500 FT</text>
+            <text x="62" y="353" text-anchor="end">4,000 FT</text>
+          </g>
 
-<section>
-  <div class="wrap">
-    <div class="split">
-      <figure class="figure">
-        <img src="assets/ukers.webp" alt="All About Coffee by William H. Ukers, 1922" loading="lazy" width="700" height="519">
-        <figcaption class="figcap">William H. Ukers, All About Coffee, 1922</figcaption>
+          <!-- the landform -->
+          <path class="sv-hill" d="M0,392 C70,384 140,344 210,318 C300,285 350,268 420,238 C500,203 545,180 600,164 C700,136 810,114 880,106 C915,102 940,101 960,102 C1050,107 1130,140 1200,186 L1200,430 L0,430 Z"/>
+          <rect x="0" y="0" width="1200" height="430" fill="url(#hatch)" clip-path="url(#ground)"/>
+
+          <!-- the three estates, marked identically -->
+          <g style="--c:#00818C">
+            <line class="sv-drop" x1="210" y1="318" x2="210" y2="430"/>
+            <circle class="sv-dot" cx="210" cy="318" r="5"/>
+            <text class="sv-name" x="210" y="292" text-anchor="middle">Glenfell</text>
+            <text class="sv-ft"   x="210" y="274" text-anchor="middle">4,100 FT</text>
+          </g>
+          <g style="--c:#324B50">
+            <line class="sv-drop" x1="600" y1="164" x2="600" y2="430"/>
+            <circle class="sv-dot" cx="600" cy="164" r="5"/>
+            <text class="sv-name" x="600" y="138" text-anchor="middle">Cauvery Peak</text>
+            <text class="sv-ft"   x="600" y="120" text-anchor="middle">4,600 FT</text>
+          </g>
+          <g style="--c:#8E3A21">
+            <line class="sv-drop" x1="960" y1="102" x2="960" y2="430"/>
+            <circle class="sv-dot" cx="960" cy="102" r="5"/>
+            <text class="sv-name" x="960" y="76" text-anchor="middle">Shevaroys</text>
+            <text class="sv-ft"   x="960" y="58" text-anchor="middle">4,800 FT</text>
+          </g>
+        </svg>
+        <figcaption class="section__cap">
+          <span><b>Schematic section</b> &mdash; Shevaroy Hills</span>
+          <span>Glenfell 4,100 ft</span>
+          <span>Cauvery Peak 4,600 ft</span>
+          <span>Shevaroys 4,800 ft</span>
+        </figcaption>
       </figure>
-      <div class="stack">
-        <p class="eyebrow">In print</p>
-        <h2 class="d2">Named as a source of the best coffee since 1922.</h2>
-        <p class="body">Kenneth Davids, who founded Coffee Review, wrote about this estate in 1996. These hills have been on record for a century.</p>
+
+      <p class="cgroup" style="margin-top:clamp(2rem,4vw,3rem)">Single estates</p>
+      <div class="coffees" style="margin-top:0">
+
+        <article class="cof" style="--c:#8E3A21">
+          <img class="cof__pack" src="assets/p_sh.webp" alt="" width="330" height="416" loading="lazy">
+          <h3 class="cof__n">Shevaroys</h3>
+          <p class="cof__t">Estate Reserve</p>
+          <ul class="cof__specs">
+            <li><span class="cof__k">Elevation</span><span class="cof__lead"></span><span class="cof__v num">1,450 m &middot; 4,800 ft</span></li>
+            <li><span class="cof__k">Acidity</span><span class="cof__lead"></span><span class="cof__v">Crisp</span></li>
+            <li><span class="cof__k">Body</span><span class="cof__lead"></span><span class="cof__v">Medium</span></li>
+            <li><span class="cof__k">Aftertaste</span><span class="cof__lead"></span><span class="cof__v">Distinct citrus</span></li>
+          </ul>
+          <p class="cof__price"><b class="num">From &#8377;620</b><a class="cof__go" href="coffee.html">Choose grind &rarr;</a></p>
+        </article>
+
+        <article class="cof" style="--c:#324B50">
+          <img class="cof__pack" src="assets/p_cp.webp" alt="" width="330" height="416" loading="lazy">
+          <h3 class="cof__n">Cauvery Peak</h3>
+          <p class="cof__t">Estate Heritage</p>
+          <ul class="cof__specs">
+            <li><span class="cof__k">Elevation</span><span class="cof__lead"></span><span class="cof__v num">1,400 m &middot; 4,600 ft</span></li>
+            <li><span class="cof__k">Acidity</span><span class="cof__lead"></span><span class="cof__v">Rich, low key</span></li>
+            <li><span class="cof__k">Body</span><span class="cof__lead"></span><span class="cof__v">Full</span></li>
+            <li><span class="cof__k">Aftertaste</span><span class="cof__lead"></span><span class="cof__v">Chocolate</span></li>
+          </ul>
+          <p class="cof__price"><b class="num">From &#8377;600</b><a class="cof__go" href="coffee.html">Choose grind &rarr;</a></p>
+        </article>
+
+        <article class="cof" style="--c:#00818C">
+          <img class="cof__pack" src="assets/p_gf.webp" alt="" width="330" height="416" loading="lazy">
+          <h3 class="cof__n">Glenfell</h3>
+          <p class="cof__t">Estate Classic</p>
+          <ul class="cof__specs">
+            <li><span class="cof__k">Elevation</span><span class="cof__lead"></span><span class="cof__v num">1,250 m &middot; 4,100 ft</span></li>
+            <li><span class="cof__k">Acidity</span><span class="cof__lead"></span><span class="cof__v">Low</span></li>
+            <li><span class="cof__k">Body</span><span class="cof__lead"></span><span class="cof__v">Full</span></li>
+            <li><span class="cof__k">Aftertaste</span><span class="cof__lead"></span><span class="cof__v">Exotic, spicy</span></li>
+          </ul>
+          <p class="cof__price"><b class="num">From &#8377;580</b><a class="cof__go" href="coffee.html">Choose grind &rarr;</a></p>
+        </article>
       </div>
-    </div>
-    <div class="press__grid">
-      <div class="cite"><div class="cite__p">Home Coffee Roasting</div><p class="cite__q">Kenneth Davids on the estate</p><div class="cite__y">1996</div></div>
-      <div class="cite"><div class="cite__p">Indian Coffee Magazine</div><p class="cite__q">Grower to Connoisseur</p><div class="cite__y">August 2017</div></div>
-      <div class="cite"><div class="cite__p">Discover India</div><p class="cite__q">Coffee tourism in the Shevaroys</p><div class="cite__y">Feature</div></div>
+
+      <p class="cgroup" style="margin-top:clamp(2rem,4vw,2.75rem)">Blends &mdash; made from all three</p>
+      <div class="coffees" style="margin-top:0">
+
+        <article class="cof" style="--c:#3B2A1E">
+          <img class="cof__pack" src="assets/p_eb.webp" alt="" width="330" height="481" loading="lazy">
+          <h3 class="cof__n">Espresso Blend</h3>
+          <p class="cof__t">All three estates</p>
+          <ul class="cof__specs">
+            <li><span class="cof__k">Made from</span><span class="cof__lead"></span><span class="cof__v">All 3 estates</span></li>
+            <li><span class="cof__k">Acidity</span><span class="cof__lead"></span><span class="cof__v">Good</span></li>
+            <li><span class="cof__k">Body</span><span class="cof__lead"></span><span class="cof__v">Medium</span></li>
+            <li><span class="cof__k">Best as</span><span class="cof__lead"></span><span class="cof__v">Espresso</span></li>
+          </ul>
+          <p class="cof__price"><b class="num">From &#8377;590</b><a class="cof__go" href="coffee.html">Choose grind &rarr;</a></p>
+        </article>
+
+        <article class="cof" style="--c:#7F3634">
+          <img class="cof__pack" src="assets/p_ib.webp" alt="" width="330" height="481" loading="lazy">
+          <h3 class="cof__n">Indian Filter Blend</h3>
+          <p class="cof__t">All three estates</p>
+          <ul class="cof__specs">
+            <li><span class="cof__k">Made from</span><span class="cof__lead"></span><span class="cof__v">All 3 estates</span></li>
+            <li><span class="cof__k">Acidity</span><span class="cof__lead"></span><span class="cof__v">Medium</span></li>
+            <li><span class="cof__k">Body</span><span class="cof__lead"></span><span class="cof__v">Good decoction</span></li>
+            <li><span class="cof__k">Best as</span><span class="cof__lead"></span><span class="cof__v">Indian filter</span></li>
+          </ul>
+          <p class="cof__price"><b class="num">From &#8377;590</b><a class="cof__go" href="coffee.html">Choose grind &rarr;</a></p>
+        </article>
+
+        <article class="cof" style="--c:#A98247">
+          <img class="cof__pack cof__pack--wide" src="assets/p_sampler.webp" alt="" width="734" height="430" loading="lazy">
+          <h3 class="cof__n">Sampler packs</h3>
+          <p class="cof__t">Two ways in</p>
+          <ul class="cof__specs">
+            <li><span class="cof__k">Three estates</span><span class="cof__lead"></span><span class="cof__v num">&#8377;670</span></li>
+            <li><span class="cof__k">Two blends</span><span class="cof__lead"></span><span class="cof__v num">&#8377;530</span></li>
+            <li><span class="cof__k">Green beans</span><span class="cof__lead"></span><span class="cof__v num">&#8377;250</span></li>
+            <li><span class="cof__k">Also</span><span class="cof__lead"></span><span class="cof__v">Spices &middot; honey</span></li>
+          </ul>
+          <p class="cof__price"><b class="num">From &#8377;250</b><a class="cof__go" href="coffee.html">See the shop &rarr;</a></p>
+        </article>
+      </div>
+
+      <div class="btns" style="margin-top:2rem">
+        <a class="btn btn--fill" href="coffee.html">Shop all coffee</a>
+        <a class="btn btn--ghost" href="coffee.html">Start a subscription</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="visit">
-  <div class="wrap stack" style="align-items:flex-start">
-    <p class="eyebrow">Yercaud, Tamil Nadu</p>
-    <h2 class="d2">One drive up the hill and the whole thing makes sense.</h2>
-    <p class="body">Walk the plantation, watch the mill, taste the coffee where it grew.</p>
-    <div class="btns"><a class="btn btn--gold" href="visit.html">Plan your visit</a><a class="btn btn--ink" href="coffee.html">Shop the coffee</a></div>
-    <div class="note" style="margin-top:1.5rem"><b>Note for review:</b> caf&eacute; opening hours and phone numbers are deliberately absent. The live site gives three different answers and I'm not guessing &mdash; they go in once MSP confirms. Palette, pack renders and the display face are all taken from the brand artwork, not invented.</div>
+<!-- ============ III — PROCESS, ALL NINE ============ -->
+<section class="band" id="process">
+  <div class="sheet ruled">
+    <div class="ruled__mark">
+      <span class="ruled__i num">III</span>
+      <span class="ruled__l">Process</span>
+    </div>
+    <div>
+      <p class="mark">Grower to connoisseur</p>
+      <h2 class="d2">Nine stages.<br>One boundary.</h2>
+      <p class="lede" style="margin-top:1.25rem">Every one of them happens on this plantation. That is what single estate is supposed to mean.</p>
+
+      <ol class="entries" style="margin-top:clamp(2rem,4vw,3rem)">
+        <li class="entry">
+          <span class="entry__n num">01</span>
+          <div><h3 class="entry__t">Nursery</h3>
+            <p class="entry__b">Seed taken from selected mother plants and raised in the estate nursery. Three years pass before a first crop.</p></div>
+          <figure class="entry__fig"><img src="assets/nursery.webp" alt="The estate nursery" width="760" height="570" loading="lazy"></figure>
+        </li>
+        <li class="entry">
+          <span class="entry__n num">02</span>
+          <div><h3 class="entry__t">Cultivation</h3>
+            <p class="entry__b">Grown under two tiers of shade inside the existing forest, alongside pepper and fruit on the same land.</p></div>
+          <figure class="entry__fig"><img src="assets/canopy.webp" alt="Two-tier shade canopy over the coffee" width="900" height="506" loading="lazy"></figure>
+        </li>
+        <li class="entry">
+          <span class="entry__n num">03</span>
+          <div><h3 class="entry__t">Harvest</h3>
+            <p class="entry__b">Picked by hand and selectively &mdash; only ripe cherry comes off the branch.</p></div>
+          <figure class="entry__fig"><img src="assets/picking.webp" alt="Selective hand picking on the estate" width="760" height="570" loading="lazy"></figure>
+        </li>
+        <li class="entry">
+          <span class="entry__n num">04</span>
+          <div><h3 class="entry__t">Pulping</h3>
+            <p class="entry__b">Sorted and pulped the same day it comes off the tree. Nothing waits overnight in cherry.</p></div>
+          <figure class="entry__fig"><img src="assets/cherrypour.webp" alt="Cherry going into the pulper" width="700" height="1050" loading="lazy"></figure>
+        </li>
+        <li class="entry">
+          <span class="entry__n num">05</span>
+          <div><h3 class="entry__t">Washing</h3>
+            <p class="entry__b">Fermented overnight in tanks, then the mucilage is washed clean through the channels.</p></div>
+          <figure class="entry__fig"><img src="assets/channel.webp" alt="Washing channels at the wet mill" width="1000" height="528" loading="lazy"></figure>
+        </li>
+        <li class="entry">
+          <span class="entry__n num">06</span>
+          <div><h3 class="entry__t">Drying</h3>
+            <p class="entry__b">Sun-dried on concrete terraces, turned by hand, down to under 12% moisture.</p></div>
+          <figure class="entry__fig"><img src="assets/terraces.webp" alt="Parchment drying on the estate terraces" width="1100" height="456" loading="lazy"></figure>
+        </li>
+        <li class="entry">
+          <span class="entry__n num">07</span>
+          <div><h3 class="entry__t">Milling &amp; grading</h3>
+            <p class="entry__b">Hulled at the dry mill, then graded by size and density. Defects are taken out by hand.</p></div>
+          <figure class="entry__fig"><img src="assets/sorting.webp" alt="Hand sorting and grading" width="760" height="507" loading="lazy"></figure>
+        </li>
+        <li class="entry">
+          <span class="entry__n num">08</span>
+          <div><h3 class="entry__t">Roasting</h3>
+            <p class="entry__b">Roasted after your order is placed, in small batches, on the estate. Never before, never to sit in a warehouse.</p></div>
+          <figure class="entry__fig"><img src="assets/roasting.webp" alt="Roasted beans dropping into the cooling tray" width="1100" height="825" loading="lazy"></figure>
+        </li>
+        <li class="entry">
+          <span class="entry__n num">09</span>
+          <div><h3 class="entry__t">Packed &amp; shipped</h3>
+            <p class="entry__b">Rested 24 hours to cool, packed, and sent from the estate itself.</p></div>
+          <figure class="entry__fig"><img src="assets/millyard.webp" alt="The mill yard" width="1100" height="580" loading="lazy"></figure>
+        </li>
+      </ol>
+
+      <div class="btns" style="margin-top:2rem">
+        <a class="btn btn--ghost" href="estate.html">Read the full process</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IV — VISIT ============ -->
+<section id="visit">
+  <div class="sheet ruled">
+    <div class="ruled__mark">
+      <span class="ruled__i num">IV</span>
+      <span class="ruled__l">Visit</span>
+    </div>
+    <div>
+      <p class="mark">The Coffee Experience Tour</p>
+      <h2 class="d2">You can buy Arabica<br>from a hundred brands.<br>You cannot walk theirs.</h2>
+      <p class="lede" style="margin-top:1.25rem">Seventy-five minutes through a 150-year-old working plantation, in your own vehicle, on all-weather roads &mdash; ending with a cup at the caf&eacute;.</p>
+
+      <ul class="ledger ledger--light" style="margin-top:clamp(2rem,4vw,2.5rem)">
+        <li><span class="ledger__k">Duration</span><span class="ledger__d"></span><span class="ledger__v num">75<sup>MIN</sup></span></li>
+        <li><span class="ledger__k">Stops on the route</span><span class="ledger__d"></span><span class="ledger__v num">7</span></li>
+        <li><span class="ledger__k">Per person</span><span class="ledger__d"></span><span class="ledger__v num">&#8377;600</span></li>
+      </ul>
+
+      <div class="plates plates--3" style="margin-top:clamp(2rem,4vw,3rem)">
+        <figure class="plate">
+          <img src="assets/shop/coffee-experience-tours--2.webp" alt="The lake on the estate route" width="1000" height="750" loading="lazy">
+          <figcaption><span class="plate__n num">01</span><span>The lake</span></figcaption>
+        </figure>
+        <figure class="plate">
+          <img src="assets/shop/coffee-experience-tours--5.webp" alt="Visitors on the estate jeep" width="1000" height="750" loading="lazy">
+          <figcaption><span class="plate__n num">02</span><span>On the route</span></figcaption>
+        </figure>
+        <figure class="plate">
+          <img src="assets/shop/coffee-experience-tours--6.webp" alt="Sunset over the Shevaroy Hills" width="1000" height="750" loading="lazy">
+          <figcaption><span class="plate__n num">03</span><span>The ridge at dusk</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="btns" style="margin-top:2rem">
+        <a class="btn btn--fill" href="visit.html">Book the tour</a>
+        <a class="btn btn--ghost" href="cafes.html">The three caf&eacute;s</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ V — HERITAGE ============ -->
+<section class="band" id="heritage">
+  <div class="sheet ruled">
+    <div class="ruled__mark">
+      <span class="ruled__i num">V</span>
+      <span class="ruled__l">Heritage</span>
+    </div>
+    <div>
+      <p class="mark">1867 to today</p>
+      <h2 class="d2">Four names,<br>five generations,<br>three estates.</h2>
+      <p class="lede" style="margin-top:1.25rem">The estate was first assigned in 1867. The family bought Glenfell in 1937 and Cauvery Peak in 1957. In 1965 MSP Rajes travelled to Costa Rica and brought back the Hawaiian Red Caturra seed the estate still grows today.</p>
+
+      <div class="plates" style="margin-top:clamp(2rem,4vw,3rem)">
+        <figure class="plate plate--wide">
+          <img src="assets/archive.webp" alt="Estate records and family photographs" width="1200" height="675" loading="lazy">
+          <figcaption><span class="plate__n num">PL. 01</span><span>Estate records, 1867 onward</span></figcaption>
+        </figure>
+        <figure class="plate plate--wide">
+          <img src="assets/ukers.webp" alt="All About Coffee by William H. Ukers, 1922" width="700" height="519" loading="lazy">
+          <figcaption><span class="plate__n num">PL. 02</span><span>Ukers, All About Coffee, 1922</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="btns" style="margin-top:2rem">
+        <a class="btn btn--ghost" href="history.html">The full history</a>
+        <a class="btn btn--ghost" href="press.html">In the press</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VI — THE GROUND ============ -->
+<section>
+  <div class="sheet ruled">
+    <div class="ruled__mark">
+      <span class="ruled__i num">VI</span>
+      <span class="ruled__l">The ground</span>
+    </div>
+    <div>
+      <p class="mark">The ecosystem</p>
+      <h2 class="d2">Coffee that grows<br>with the forest.</h2>
+      <p class="lede" style="margin-top:1.25rem">Not a sustainability claim. A description of how the estate physically works.</p>
+
+      <div class="plates plates--3" style="margin-top:clamp(2rem,4vw,3rem)">
+        <figure class="plate">
+          <img src="assets/shade.webp" alt="Two tiers of shade trees over the coffee" width="620" height="413" loading="lazy">
+          <figcaption><span class="plate__n num">PL. 01</span><span>Shade &mdash; two tiers</span></figcaption>
+        </figure>
+        <figure class="plate">
+          <img src="assets/lake.webp" alt="Rainwater held on the estate" width="900" height="600" loading="lazy">
+          <figcaption><span class="plate__n num">PL. 02</span><span>Water &mdash; harvested rainfall</span></figcaption>
+        </figure>
+        <figure class="plate">
+          <img src="assets/soil.webp" alt="Bauxite-rich estate soil" width="700" height="331" loading="lazy">
+          <figcaption><span class="plate__n num">PL. 03</span><span>Soil &mdash; bauxite, vermicompost</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="btns" style="margin-top:2rem">
+        <a class="btn btn--ghost" href="environment.html">How the estate works</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSE ============ -->
+<section class="band">
+  <div class="sheet ruled">
+    <div class="ruled__mark">
+      <span class="ruled__i num">VII</span>
+      <span class="ruled__l">Come up</span>
+    </div>
+    <div>
+      <p class="mark">Yercaud, Tamil Nadu</p>
+      <h2 class="d2">One drive up the hill<br>and the whole thing<br>makes sense.</h2>
+      <p class="lede" style="margin-top:1.25rem">Walk the plantation, watch the mill run, and drink the coffee where it grew.</p>
+      <div class="btns" style="margin-top:1.75rem">
+        <a class="btn btn--fill" href="visit.html">Book the tour</a>
+        <a class="btn btn--ghost" href="coffee.html">Shop the coffee</a>
+      </div>
+    </div>
   </div>
 </section>

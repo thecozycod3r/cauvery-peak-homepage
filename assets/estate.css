@@ -193,72 +193,74 @@ section{padding-block:clamp(3.5rem,9vw,7rem); position:relative; z-index:2}
 .ledger__v sup{font-family:var(--mono); font-size:.55rem; letter-spacing:.14em;
   vertical-align:super; color:var(--onDark-2)}
 
-/* ---------- ELEVATION SPINE ----------
-   The one thing no template can lend them. The three estates are plotted
-   against a real altitude axis, so the page physically climbs: a card's
-   top edge sits at the height that estate is farmed at. --ft is the only
-   thing set per card; the offset is derived from it, so the drawing
-   cannot drift out of step with the number printed on the card.
+/* ---------- SECTION THROUGH THE ESTATES ----------
+   Elevation is the real difference between these coffees, but staggering
+   the products by height reads as a podium — and the estate's own copy
+   calls the MIDDLE elevation the ideal one ("a well balanced cup"). So
+   the altitude lives in a survey drawing where the three are equal marks
+   on one landform, and the products below sit in a flat grid. */
+.section{margin-top:clamp(2rem,5vw,3rem); position:relative}
+.section svg{width:100%; height:auto; display:block; overflow:visible}
+.section__cap{display:flex; flex-wrap:wrap; gap:.4rem 1.25rem; margin:.85rem 0 0;
+  padding-top:.7rem; border-top:var(--hair);
+  font-family:var(--mono); font-size:.625rem; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-2)}
+.section__cap b{color:var(--bauxite); font-weight:500}
+/* survey-drawing parts, styled here so the markup stays clean */
+.sv-sky{fill:none}
+.sv-grid{stroke:color-mix(in srgb,var(--brass) 42%,transparent); stroke-width:1; stroke-dasharray:2 5}
+.sv-glabel{fill:var(--ink-2); font-family:var(--mono); font-size:11px; letter-spacing:.1em}
+.sv-hill{fill:color-mix(in srgb,var(--canopy) 12%,transparent);
+  stroke:var(--canopy); stroke-width:1.5; stroke-linejoin:round}
+.sv-hatch{stroke:color-mix(in srgb,var(--canopy) 34%,transparent); stroke-width:1}
+.sv-drop{stroke:var(--c,var(--bauxite)); stroke-width:1.5; stroke-dasharray:3 3}
+.sv-dot{fill:var(--c,var(--bauxite))}
+.sv-name{fill:var(--ink); font-family:var(--display); font-size:19px;
+  font-variation-settings:"opsz" 60}
+.sv-ft{fill:var(--c,var(--bauxite)); font-family:var(--mono); font-size:11.5px;
+  letter-spacing:.12em; font-weight:500}
+.band .sv-hill{fill:color-mix(in srgb,var(--onDark) 9%,transparent); stroke:var(--onDark-2)}
+.band .sv-name{fill:var(--onDark)}
+.band .sv-glabel{fill:var(--onDark-2)}
 
-   Scale: --alt-hi ft at the top of the plot, --alt-lo at the bottom,
-   spanning --plot pixels. */
-.alt{--alt-hi:4800; --alt-lo:4100; --plot:270px;
-  position:relative; margin-top:clamp(2rem,5vw,3.5rem)}
-.alt__in{display:grid; grid-template-columns:1fr; gap:1.25rem}
-@media (min-width:820px){
-  .alt__in{grid-template-columns:5.5rem 1fr; gap:clamp(1.25rem,2.5vw,2.25rem)}
-}
+/* ---------- the coffees: one flat grid, no ranking ---------- */
+.coffees{display:grid; gap:clamp(.9rem,2vw,1.25rem); grid-template-columns:1fr;
+  margin-top:clamp(2rem,4vw,3rem)}
+@media (min-width:640px){ .coffees{grid-template-columns:repeat(2,1fr)} }
+@media (min-width:1000px){ .coffees{grid-template-columns:repeat(3,1fr)} }
+.cgroup{margin:0 0 .9rem; display:flex; align-items:baseline; gap:.8rem;
+  font-family:var(--mono); font-size:.625rem; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--ink-2)}
+.cgroup::after{content:""; flex:1; border-top:var(--hair)}
 
-/* the ruled axis */
-.alt__axis{display:none}
-@media (min-width:820px){
-  .alt__axis{display:block; position:relative; height:calc(var(--plot) + 1px);
-    border-right:1px solid color-mix(in srgb,var(--brass) 55%,transparent)}
-  .alt__t{position:absolute; right:0; transform:translateY(-50%);
-    top:calc((var(--alt-hi) - var(--ft)) / (var(--alt-hi) - var(--alt-lo)) * var(--plot));
-    display:flex; align-items:center; justify-content:flex-end; gap:.5rem;
-    width:100%; padding-right:.7rem;
-    font-family:var(--mono); font-size:.625rem; letter-spacing:.14em;
-    color:var(--ink-2); white-space:nowrap}
-  .alt__t::after{content:""; position:absolute; right:-.5rem; width:.5rem; height:1px;
-    background:color-mix(in srgb,var(--brass) 70%,transparent)}
-  .alt__t--on{color:var(--bauxite); font-weight:500}
-  .alt__t--on::after{width:1rem; right:-1rem; background:var(--bauxite); height:1.5px}
-}
-
-.estates{display:grid; gap:clamp(1rem,2.5vw,1.4rem); grid-template-columns:1fr;
-  align-items:start}
-@media (min-width:820px){ .estates{grid-template-columns:repeat(3,1fr)} }
-
-.estate{position:relative; border-top:2px solid var(--c,var(--bauxite));
-  background:var(--paper-hi); padding:1.1rem 1.15rem 1.3rem; display:flex;
-  flex-direction:column; gap:.4rem; min-height:236px}
-/* the drop, derived straight from the altitude printed on the card */
-@media (min-width:820px){
-  .estate{margin-top:calc((var(--alt-hi) - var(--ft)) / (var(--alt-hi) - var(--alt-lo)) * var(--plot))}
-  /* a hairline back to the axis, so the card reads as plotted not merely offset */
-  .estate::before{content:""; position:absolute; top:-1px; right:100%;
-    width:calc(100% * var(--reach,0)); border-top:1px dotted color-mix(in srgb,var(--brass) 60%,transparent)}
-}
-.estate__ft{font-family:var(--display); font-size:clamp(1.9rem,3.4vw,2.7rem); line-height:1;
-  font-variation-settings:"opsz" 90,"WONK" 1; color:var(--c,var(--bauxite))}
-.estate__ft small{font-family:var(--mono); font-size:.6rem; letter-spacing:.16em;
-  color:var(--ink-2); margin-left:.35rem}
-.estate__n{font-family:var(--display); font-size:1.5rem; line-height:1.06; margin:0;
-  font-variation-settings:"opsz" 60,"WONK" 0}
-.estate__t{font-family:var(--mono); font-size:.625rem; letter-spacing:.16em;
-  text-transform:uppercase; color:var(--ink-2); margin:0}
-.estate__pack{position:absolute; right:.8rem; top:.9rem; width:52px; height:auto;
-  filter:drop-shadow(0 10px 18px rgba(10,20,14,.28))}
-.estate__notes{margin:.5rem 0 0; font-size:.9rem; line-height:1.45; color:var(--ink-2);
-  max-width:30ch}
-.estate__price{margin-top:auto; padding-top:.9rem; font-family:var(--mono); font-size:.75rem;
-  letter-spacing:.06em; color:var(--ink); border-top:var(--hair)}
-/* on a phone the stagger says nothing — carry the altitude inline instead */
-.estate__bar{display:flex; align-items:center; gap:.6rem; margin-top:.15rem}
-.estate__bar i{display:block; height:2px; background:var(--c,var(--bauxite));
-  width:calc((var(--ft) - 4000) / 900 * 100%); max-width:100%}
-@media (min-width:820px){ .estate__bar{display:none} }
+.cof{position:relative; display:flex; flex-direction:column; gap:.35rem;
+  background:var(--paper-hi); border-top:2px solid var(--c,var(--bauxite));
+  padding:1.1rem 1.15rem 1.25rem; min-height:250px;
+  transition:transform 160ms ease-out, box-shadow 160ms ease-out}
+.cof:hover{transform:translateY(-2px); box-shadow:0 12px 28px rgba(10,20,14,.10)}
+.cof__pack{position:absolute; right:.85rem; top:1rem; width:56px; height:auto;
+  filter:drop-shadow(0 10px 18px rgba(10,20,14,.26))}
+.cof__n{font-family:var(--display); font-size:1.55rem; line-height:1.04; margin:0;
+  font-variation-settings:"opsz" 60,"WONK" 0; padding-right:4rem}
+.cof__t{font-family:var(--mono); font-size:.625rem; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--c,var(--bauxite)); margin:0; font-weight:500}
+/* elevation as one specification among several, not a score */
+.cof__specs{list-style:none; margin:.9rem 0 0; padding:0; display:grid; gap:0}
+.cof__specs li{display:grid; grid-template-columns:auto 1fr auto; gap:.6rem;
+  align-items:baseline; padding-block:.42rem; border-top:var(--hair); font-size:.875rem}
+.cof__specs li:first-child{border-top:0}
+.cof__k{font-family:var(--mono); font-size:.5875rem; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--ink-2)}
+.cof__lead{border-bottom:1px dotted color-mix(in srgb,var(--brass) 50%,transparent);
+  transform:translateY(-.3em)}
+.cof__v{color:var(--ink); text-align:right}
+.cof__price{margin-top:auto; padding-top:.95rem; border-top:var(--hair);
+  display:flex; align-items:baseline; justify-content:space-between; gap:.75rem;
+  font-family:var(--mono); font-size:.75rem; letter-spacing:.05em}
+.cof__price b{font-weight:500}
+.cof__go{color:var(--c,var(--bauxite)); text-decoration:none; white-space:nowrap}
+.cof a.cof__hit{position:absolute; inset:0}
+.cof:focus-within{outline:2px solid var(--bauxite); outline-offset:3px}
 
 /* ---------- plates: photography as documented plates ---------- */
 .plates{display:grid; gap:clamp(1rem,2.5vw,1.5rem); grid-template-columns:1fr}
@@ -322,3 +324,342 @@ section{padding-block:clamp(3.5rem,9vw,7rem); position:relative; z-index:2}
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important; transition:none!important}
 }
+
+/* the ledger also appears on light ground (the tour figures) */
+.ledger--light .ledger__k{color:var(--ink-2)}
+.ledger--light .ledger__v{color:var(--bauxite)}
+.ledger--light .ledger__v sup{color:var(--ink-2)}
+
+/* the survey drawing's labels vanish below the width where they'd be
+   illegible; the caption strip carries the same three figures always */
+@media (max-width:719px){ .sv-name,.sv-ft,.sv-glabel{display:none} }
+
+/* footer credit line wraps to its own row rather than squeezing the rest */
+.foot__bar a{color:var(--brass)}
+
+/* the sampler is a lineup, not a single pack — it needs a wider slot */
+.cof__pack--wide{width:118px; top:1.4rem; right:.7rem}
+
+
+/* ============================================================
+   CHROME — skip link, mobile drawer, footer furniture
+   ============================================================ */
+.skip{position:absolute; left:.75rem; top:-4rem; z-index:80;
+  background:var(--canopy); color:var(--paper); padding:.7rem 1.1rem;
+  font-family:var(--mono); font-size:.75rem; letter-spacing:.14em; text-transform:uppercase;
+  text-decoration:none; transition:top 140ms ease-out}
+.skip:focus{top:.75rem}
+.top__home{display:inline-flex; text-decoration:none}
+
+.burger{display:inline-flex; align-items:center; gap:.6rem; min-height:44px;
+  padding:0 .25rem 0 .75rem; margin-right:-.25rem;
+  background:none; border:0; cursor:pointer; color:var(--ink);
+  font-family:var(--mono); font-size:.6875rem; letter-spacing:.16em; text-transform:uppercase}
+.burger__box{display:grid; gap:5px; width:22px}
+.burger__box i{display:block; height:1.5px; background:currentColor;
+  transition:transform 200ms ease-out, opacity 120ms ease-out}
+.burger[aria-expanded="true"] .burger__box i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger[aria-expanded="true"] .burger__box i:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] .burger__box i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.burger:focus-visible{outline:2px solid var(--bauxite); outline-offset:3px}
+@media (min-width:860px){ .burger{display:none} }
+
+html.no-scroll,html.no-scroll body{overflow:hidden}
+.drawer{position:fixed; inset:0; z-index:70; visibility:hidden; pointer-events:none;
+  overflow:hidden; transition:visibility 0s linear 260ms}
+.drawer.is-open{visibility:visible; pointer-events:auto; transition-delay:0s}
+.drawer__scrim{position:absolute; inset:0; background:rgba(10,20,14,.6);
+  opacity:0; transition:opacity 240ms ease-out}
+.drawer.is-open .drawer__scrim{opacity:1}
+.drawer__panel{position:absolute; inset:0 0 0 auto; width:min(86vw,400px);
+  display:flex; flex-direction:column; gap:1.5rem; overflow-y:auto; overscroll-behavior:contain;
+  background:var(--canopy); color:var(--onDark);
+  padding:1rem var(--gut) calc(2rem + env(safe-area-inset-bottom));
+  transform:translateX(100%); transition:transform 260ms cubic-bezier(.32,.72,0,1)}
+.drawer.is-open .drawer__panel{transform:translateX(0)}
+.drawer__head{display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  padding-block:.4rem; position:sticky; top:0; background:var(--canopy); z-index:1}
+.drawer__home{font-family:var(--display); font-size:1.4rem; color:var(--onDark);
+  text-decoration:none; font-variation-settings:"opsz" 60}
+.drawer__x{width:44px; height:44px; margin-right:-.6rem; display:grid; place-items:center;
+  background:none; border:0; color:var(--onDark); cursor:pointer}
+.drawer__x svg{width:22px; height:22px}
+.drawer__x:focus-visible,.drawer a:focus-visible{outline:2px solid var(--brass); outline-offset:3px}
+.dnav{display:grid; gap:1.6rem}
+.dnav__h{font-family:var(--mono); font-size:.625rem; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--brass); margin:0 0 .35rem; font-weight:500}
+.dnav__l{list-style:none; margin:0; padding:0; display:flex; flex-direction:column}
+.dnav__l a{display:flex; align-items:center; min-height:46px; color:var(--onDark);
+  text-decoration:none; font-size:1.0625rem;
+  border-bottom:1px solid color-mix(in srgb,var(--brass) 24%,transparent)}
+.dnav__l a[aria-current="page"]{color:var(--brass)}
+.drawer__cta{display:grid; gap:.6rem; margin-top:.4rem}
+.drawer__cta .btn{color:var(--onDark)}
+.drawer__meta{font-family:var(--mono); font-size:.6875rem; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--onDark-2); margin:0}
+@media (prefers-reduced-motion:reduce){
+  .drawer__panel{transform:none; opacity:0}
+  .drawer.is-open .drawer__panel{opacity:1}
+}
+
+/* footer furniture carried over from the old build, restyled */
+.foot__places{display:grid; grid-template-columns:1fr; gap:1.1rem; margin-top:2.5rem;
+  padding-top:2rem; border-top:var(--hair)}
+@media (min-width:720px){ .foot__places{grid-template-columns:repeat(3,1fr); gap:2rem} }
+.foot__place{border-left:2px solid var(--c,var(--brass)); padding-left:.9rem}
+.foot__pn{font-family:var(--display); font-size:1.15rem; margin:0;
+  font-variation-settings:"opsz" 60}
+.foot__pd{font-size:.875rem; color:var(--onDark-2); margin:.25rem 0 0}
+.foot__pl{font-family:var(--mono); font-size:.625rem; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--brass); text-decoration:none; display:inline-flex; align-items:center; min-height:40px}
+.foot__legal{display:flex; flex-wrap:wrap; gap:.3rem 1.25rem; margin:0; padding:0; list-style:none}
+.foot__legal a{color:var(--onDark-2); text-decoration:none;
+  display:inline-flex; align-items:center; min-height:40px}
+.foot__legal a:hover{color:var(--brass)}
+.foot__social{display:flex; gap:.6rem}
+.foot__social a{width:42px; height:42px; display:grid; place-items:center;
+  border:1px solid color-mix(in srgb,var(--brass) 40%,transparent); color:var(--onDark)}
+.foot__social a:hover{border-color:var(--brass); color:var(--brass)}
+.foot__social svg{width:18px; height:18px; fill:currentColor}
+.foot__credit{flex-basis:100%; color:var(--onDark-2); text-transform:none; letter-spacing:.04em}
+
+/* the mobile action bar */
+.sticky{position:fixed; left:0; right:0; bottom:0; z-index:50; display:flex; gap:.5rem;
+  padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));
+  background:var(--canopy); border-top:1px solid color-mix(in srgb,var(--brass) 45%,transparent)}
+.sticky .btn{flex:1; min-height:48px; padding:0 .6rem; font-size:.625rem; color:var(--onDark)}
+.sticky .btn--gold,.sticky .btn--fill{background:var(--bauxite); border-color:var(--bauxite); color:var(--paper-hi)}
+@media (min-width:860px){ .sticky{display:none} }
+body{padding-bottom:80px}
+@media (min-width:860px){ body{padding-bottom:0} }
+
+
+/* ============================================================
+   INNER PAGES
+   The eleven pages other than the homepage still carry the
+   previous build's markup. Rather than re-author their content,
+   each component is remapped onto the new vocabulary: figures
+   become plates, stat rows become ledgers, process stages become
+   entries. Same structure, new language.
+   ============================================================ */
+
+.wrap{max-width:var(--max); margin-inline:auto; padding-inline:var(--gut)}
+.stack{display:flex; flex-direction:column; gap:clamp(.9rem,2.5vw,1.4rem)}
+
+/* eyebrows speak in the marginalia voice */
+.eyebrow{font-family:var(--mono); font-size:.6875rem; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--bauxite); margin:0 0 .9rem; font-weight:500; position:static; padding-top:0}
+.eyebrow::before{display:none}
+.eyebrow--d,.band .eyebrow{color:var(--brass)}
+
+/* buttons: the old names map onto the new set */
+.btn--gold{background:var(--bauxite); border-color:var(--bauxite); color:var(--paper-hi)}
+.btn--gold:hover{background:var(--bauxite-hi); border-color:var(--bauxite-hi)}
+.btn--ink{border-color:currentColor; color:var(--ink)}
+.band .btn--ink,.band .btn--ghost{border-color:color-mix(in srgb,var(--onDark) 55%,transparent); color:var(--onDark)}
+
+/* page hero */
+.phero{position:relative; isolation:isolate; background:var(--canopy); overflow:hidden;
+  min-height:clamp(420px,58svh,600px); display:grid; align-items:end}
+.phero__img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2}
+.phero::after{content:""; position:absolute; inset:0; z-index:-1;
+  background:linear-gradient(179deg,rgba(10,20,14,.6) 0%,rgba(10,20,14,.08) 34%,rgba(10,20,14,.92) 100%),
+             radial-gradient(120% 80% at 10% 100%,rgba(10,20,14,.7),transparent 62%)}
+.phero__in{padding-block:clamp(2rem,5vw,3.5rem); width:100%}
+.phero .d1{color:#F2F5F0; font-size:clamp(2.4rem,7vw,4.6rem)}
+.phero .lede{color:rgba(242,245,240,.88); max-width:44ch}
+.phero .eyebrow{color:#E8D6AE; text-shadow:0 1px 8px rgba(10,20,14,.6)}
+
+/* tinted grounds */
+.journey,.visit{background:var(--sunk)}
+.stats,.env{background:var(--canopy); color:var(--onDark)}
+.stats .stat__l,.env p{color:var(--onDark-2)}
+
+/* ---- process stages become ruled entries ---- */
+.flow{background:var(--sunk)}
+.flow__steps{list-style:none; margin:0; padding:0}
+.flow__step{display:grid; gap:1rem; padding-block:clamp(1.6rem,3.5vw,2.4rem); border-top:var(--hair)}
+.flow__step:first-child{border-top:0}
+@media (min-width:900px){
+  .flow__step{grid-template-columns:1fr 1.1fr; gap:clamp(1.5rem,3vw,3rem); align-items:start}
+  .flow__step:nth-child(even) .flow__fig{order:2}
+  .flow__fig{position:static}
+  .flow__fig img{aspect-ratio:4/3; max-height:none}
+}
+.flow__fig{margin:0; position:relative; background:var(--canopy)}
+.flow__fig img{width:100%; aspect-ratio:4/3; object-fit:cover; filter:saturate(.92) contrast(1.03)}
+.flow__n{position:absolute; left:0; bottom:0; z-index:2; font-family:var(--mono);
+  font-size:.6875rem; letter-spacing:.2em; font-weight:500; color:var(--paper-hi);
+  background:var(--c,var(--bauxite)); padding:.45rem .7rem}
+.flow__t{font-family:var(--display); font-size:clamp(1.5rem,3vw,2.1rem); line-height:1.06;
+  margin:0 0 .45rem; font-variation-settings:"opsz" 60,"WONK" 0}
+.flow__b{margin:0; color:var(--ink-2); max-width:46ch}
+.flow__note{margin:.7rem 0 0; font-family:var(--mono); font-size:.6875rem; line-height:1.5;
+  letter-spacing:.04em; color:var(--bauxite); max-width:42ch}
+.band .flow__b{color:var(--onDark-2)}
+.band .flow__note{color:var(--brass)}
+.flow__fig--none{background:none}
+.noimg{aspect-ratio:auto; display:flex; flex-direction:column; gap:.35rem; padding:1.1rem;
+  text-align:left; border:1px dashed color-mix(in srgb,var(--brass) 45%,transparent)}
+.noimg__t{font-family:var(--mono); font-size:.6875rem; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--brass); margin:0}
+.noimg__b{font-family:var(--sans); font-size:.95rem; line-height:1.5; color:var(--onDark-2);
+  margin:0; max-width:26ch; justify-self:start}
+@media (min-width:900px){ .noimg{aspect-ratio:auto} }
+
+/* ---- every stat row becomes a ledger ---- */
+.facts,.tourfacts,.kvs,.stats__grid{display:grid; grid-template-columns:1fr; gap:0}
+.facts>div,.tourfacts li,.kv,.stat{display:grid; grid-template-columns:auto 1fr auto;
+  align-items:baseline; gap:1rem; padding-block:1.05rem; border-top:var(--hair);
+  border-left:0; border-bottom:0; padding-inline:0}
+.facts>div:last-child,.tourfacts li:last-child,.kv:last-child,.stat:last-child{border-bottom:var(--hair)}
+.fact__l,.tourfacts__l,.kv__k,.stat__l{grid-column:1; order:1; margin:0;
+  font-family:var(--mono); font-size:.625rem; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ink-2)}
+.fact__n,.tourfacts__n,.stat__n{grid-column:3; order:3;
+  font-family:var(--display); font-size:clamp(1.8rem,4vw,2.8rem); line-height:1;
+  font-variation-settings:"opsz" 100,"WONK" 1; color:var(--bauxite)}
+.kv__v{grid-column:3; order:3; text-align:right; margin:0; color:var(--ink)}
+.band .fact__l,.band .tourfacts__l,.band .kv__k,.band .stat__l{color:var(--onDark-2)}
+.band .fact__n,.band .tourfacts__n,.band .stat__n,.stats .stat__n{color:var(--brass)}
+.band .kv__v{color:var(--onDark)}
+
+/* ---- figures become plates ---- */
+.figure,.chap__fig,.cafe__fig,.cut__fig,.do__fig,.tourcard{margin:0; position:relative}
+.figure img,.chap__fig img,.cafe__fig img,.cut__fig img,.do__fig img{
+  width:100%; object-fit:cover; filter:saturate(.92) contrast(1.03)}
+.figcap{display:flex; gap:.7rem; align-items:baseline; padding-top:.6rem; margin-top:.7rem;
+  border-top:var(--hair); font-family:var(--mono); font-size:.625rem; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-2)}
+.cafe__fig{border-top:2px solid var(--c,var(--bauxite))}
+.chap__t,.cut__t,.do__t,.place__n,.person__n,.diff__t,.wl__t,.brew__t,.pick__m{
+  font-family:var(--display); font-variation-settings:"opsz" 60,"WONK" 0}
+.envgrid{display:grid; grid-template-columns:repeat(2,1fr); gap:1.1rem; margin-top:2.5rem}
+@media (min-width:900px){ .envgrid{grid-template-columns:repeat(4,1fr)} }
+.envcard img{width:100%; aspect-ratio:1/1; object-fit:cover}
+.envcard h3{font-family:var(--mono); font-size:.625rem; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--brass); margin:.7rem 0 .3rem; padding-top:.6rem; border-top:var(--hair)}
+
+/* ---- the coffee cards ---- */
+.coffees{display:grid; gap:1.1rem; grid-template-columns:1fr}
+@media (min-width:640px){ .coffees{grid-template-columns:repeat(2,1fr)} }
+@media (min-width:1000px){ .coffees{grid-template-columns:repeat(3,1fr)} }
+.coffee,.blend{background:var(--paper-hi); border:0; border-top:2px solid var(--c,var(--bauxite));
+  padding:0; display:flex; flex-direction:column}
+.coffee__band{display:none}
+.coffee__place{position:relative; aspect-ratio:4/3; background:var(--sunk)}
+.coffee__place>img:not(.coffee__pack){width:100%; height:100%; object-fit:cover}
+.coffee__place::after{content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(10,20,14,.04),rgba(10,20,14,.5))}
+.coffee__pack{position:absolute; z-index:2; right:1rem; bottom:-1.4rem; width:84px; height:auto;
+  filter:drop-shadow(0 12px 22px rgba(10,20,14,.45))}
+.coffee__terr{position:absolute; z-index:2; left:.9rem; bottom:.8rem; margin:0;
+  font-family:var(--mono); font-size:.625rem; letter-spacing:.14em; text-transform:uppercase;
+  color:rgba(242,245,240,.94)}
+.coffee__in{padding:1.5rem 1.15rem 1.3rem; display:flex; flex-direction:column; flex:1}
+.coffee__name,.blend__n{font-family:var(--display); font-size:1.55rem; line-height:1.04; margin:0;
+  font-variation-settings:"opsz" 60,"WONK" 0}
+.coffee__sub,.blend__k{font-family:var(--mono); font-size:.625rem; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--c,var(--bauxite)); margin-top:.3rem; font-weight:500}
+.alt{display:flex; align-items:flex-end; gap:.4rem; margin:1.1rem 0 0}
+.alt__n{font-family:var(--display); font-size:2.4rem; line-height:.9; color:var(--ink);
+  font-variation-settings:"opsz" 90,"WONK" 1}
+.alt__u{font-family:var(--mono); font-size:.7rem; letter-spacing:.12em; color:var(--ink-2); padding-bottom:.3rem}
+.gauge{display:none}
+.spec{list-style:none; margin:1rem 0 0; padding:0}
+.spec li{display:grid; grid-template-columns:auto 1fr auto; gap:.6rem; align-items:baseline;
+  padding-block:.42rem; border-top:var(--hair); font-size:.875rem}
+.spec .k{font-family:var(--mono); font-size:.5875rem; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--ink-2); padding-top:0}
+.coffee__notes{color:var(--ink-2); font-size:.9rem; margin:1rem 0 0}
+.blends{display:grid; gap:1.1rem; grid-template-columns:1fr; margin-top:1.1rem}
+@media (min-width:640px){ .blends{grid-template-columns:repeat(2,1fr)} }
+.blend{padding:1.3rem 1.15rem 1.4rem; display:grid; grid-template-columns:1fr auto;
+  gap:0 1rem; align-items:start; border-left:0}
+.blend__label{grid-column:2; grid-row:1/span 2; width:86px; align-self:center;
+  filter:drop-shadow(0 10px 18px rgba(10,20,14,.28)); box-shadow:none}
+.blend__from{font-size:.9rem; color:var(--ink-2); margin:.5rem 0 0}
+.blend__attrs li{font-family:var(--mono); font-size:.5875rem; letter-spacing:.12em;
+  text-transform:uppercase; border:1px solid color-mix(in srgb,var(--brass) 45%,transparent);
+  padding:.35rem .6rem; color:var(--ink-2)}
+
+/* ---- lists, timelines, cards ---- */
+.ticks li::before{background:var(--c,var(--bauxite))}
+.band .ticks li::before{background:var(--brass)}
+.wl__i{border-top:var(--hair)}
+.wl__i::before{color:var(--brass); font-family:var(--mono)}
+.tl__i::before{background:var(--bauxite); box-shadow:0 0 0 4px var(--paper)}
+.tl__y{font-family:var(--display); font-variation-settings:"opsz" 100,"WONK" 1; color:var(--bauxite)}
+.person{border-top:2px solid var(--brass)}
+.person__r{font-family:var(--mono); color:var(--brass)}
+.diff{border-left:3px solid var(--brass)}
+.place{border-top:2px solid var(--c,var(--bauxite))}
+.pill{border-color:rgba(242,245,240,.5); font-family:var(--mono)}
+.jump a,.pick{border:1px solid color-mix(in srgb,var(--brass) 45%,transparent);
+  font-family:var(--mono); text-decoration:none}
+.jump a:hover,.pick:hover{border-color:var(--bauxite); color:var(--bauxite)}
+.pick__g{font-family:var(--mono); color:var(--bauxite)}
+.brew{border-top:2px solid var(--bauxite)}
+.brew__spec dt{font-family:var(--mono); color:var(--ink-2)}
+.brew__steps li::marker{color:var(--bauxite)}
+.cut__pub{font-family:var(--mono); color:var(--bauxite)}
+.cite{border-top:var(--hair)}
+.cite__p{font-family:var(--mono); color:var(--bauxite)}
+.cite__q{font-family:var(--display); font-variation-settings:"opsz" 60}
+.note{border-left:3px solid var(--brass); background:var(--sunk); color:var(--ink-2)}
+.years b{font-family:var(--display); font-variation-settings:"opsz" 144,"WONK" 1}
+.years span{font-family:var(--mono); color:var(--bauxite)}
+.route{border-top:2px solid var(--bauxite)}
+.tourcard__body{background:linear-gradient(180deg,rgba(10,20,14,0),rgba(10,20,14,.92)); color:#F2F5F0}
+.rail::-webkit-scrollbar-thumb{background:var(--bauxite)}
+.step__n{font-family:var(--mono); color:var(--bauxite)}
+.step__t{font-family:var(--display); font-variation-settings:"opsz" 60}
+.gt thead th{color:var(--bauxite); border-bottom-color:var(--bauxite); font-family:var(--mono)}
+.gt th,.gt td{border-bottom:var(--hair)}
+.gt__feel{font-family:var(--mono); color:var(--ink-2)}
+.gt td::before{color:var(--bauxite)}
+.band .gt thead th{color:var(--brass); border-bottom-color:var(--brass)}
+.band .gt__feel{color:var(--onDark-2)}
+.band .gt td::before{color:var(--brass)}
+
+/* tap targets: every inline action clears 44px on touch */
+.cof__go{display:inline-flex; align-items:center; min-height:44px}
+.cof__price{padding-bottom:0}
+.jump a{min-height:46px}
+.pick{min-height:96px}
+.foot__l a{min-height:42px}
+
+
+/* ============================================================
+   TOKEN BRIDGE
+   site.css supplies the inner pages' layout (grid columns, spacing,
+   breakpoints) and is loaded first. Everything it paints, it paints
+   through these names — so re-pointing them carries any component
+   this file has not explicitly restyled onto the new palette and
+   type, instead of leaving it in the old teal-and-gold.
+   ============================================================ */
+:root{
+  --petrol:#16261C;      /* was the packaging teal */
+  --petrol-deep:#0E1A12;
+  --gold:#A98247;        /* demoted to hairlines and marginalia */
+  --gold-soft:#C09A62;
+  --sh:#8E3A21;          /* the accent is now bauxite */
+  --paper:#E4E7E2;
+  --surface:#EDEFEA;
+  --sunk:#D2D7D0;
+  --ink:#10170F;
+  --ink-soft:#4C574C;
+  --rule:color-mix(in srgb,#A98247 46%,transparent);
+  --onDark:#E4E7E2;
+  --onDarkSoft:#93A395;
+  --display:"Fraunces","Iowan Old Style",Georgia,serif;
+  --sans:"Archivo",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --max:74rem;
+  --gut:clamp(1.15rem,4vw,2.5rem);
+}
+body{background:var(--paper)}
+/* site.css sets a flat letter-spacing on the display face; the new scale is
+   size-specific and set above, so stop it being overridden */
+.d1,.d2,.d3{font-family:var(--display); font-weight:400}
+.jump a{display:inline-flex; align-items:center; min-height:46px; padding:0 1rem}
+.pick{display:flex; flex-direction:column; min-height:96px}

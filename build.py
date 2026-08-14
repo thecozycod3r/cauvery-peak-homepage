@@ -60,12 +60,12 @@ def header(active):
         f'      <a href="{href}"{" aria-current=\"page\"" if href == active else ""}>{label}</a>'
         for label, href in NAV)
     return f'''<a class="skip" href="#main">Skip to content</a>
-<header class="site">
-  <div class="site__in">
-    <a href="index.html" class="site__home" aria-label="Cauvery Peak, home">
-      <img class="site__logo" src="assets/logo_dark.webp" alt="Cauvery Peak" width="300" height="239" fetchpriority="high">
+<header class="top">
+  <div class="top__in">
+    <a href="index.html" class="top__home" aria-label="Cauvery Peak, home">
+      <img class="top__logo" src="assets/logo_dark.webp" alt="Cauvery Peak" width="300" height="239" fetchpriority="high">
     </a>
-    <nav class="site__nav" aria-label="Main">
+    <nav class="top__nav" aria-label="Main">
 {links}
     </nav>
     <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="sitemenu">
@@ -108,7 +108,7 @@ def drawer(active):
 
 def footer():
     cols = "\n".join(
-        '        <div>\n          <h2 class="foot__h">%s</h2>\n          <ul class="foot__list">\n%s\n          </ul>\n        </div>' % (
+        '        <div>\n          <h2 class="foot__h">%s</h2>\n          <ul class="foot__l">\n%s\n          </ul>\n        </div>' % (
             title, "\n".join(f'            <li><a href="{h}">{t}</a></li>' for t, h in items))
         for title, items in FOOT)
     places = "\n".join(
@@ -122,12 +122,12 @@ def footer():
         f'        <a href="{h}" aria-label="{n}" rel="me noopener" target="_blank">{SOCIAL_SVG[n]}</a>'
         for n, h in SOCIAL)
     return f'''<footer class="foot">
-  <div class="foot__in">
-    <div class="foot__top">
-      <div class="foot__brand">
+  <div class="sheet">
+    <div class="foot__grid">
+      <div>
         <img class="foot__logo" src="assets/logo_light.webp" alt="Cauvery Peak" width="300" height="239" loading="lazy">
-        <p class="foot__tag">Growing since 1867</p>
-        <p class="foot__blurb">A working coffee estate in the Shevaroy Hills, farmed by the same family for five generations.</p>
+        <p class="mark mark--d" style="margin-top:1rem">Growing since 1867</p>
+        <p class="body" style="color:var(--onDark-2); margin-top:.6rem; max-width:32ch">A working coffee estate in the Shevaroy Hills, farmed by the same family for five generations.</p>
       </div>
       <nav class="foot__cols" aria-label="Footer">
 {cols}
@@ -141,7 +141,8 @@ def footer():
       <div class="foot__social">
 {social}
       </div>
-      <p class="foot__co">MSP Plantations &middot; Yercaud, Tamil Nadu</p>
+      <span class="num">11&deg;46&prime;N 78&deg;12&prime;E &middot; 4,100&ndash;4,800 FT</span>
+      <span class="foot__credit">Roasting photograph: <a href="https://commons.wikimedia.org/wiki/File:Genio_dsc02968.jpg" rel="noopener">Wikimedia Commons</a>, CC BY-SA 4.0 &mdash; placeholder</span>
     </div>
   </div>
 </footer>'''
@@ -240,7 +241,7 @@ def document(slug, title, desc, og, body):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#00313B">
+<meta name="theme-color" content="#16261C">
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="robots" content="noindex, nofollow">
@@ -256,8 +257,10 @@ def document(slug, title, desc, og, body):
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="{desc[:110]}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="assets/lane.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/estate.css">
 {jsonld(slug, title, desc, og)}
 </head>
 <body>
