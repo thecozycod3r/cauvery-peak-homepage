@@ -20,11 +20,12 @@ NAV = [
     ("Visit",    "visit.html"),
     ("The estate", "estate.html"),
     ("Learn",    "brewing.html"),
+    ("Shop",     "shop.html"),
 ]
 
 FOOT = [
-    ("Coffee", [("Single estates","coffee.html"),("Blends","coffee.html#blends"),
-                ("Subscriptions","coffee.html"),("Spices &amp; honey","coffee.html")]),
+    ("Coffee", [("Single estates","shop.html"),("Blends","shop.html"),
+                ("Subscriptions","subscribe.html"),("Spices &amp; honey","shop.html")]),
     ("Visit",  [("Estate tour","visit.html"),("Estate caf&eacute;","cafes.html"),
                 ("Lake View Village","cafes.html"),("Glenfell kiosk","cafes.html")]),
     ("The estate", [("Grower to Connoisseur","estate.html"),("Our story","story.html"),
@@ -162,7 +163,7 @@ CART = '''<div class="cart" id="cart">
     <div class="cart__body" data-clines></div>
     <div class="cart__foot">
       <p class="cart__sum"><span>Total</span><b class="num" data-ctotal>&#8377;0</b></p>
-      <a class="btn btn--gold" data-ccheckout href="#">Checkout on the estate store</a>
+      <a class="btn btn--gold" data-ccheckout href="https://cauverypeakestate.com/collections/all">Checkout on the estate store</a>
       <p class="buy__note" style="margin:0">You will finish on cauverypeakestate.com, where the order is actually taken.</p>
     </div>
   </div>

@@ -756,3 +756,11 @@ body{background:var(--paper)}
   .cart__panel{transform:none; opacity:0}
   .cart.is-open .cart__panel{opacity:1}
 }
+
+/* whole-card links: the title carries the href, the overlay carries the hit area */
+.cof,.coffee.is-link,.blend.is-link{position:relative}
+.cof__hit{text-decoration:none}
+.cof__hit::after{content:""; position:absolute; inset:0}
+.coffee.is-link:hover,.blend.is-link:hover{box-shadow:0 12px 28px rgba(10,20,14,.10)}
+.coffee.is-link,.blend.is-link{transition:box-shadow 160ms ease-out}
+.cof__go{pointer-events:none}

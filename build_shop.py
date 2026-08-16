@@ -310,6 +310,10 @@ def main():
 
     made = 0
     for p in CAT:
+        # the subscription has a purpose-built page; a generic PDP would be a
+        # second, worse copy of it
+        if p["handle"] == "coffee":
+            continue
         frag = product_page(p)
         f = f"p-{p['handle']}.html"
         open(os.path.join(SRC, f), "w").write(frag)
