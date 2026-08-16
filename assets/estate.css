@@ -880,3 +880,6 @@ body{background:var(--paper)}
 .crumb a:hover{text-decoration:underline; text-underline-offset:3px}
 .crumb span[aria-hidden]{color:color-mix(in srgb,var(--ink-2) 60%,transparent)}
 .crumb [aria-current]{color:var(--ink-2)}
+
+/* the unit rides tight against the figure ("4,100–4,800FT"); give it air */
+.ledger__v sup{margin-left:.28em}
