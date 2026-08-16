@@ -82,5 +82,124 @@
   "title": "Contact — Cauvery Peak",
   "desc": "Come and visit the estate, book a tour, or talk to us about wholesale. MSP Plantations, Yercaud, Tamil Nadu.",
   "og": "og-contact.jpg"
+ },
+ {
+  "file": "shop.html",
+  "slug": "shop.html",
+  "title": "Shop — Cauvery Peak",
+  "og": "og-coffee.jpg",
+  "desc": "Estate coffee, spices and honey from a 150-year-old plantation in the Shevaroy Hills, Yercaud. Roasted to order."
+ },
+ {
+  "file": "subscribe.html",
+  "slug": "subscribe.html",
+  "title": "Coffee subscription — Cauvery Peak",
+  "og": "og-coffee.jpg",
+  "desc": "Six, twelve or twenty-four months of single-estate coffee, roasted to order before each despatch."
+ },
+ {
+  "file": "p-coffee-scrub.html",
+  "slug": "p-coffee-scrub.html",
+  "og": "og-coffee.jpg",
+  "title": "Coffee Scrub — Cauvery Peak",
+  "desc": "Experience the goodness of our Cauvery Peak coffees in a rejuvenating scrub. Finely ground coffee gently exfoliates to remove dead skin cells and stim"
+ },
+ {
+  "file": "p-coffee-experience-tours-11.html",
+  "slug": "p-coffee-experience-tours-11.html",
+  "og": "og-coffee.jpg",
+  "title": "Coffee Experience Tour — Cauvery Peak",
+  "desc": "Experience coffee at its source at the Cauvery Peak Coffee Estate Tour. On this 75-minute guided journey through a 150-year-old plantation, you’ll exp"
+ },
+ {
+  "file": "p-cauvery-peak-green-beans.html",
+  "slug": "p-cauvery-peak-green-beans.html",
+  "og": "og-coffee.jpg",
+  "title": "Cauvery Peak Green Beans — Cauvery Peak",
+  "desc": "This immaculately manicured plantation, at 1400mts/ 4600ft, is unique in India for the Hawaiian Red Catturra (HRC) strain of Arabica coffee which help"
+ },
+ {
+  "file": "p-coffee.html",
+  "slug": "p-coffee.html",
+  "og": "og-coffee.jpg",
+  "title": "Coffee Subscription — Cauvery Peak",
+  "desc": "Coffee connoisseurs can subscribe to our coffee subscription service with purchase of 6, 12 or 24 month package deliveries. Further, you can select we"
+ },
+ {
+  "file": "p-blend-sampler-pack-23.html",
+  "slug": "p-blend-sampler-pack-23.html",
+  "og": "og-coffee.jpg",
+  "title": "2 Blends Sampler Pack — Cauvery Peak",
+  "desc": "Specially curated blend by the Masters at Cauvery Peak to give a distinct aroma, thick body and bitterness, truly representing the best of South India"
+ },
+ {
+  "file": "p-indian-filter-blend-5.html",
+  "slug": "p-indian-filter-blend-5.html",
+  "og": "og-coffee.jpg",
+  "title": "Indian Filter Blend — Cauvery Peak",
+  "desc": "Specially curated blend by the Masters at Cauvery Peak to give a distinct aroma, thick body, and bitterness, truly representing the best of South Indi"
+ },
+ {
+  "file": "p-espresso-blend-5.html",
+  "slug": "p-espresso-blend-5.html",
+  "og": "og-coffee.jpg",
+  "title": "Espresso Blend — Cauvery Peak",
+  "desc": "A delicately curated blend by the Masters at Cauvery Peak to give sweet acidity, rich creamy body for a fine Espresso Coffee. MSP Plantations is a fam"
+ },
+ {
+  "file": "p-pepper.html",
+  "slug": "p-pepper.html",
+  "og": "og-coffee.jpg",
+  "title": "Pepper — Cauvery Peak",
+  "desc": "MSP Plantations is a family owned, professionally managed company. 5 generations of coffee and spices knowledge, goes into systematically improving cu"
+ },
+ {
+  "file": "p-coffee-powder-she.html",
+  "slug": "p-coffee-powder-she.html",
+  "og": "og-coffee.jpg",
+  "title": "Shevaroys — Cauvery Peak",
+  "desc": "Shevaroys Single Estate Reserve coffee comes to you from the high altitude estate of the Shevaroys. The rich bauxite soil lends to the unique flavour "
+ },
+ {
+  "file": "p-nutmeg-mace.html",
+  "slug": "p-nutmeg-mace.html",
+  "og": "og-coffee.jpg",
+  "title": "Nutmeg & Mace — Cauvery Peak",
+  "desc": "Nutmeg is a popular spice having a long list of health benefits, including its ability to relieve pain, soothe indigestion, and improve cognitive func"
+ },
+ {
+  "file": "p-clove.html",
+  "slug": "p-clove.html",
+  "og": "og-coffee.jpg",
+  "title": "Cloves — Cauvery Peak",
+  "desc": "MSP Plantations is a family owned, professionally managed company. 5 generations of coffee and spices knowledge, goes into systematically improving cu"
+ },
+ {
+  "file": "p-honey.html",
+  "slug": "p-honey.html",
+  "og": "og-coffee.jpg",
+  "title": "Honey — Cauvery Peak",
+  "desc": "MSP Plantations is a family owned, professionally managed company. 5 generations of coffee and spices knowledge, goes into systematically improving cu"
+ },
+ {
+  "file": "p-glenfell-4.html",
+  "slug": "p-glenfell-4.html",
+  "og": "og-coffee.jpg",
+  "title": "Glenfell — Cauvery Peak",
+  "desc": "Glenfell is planted with both Arabica and Robusta varieties and inter-planted with cloves, nutmeg and pepper vines. Heavy shade provided by a mixed ca"
+ },
+ {
+  "file": "p-sample-pack.html",
+  "slug": "p-sample-pack.html",
+  "og": "og-coffee.jpg",
+  "title": "3 Single Estates Sampler Pack — Cauvery Peak",
+  "desc": "Shevaroys - Elevation - 1450m, Hawaiian Red Caturra varietal, Fine Aroma, Medium Body, Crisp Acidity Flavour profile - Distinct citrus after taste Cau"
+ },
+ {
+  "file": "p-coffee-powder-cp.html",
+  "slug": "p-coffee-powder-cp.html",
+  "og": "og-coffee.jpg",
+  "title": "Cauvery Peak — Cauvery Peak",
+  "desc": "Kenneth Davids - Coffee expert, author and co founder of Coffee Review rated Cauvery Peak coffee among the top 3 Indian Arabica coffees. This immacula"
  }
 ]

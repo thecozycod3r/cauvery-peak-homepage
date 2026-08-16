@@ -1,0 +1,2613 @@
+[
+ {
+  "handle": "coffee-scrub",
+  "title": "Coffee Scrub",
+  "type": "",
+  "tags": [],
+  "options": [
+   {
+    "name": "Type",
+    "values": [
+     "Orange Coffee Scrub",
+     "Eucalyptus Coffee Scrub",
+     "Pine Coffee Scrub"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 52214995943740,
+    "t": "Orange Coffee Scrub",
+    "p": 325.0,
+    "o1": "Orange Coffee Scrub",
+    "o2": null,
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 52214995976508,
+    "t": "Eucalyptus Coffee Scrub",
+    "p": 325.0,
+    "o1": "Eucalyptus Coffee Scrub",
+    "o2": null,
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 52214996009276,
+    "t": "Pine Coffee Scrub",
+    "p": 325.0,
+    "o1": "Pine Coffee Scrub",
+    "o2": null,
+    "o3": null,
+    "av": true
+   }
+  ],
+  "images": [
+   "Cauvery_Peak_All_A_Content-43.png",
+   "Cauvery_Peak_All_A_Content-44.png",
+   "coffeescrub.jpg",
+   "IMG_9374_jpg_Original.jpg"
+  ],
+  "body": "Experience the goodness of our Cauvery Peak coffees in a rejuvenating scrub. Finely ground coffee gently exfoliates to remove dead skin cells and stimulate circulation, while nourishing oils soften and hydrate. The result is skin that feels smoother, brighter, and naturally refreshed. Infused with pure essential oils, each variant — Orange, Eucalyptus, and Pine — brings its own unique touch of vitality, crafted to awaken both skin and senses. From our estate to your self-care ritual, it’s nature’s care. A natural skin exfoliator, softener and toner. Orange Coffee Scrub: Bright, zesty notes of orange uplift the senses while coffee grains polish the skin, leaving it soft, energized, and radiant. Eucalyptus Coffee Scrub: Cool eucalyptus clears and refreshes, blending with coffee to gently cleanse and revive tired skin. Pine Coffee Scrub: Crisp pine essence grounds and restores, paired with coffee for a smooth, nourished, and refreshed feel. How to Use 1. Take a small amount of scrub in your palm. 2. Apply to damp skin and massage gently in circular motions. 3. Focus on rough areas like elbows, knees, feet and nose. 4. Rinse off thoroughly with warm water. 5. Pat dry and follow with your favorite moisturizer."
+ },
+ {
+  "handle": "coffee-experience-tours-11",
+  "title": "COFFEE EXPERIENCE TOUR",
+  "type": "Tour",
+  "tags": [
+   "tour"
+  ],
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 51694080426300,
+    "t": "Default Title",
+    "p": 600.0,
+    "o1": "Default Title",
+    "o2": null,
+    "o3": null,
+    "av": true
+   }
+  ],
+  "images": [
+   "Cauvery_Peak_Coffee_Experience_Tour_Brochure-02.png",
+   "Cauvery_Peak_Coffee_Experience_Tour_Brochure-05_5f4c8e11-aae6-4f98-9bf6-1e28906b41f3.png",
+   "a83e305b-bf48-4e62-ab77-702501045046_Original.jpg",
+   "IMG-20210830-WA0061.jpg",
+   "e8827906-1527-4527-9012-aa83457c3004_Original_e70b0e71-0955-415c-8fae-b0fa841a6c62.jpg",
+   "IMG-20210830-WA0064.jpg",
+   "IMG_7952.jpg",
+   "IMG-20210830-WA0062.jpg"
+  ],
+  "body": "Experience coffee at its source at the Cauvery Peak Coffee Estate Tour. On this 75-minute guided journey through a 150-year-old plantation, you’ll explore scenic peaks, valleys and lakes while tracing the bean-to-cup story. Travel in your own vehicle on all-weather roads as a coffee guide shares the estate’s history and craft. Stop at key points like the Wet Mill, Dry Mill, Roasting & Grinding unit, Estate Museum, and Café, where the journey ends with the aroma of fresh coffee. Perfect for families, nature lovers, and coffee enthusiasts alike, this tour blends breathtaking landscapes with the fascinating world of coffee making."
+ },
+ {
+  "handle": "cauvery-peak-green-beans",
+  "title": "CAUVERY PEAK GREEN BEANS",
+  "type": "Coffee",
+  "tags": [
+   "coffee",
+   "home"
+  ],
+  "options": [
+   {
+    "name": "Select Weight",
+    "values": [
+     "250 gm (serves approximately 30 cups)"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 51975703101756,
+    "t": "250 gm (serves approximately 30 cups)",
+    "p": 250.0,
+    "o1": "250 gm (serves approximately 30 cups)",
+    "o2": null,
+    "o3": null,
+    "av": true
+   }
+  ],
+  "images": [
+   "CauveryPeak_A_Content_GreenCoffeeBeans1.png",
+   "CauveryPeak_A_Content_GreenCoffeeBeans2.png"
+  ],
+  "body": "This immaculately manicured plantation, at 1400mts/ 4600ft, is unique in India for the Hawaiian Red Catturra (HRC) strain of Arabica coffee which helps produce a truly well balanced cup of coffee. MSP Plantations is a family owned, professionally managed company. 5 generations of coffee knowledge, goes into systematically improving cultural practices, introducing modern agricultural techniques, upgrading infrastructure and optimising production on a continuous basis. This endeavour is to bring our high-quality produce directly to you THE CONNOISSEUR.The single estate coffee beans are planted, picked, processed, packed and despatched from the estate and delivered directly to your doorstep in order to ensure freshness, consistency, traceability and quality."
+ },
+ {
+  "handle": "coffee",
+  "title": "COFFEE SUBSCRIPTION",
+  "type": "subscribe",
+  "tags": [
+   "coffee",
+   "subscribe"
+  ],
+  "options": [
+   {
+    "name": "Frequencies",
+    "values": [
+     "24 Months",
+     "12 Months",
+     "6 Months"
+    ]
+   },
+   {
+    "name": "Select Coffee",
+    "values": [
+     "Mixed Bag",
+     "Indian Filter Blend",
+     "Espresso Blend",
+     "Glenfell Classic",
+     "Cauvery Peak Estate Heritage",
+     "Shevaroys Estate Reserve"
+    ]
+   },
+   {
+    "name": "Pack Weight",
+    "values": [
+     "1 kg",
+     "500 gm",
+     "250 gm"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 51694082064700,
+    "t": "24 Months / Mixed Bag / 1 kg",
+    "p": 40800.0,
+    "o1": "24 Months",
+    "o2": "Mixed Bag",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694082097468,
+    "t": "12 Months / Mixed Bag / 1 kg",
+    "p": 20880.0,
+    "o1": "12 Months",
+    "o2": "Mixed Bag",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694082130236,
+    "t": "6 Months / Mixed Bag / 1 kg",
+    "p": 10800.0,
+    "o1": "6 Months",
+    "o2": "Mixed Bag",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694082163004,
+    "t": "24 Months / Mixed Bag / 500 gm",
+    "p": 22440.0,
+    "o1": "24 Months",
+    "o2": "Mixed Bag",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694082195772,
+    "t": "12 Months / Mixed Bag / 500 gm",
+    "p": 11484.0,
+    "o1": "12 Months",
+    "o2": "Mixed Bag",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694082228540,
+    "t": "6 Months / Mixed Bag / 500 gm",
+    "p": 5940.0,
+    "o1": "6 Months",
+    "o2": "Mixed Bag",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694082261308,
+    "t": "24 Months / Mixed Bag / 250 gm",
+    "p": 12240.0,
+    "o1": "24 Months",
+    "o2": "Mixed Bag",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694082294076,
+    "t": "12 Months / Mixed Bag / 250 gm",
+    "p": 6264.0,
+    "o1": "12 Months",
+    "o2": "Mixed Bag",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694082326844,
+    "t": "6 Months / Mixed Bag / 250 gm",
+    "p": 3240.0,
+    "o1": "6 Months",
+    "o2": "Mixed Bag",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694082359612,
+    "t": "24 Months / Indian Filter Blend / 1 kg",
+    "p": 40596.0,
+    "o1": "24 Months",
+    "o2": "Indian Filter Blend",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694082392380,
+    "t": "12 Months / Indian Filter Blend / 1 kg",
+    "p": 20776.0,
+    "o1": "12 Months",
+    "o2": "Indian Filter Blend",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694082425148,
+    "t": "6 Months / Indian Filter Blend / 1 kg",
+    "p": 10746.0,
+    "o1": "6 Months",
+    "o2": "Indian Filter Blend",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694082457916,
+    "t": "24 Months / Indian Filter Blend / 500 gm",
+    "p": 22236.0,
+    "o1": "24 Months",
+    "o2": "Indian Filter Blend",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694082490684,
+    "t": "12 Months / Indian Filter Blend / 500 gm",
+    "p": 11380.0,
+    "o1": "12 Months",
+    "o2": "Indian Filter Blend",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694082523452,
+    "t": "6 Months / Indian Filter Blend / 500 gm",
+    "p": 5886.0,
+    "o1": "6 Months",
+    "o2": "Indian Filter Blend",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694082556220,
+    "t": "24 Months / Indian Filter Blend / 250 gm",
+    "p": 12036.0,
+    "o1": "24 Months",
+    "o2": "Indian Filter Blend",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694082588988,
+    "t": "12 Months / Indian Filter Blend / 250 gm",
+    "p": 6150.0,
+    "o1": "12 Months",
+    "o2": "Indian Filter Blend",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694082621756,
+    "t": "6 Months / Indian Filter Blend / 250 gm",
+    "p": 3186.0,
+    "o1": "6 Months",
+    "o2": "Indian Filter Blend",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694082654524,
+    "t": "24 Months / Espresso Blend / 1 kg",
+    "p": 40596.0,
+    "o1": "24 Months",
+    "o2": "Espresso Blend",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694082687292,
+    "t": "12 Months / Espresso Blend / 1 kg",
+    "p": 20776.0,
+    "o1": "12 Months",
+    "o2": "Espresso Blend",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694082720060,
+    "t": "6 Months / Espresso Blend / 1 kg",
+    "p": 10746.0,
+    "o1": "6 Months",
+    "o2": "Espresso Blend",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694082752828,
+    "t": "24 Months / Espresso Blend / 500 gm",
+    "p": 22236.0,
+    "o1": "24 Months",
+    "o2": "Espresso Blend",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694082785596,
+    "t": "12 Months / Espresso Blend / 500 gm",
+    "p": 11380.0,
+    "o1": "12 Months",
+    "o2": "Espresso Blend",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694082818364,
+    "t": "6 Months / Espresso Blend / 500 gm",
+    "p": 5886.0,
+    "o1": "6 Months",
+    "o2": "Espresso Blend",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694082851132,
+    "t": "24 Months / Espresso Blend / 250 gm",
+    "p": 12036.0,
+    "o1": "24 Months",
+    "o2": "Espresso Blend",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694082883900,
+    "t": "12 Months / Espresso Blend / 250 gm",
+    "p": 6160.0,
+    "o1": "12 Months",
+    "o2": "Espresso Blend",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694082916668,
+    "t": "6 Months / Espresso Blend / 250 gm",
+    "p": 3186.0,
+    "o1": "6 Months",
+    "o2": "Espresso Blend",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694082949436,
+    "t": "24 Months / Glenfell Classic / 1 kg",
+    "p": 40392.0,
+    "o1": "24 Months",
+    "o2": "Glenfell Classic",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694082982204,
+    "t": "12 Months / Glenfell Classic / 1 kg",
+    "p": 20671.0,
+    "o1": "12 Months",
+    "o2": "Glenfell Classic",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694083014972,
+    "t": "6 Months / Glenfell Classic / 1 kg",
+    "p": 10692.0,
+    "o1": "6 Months",
+    "o2": "Glenfell Classic",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694083047740,
+    "t": "24 Months / Glenfell Classic / 500 gm",
+    "p": 22032.0,
+    "o1": "24 Months",
+    "o2": "Glenfell Classic",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694083080508,
+    "t": "12 Months / Glenfell Classic / 500 gm",
+    "p": 11275.0,
+    "o1": "12 Months",
+    "o2": "Glenfell Classic",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694083113276,
+    "t": "6 Months / Glenfell Classic / 500 gm",
+    "p": 5832.0,
+    "o1": "6 Months",
+    "o2": "Glenfell Classic",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694083146044,
+    "t": "24 Months / Glenfell Classic / 250 gm",
+    "p": 11832.0,
+    "o1": "24 Months",
+    "o2": "Glenfell Classic",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694083178812,
+    "t": "12 Months / Glenfell Classic / 250 gm",
+    "p": 6055.0,
+    "o1": "12 Months",
+    "o2": "Glenfell Classic",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694083211580,
+    "t": "6 Months / Glenfell Classic / 250 gm",
+    "p": 3132.0,
+    "o1": "6 Months",
+    "o2": "Glenfell Classic",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694083244348,
+    "t": "24 Months / Cauvery Peak Estate Heritage / 1 kg",
+    "p": 40800.0,
+    "o1": "24 Months",
+    "o2": "Cauvery Peak Estate Heritage",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694083277116,
+    "t": "12 Months / Cauvery Peak Estate Heritage / 1 kg",
+    "p": 20880.0,
+    "o1": "12 Months",
+    "o2": "Cauvery Peak Estate Heritage",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694083309884,
+    "t": "6 Months / Cauvery Peak Estate Heritage / 1 kg",
+    "p": 10800.0,
+    "o1": "6 Months",
+    "o2": "Cauvery Peak Estate Heritage",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694083342652,
+    "t": "24 Months / Cauvery Peak Estate Heritage / 500 gm",
+    "p": 22440.0,
+    "o1": "24 Months",
+    "o2": "Cauvery Peak Estate Heritage",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694083375420,
+    "t": "12 Months / Cauvery Peak Estate Heritage / 500 gm",
+    "p": 11484.0,
+    "o1": "12 Months",
+    "o2": "Cauvery Peak Estate Heritage",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694083408188,
+    "t": "6 Months / Cauvery Peak Estate Heritage / 500 gm",
+    "p": 5940.0,
+    "o1": "6 Months",
+    "o2": "Cauvery Peak Estate Heritage",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694083440956,
+    "t": "24 Months / Cauvery Peak Estate Heritage / 250 gm",
+    "p": 12240.0,
+    "o1": "24 Months",
+    "o2": "Cauvery Peak Estate Heritage",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694083473724,
+    "t": "12 Months / Cauvery Peak Estate Heritage / 250 gm",
+    "p": 6264.0,
+    "o1": "12 Months",
+    "o2": "Cauvery Peak Estate Heritage",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694083506492,
+    "t": "6 Months / Cauvery Peak Estate Heritage / 250 gm",
+    "p": 3240.0,
+    "o1": "6 Months",
+    "o2": "Cauvery Peak Estate Heritage",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694083539260,
+    "t": "24 Months / Shevaroys Estate Reserve / 1 kg",
+    "p": 41208.0,
+    "o1": "24 Months",
+    "o2": "Shevaroys Estate Reserve",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694083572028,
+    "t": "12 Months / Shevaroys Estate Reserve / 1 kg",
+    "p": 21089.0,
+    "o1": "12 Months",
+    "o2": "Shevaroys Estate Reserve",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694083604796,
+    "t": "6 Months / Shevaroys Estate Reserve / 1 kg",
+    "p": 10908.0,
+    "o1": "6 Months",
+    "o2": "Shevaroys Estate Reserve",
+    "o3": "1 kg",
+    "av": true
+   },
+   {
+    "id": 51694083637564,
+    "t": "24 Months / Shevaroys Estate Reserve / 500 gm",
+    "p": 22848.0,
+    "o1": "24 Months",
+    "o2": "Shevaroys Estate Reserve",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694083670332,
+    "t": "12 Months / Shevaroys Estate Reserve / 500 gm",
+    "p": 11693.0,
+    "o1": "12 Months",
+    "o2": "Shevaroys Estate Reserve",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694083703100,
+    "t": "6 Months / Shevaroys Estate Reserve / 500 gm",
+    "p": 6048.0,
+    "o1": "6 Months",
+    "o2": "Shevaroys Estate Reserve",
+    "o3": "500 gm",
+    "av": true
+   },
+   {
+    "id": 51694083735868,
+    "t": "24 Months / Shevaroys Estate Reserve / 250 gm",
+    "p": 12648.0,
+    "o1": "24 Months",
+    "o2": "Shevaroys Estate Reserve",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694083768636,
+    "t": "12 Months / Shevaroys Estate Reserve / 250 gm",
+    "p": 6473.0,
+    "o1": "12 Months",
+    "o2": "Shevaroys Estate Reserve",
+    "o3": "250 gm",
+    "av": true
+   },
+   {
+    "id": 51694083801404,
+    "t": "6 Months / Shevaroys Estate Reserve / 250 gm",
+    "p": 3348.0,
+    "o1": "6 Months",
+    "o2": "Shevaroys Estate Reserve",
+    "o3": "250 gm",
+    "av": true
+   }
+  ],
+  "images": [
+   "Coffee_subscription_2_-47_Large_317d321d-a0f9-4b74-a054-d2813046f96e.jpg",
+   "Coffee_subscription_2_-48_Large_a45626a8-9078-4624-983b-a33c8f2879af.jpg",
+   "Cauvery_Peak_A_Content_Cauvery_Peak_1.png",
+   "Cauvery_Peak_A_Content_Cauvery_Peak_2.png",
+   "Cauvery_Peak_A_Content_Espresso_Blend_1.png",
+   "Cauvery_Peak_A_Content_Espresso_Blend_2.png",
+   "Cauvery_Peak_A_Content_Glenfell_1.png",
+   "Cauvery_Peak_A_Content_Glenfell_2.png",
+   "Cauvery_Peak_A_Content_Indian_Filter_1.png",
+   "Cauvery_Peak_A_Content_Indian_Filter_2.png",
+   "Cauvery_Peak_A_Content_Shevaroys_1.png",
+   "Cauvery_Peak_A_Content_Shevaroys_2.png"
+  ],
+  "body": "Coffee connoisseurs can subscribe to our coffee subscription service with purchase of 6, 12 or 24 month package deliveries. Further, you can select weight options of 250g, 500g and 1kg. For customized frequency, we will contact you and deliver as per your convenience. For connoisseurs who would like to get a different coffee every delivery, you can choose the mixed bag option. Subscription deliveries can save you up to 15% compared to buying the packets individually."
+ },
+ {
+  "handle": "blend-sampler-pack-23",
+  "title": "2 BLENDS SAMPLER PACK",
+  "type": "Cauvery Peak Bundles",
+  "tags": [
+   "cauvery-peak-bundles",
+   "coffee"
+  ],
+  "options": [
+   {
+    "name": "Select Weight",
+    "values": [
+     "250GM x 2Packs",
+     "100GM x 2Packs"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 51694081409340,
+    "t": "250GM x 2Packs",
+    "p": 1110.0,
+    "o1": "250GM x 2Packs",
+    "o2": null,
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51694081442108,
+    "t": "100GM x 2Packs",
+    "p": 530.0,
+    "o1": "100GM x 2Packs",
+    "o2": null,
+    "o3": null,
+    "av": true
+   }
+  ],
+  "images": [
+   "CauveryPeak_A_SamplerPack_TwoBlends1.png",
+   "Cauvery_Peak_A_Sampler_Pack_Two_Blends_2.png"
+  ],
+  "body": "Specially curated blend by the Masters at Cauvery Peak to give a distinct aroma, thick body and bitterness, truly representing the best of South Indian Filter Coffee. A delicately curated blend by the Masters at Cauvery Peak to give sweet acidity, rich creamy body for a fine Espresso Coffee."
+ },
+ {
+  "handle": "indian-filter-blend-5",
+  "title": "Indian Filter Blend",
+  "type": "Coffee",
+  "tags": [
+   "coffee"
+  ],
+  "options": [
+   {
+    "name": "Select Grind",
+    "values": [
+     "Whole Beans",
+     "Pour Over",
+     "Indian Filter",
+     "French Press",
+     "Turkish",
+     "Aeropress",
+     "Moka Pot",
+     "Inverted Aeropress",
+     "Cold Brew",
+     "Coffee Filter",
+     "Espresso"
+    ]
+   },
+   {
+    "name": "Select weight",
+    "values": [
+     "1 Kg ( Serves approximately 125 cups )",
+     "500 gm ( Serves approximately 62 cups )",
+     "250 gm ( Serves approximately 30 cups )"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 51694080622908,
+    "t": "Whole Beans / 1 Kg ( Serves approximately 125 cups )",
+    "p": 1990.0,
+    "o1": "Whole Beans",
+    "o2": "1 Kg ( Serves approximately 125 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51694080655676,
+    "t": "Whole Beans / 500 gm ( Serves approximately 62 cups )",
+    "p": 1090.0,
+    "o1": "Whole Beans",
+    "o2": "500 gm ( Serves approximately 62 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51694080688444,
+    "t": "Whole Beans / 250 gm ( Serves approximately 30 cups )",
+    "p": 590.0,
+    "o1": "Whole Beans",
+    "o2": "250 gm ( Serves approximately 30 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903411552572,
+    "t": "Pour Over / 1 Kg ( Serves approximately 125 cups )",
+    "p": 1990.0,
+    "o1": "Pour Over",
+    "o2": "1 Kg ( Serves approximately 125 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903411585340,
+    "t": "Pour Over / 500 gm ( Serves approximately 62 cups )",
+    "p": 1090.0,
+    "o1": "Pour Over",
+    "o2": "500 gm ( Serves approximately 62 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903411618108,
+    "t": "Pour Over / 250 gm ( Serves approximately 30 cups )",
+    "p": 590.0,
+    "o1": "Pour Over",
+    "o2": "250 gm ( Serves approximately 30 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903411650876,
+    "t": "Indian Filter / 1 Kg ( Serves approximately 125 cups )",
+    "p": 1990.0,
+    "o1": "Indian Filter",
+    "o2": "1 Kg ( Serves approximately 125 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903411683644,
+    "t": "Indian Filter / 500 gm ( Serves approximately 62 cups )",
+    "p": 1090.0,
+    "o1": "Indian Filter",
+    "o2": "500 gm ( Serves approximately 62 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903411716412,
+    "t": "Indian Filter / 250 gm ( Serves approximately 30 cups )",
+    "p": 590.0,
+    "o1": "Indian Filter",
+    "o2": "250 gm ( Serves approximately 30 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903411749180,
+    "t": "French Press / 1 Kg ( Serves approximately 125 cups )",
+    "p": 1990.0,
+    "o1": "French Press",
+    "o2": "1 Kg ( Serves approximately 125 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903411781948,
+    "t": "French Press / 500 gm ( Serves approximately 62 cups )",
+    "p": 1090.0,
+    "o1": "French Press",
+    "o2": "500 gm ( Serves approximately 62 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903411814716,
+    "t": "French Press / 250 gm ( Serves approximately 30 cups )",
+    "p": 590.0,
+    "o1": "French Press",
+    "o2": "250 gm ( Serves approximately 30 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903411847484,
+    "t": "Turkish / 1 Kg ( Serves approximately 125 cups )",
+    "p": 1990.0,
+    "o1": "Turkish",
+    "o2": "1 Kg ( Serves approximately 125 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903411880252,
+    "t": "Turkish / 500 gm ( Serves approximately 62 cups )",
+    "p": 1090.0,
+    "o1": "Turkish",
+    "o2": "500 gm ( Serves approximately 62 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903411913020,
+    "t": "Turkish / 250 gm ( Serves approximately 30 cups )",
+    "p": 590.0,
+    "o1": "Turkish",
+    "o2": "250 gm ( Serves approximately 30 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903411945788,
+    "t": "Aeropress / 1 Kg ( Serves approximately 125 cups )",
+    "p": 1990.0,
+    "o1": "Aeropress",
+    "o2": "1 Kg ( Serves approximately 125 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903411978556,
+    "t": "Aeropress / 500 gm ( Serves approximately 62 cups )",
+    "p": 1090.0,
+    "o1": "Aeropress",
+    "o2": "500 gm ( Serves approximately 62 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412011324,
+    "t": "Aeropress / 250 gm ( Serves approximately 30 cups )",
+    "p": 590.0,
+    "o1": "Aeropress",
+    "o2": "250 gm ( Serves approximately 30 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412044092,
+    "t": "Moka Pot / 1 Kg ( Serves approximately 125 cups )",
+    "p": 1990.0,
+    "o1": "Moka Pot",
+    "o2": "1 Kg ( Serves approximately 125 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412076860,
+    "t": "Moka Pot / 500 gm ( Serves approximately 62 cups )",
+    "p": 1090.0,
+    "o1": "Moka Pot",
+    "o2": "500 gm ( Serves approximately 62 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412109628,
+    "t": "Moka Pot / 250 gm ( Serves approximately 30 cups )",
+    "p": 590.0,
+    "o1": "Moka Pot",
+    "o2": "250 gm ( Serves approximately 30 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412142396,
+    "t": "Inverted Aeropress / 1 Kg ( Serves approximately 125 cups )",
+    "p": 1990.0,
+    "o1": "Inverted Aeropress",
+    "o2": "1 Kg ( Serves approximately 125 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412175164,
+    "t": "Inverted Aeropress / 500 gm ( Serves approximately 62 cups )",
+    "p": 1090.0,
+    "o1": "Inverted Aeropress",
+    "o2": "500 gm ( Serves approximately 62 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412207932,
+    "t": "Inverted Aeropress / 250 gm ( Serves approximately 30 cups )",
+    "p": 590.0,
+    "o1": "Inverted Aeropress",
+    "o2": "250 gm ( Serves approximately 30 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412240700,
+    "t": "Cold Brew / 1 Kg ( Serves approximately 125 cups )",
+    "p": 1990.0,
+    "o1": "Cold Brew",
+    "o2": "1 Kg ( Serves approximately 125 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412273468,
+    "t": "Cold Brew / 500 gm ( Serves approximately 62 cups )",
+    "p": 1090.0,
+    "o1": "Cold Brew",
+    "o2": "500 gm ( Serves approximately 62 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412306236,
+    "t": "Cold Brew / 250 gm ( Serves approximately 30 cups )",
+    "p": 590.0,
+    "o1": "Cold Brew",
+    "o2": "250 gm ( Serves approximately 30 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412339004,
+    "t": "Coffee Filter / 1 Kg ( Serves approximately 125 cups )",
+    "p": 1990.0,
+    "o1": "Coffee Filter",
+    "o2": "1 Kg ( Serves approximately 125 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412371772,
+    "t": "Coffee Filter / 500 gm ( Serves approximately 62 cups )",
+    "p": 1090.0,
+    "o1": "Coffee Filter",
+    "o2": "500 gm ( Serves approximately 62 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412404540,
+    "t": "Coffee Filter / 250 gm ( Serves approximately 30 cups )",
+    "p": 590.0,
+    "o1": "Coffee Filter",
+    "o2": "250 gm ( Serves approximately 30 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412437308,
+    "t": "Espresso / 1 Kg ( Serves approximately 125 cups )",
+    "p": 1990.0,
+    "o1": "Espresso",
+    "o2": "1 Kg ( Serves approximately 125 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412470076,
+    "t": "Espresso / 500 gm ( Serves approximately 62 cups )",
+    "p": 1090.0,
+    "o1": "Espresso",
+    "o2": "500 gm ( Serves approximately 62 cups )",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903412502844,
+    "t": "Espresso / 250 gm ( Serves approximately 30 cups )",
+    "p": 590.0,
+    "o1": "Espresso",
+    "o2": "250 gm ( Serves approximately 30 cups )",
+    "o3": null,
+    "av": true
+   }
+  ],
+  "images": [
+   "CauveryPeak_A_Content_IndianFilter1.png",
+   "Cauvery_Peak_A_Content_Indian_Filter_2_139378dc-b92d-49dd-99c7-c0a88e9debdd.png"
+  ],
+  "body": "Specially curated blend by the Masters at Cauvery Peak to give a distinct aroma, thick body, and bitterness, truly representing the best of South Indian Filter Coffee. MSP Plantations is a family-owned, professionally managed company. 5 generations of coffee knowledge, goes into systematically improving cultural practices, introducing modern agricultural techniques, upgrading infrastructure and optimizing production on a continuous basis. This Endeavour is to bring our high-quality produce directly to you THE CONNOISSEUR. The single estate coffee beans are planted, picked, processed, roasted, packed and despatched from the estate and delivered directly to your doorstep in order to ensure freshness, consistency, traceability, and quality."
+ },
+ {
+  "handle": "espresso-blend-5",
+  "title": "Espresso Blend",
+  "type": "Coffee",
+  "tags": [
+   "coffee"
+  ],
+  "options": [
+   {
+    "name": "Select Grind",
+    "values": [
+     "Whole Beans",
+     "Pour Over",
+     "Indian Filter",
+     "French Press",
+     "Turkish",
+     "Aeropress",
+     "Moka Pot",
+     "Inverted Aeropress",
+     "Cold Brew",
+     "Coffee Filter",
+     "Espresso"
+    ]
+   },
+   {
+    "name": "Select weight",
+    "values": [
+     "1 kg (serves approximately 125 cups)",
+     "500 gm (serves approximately 62 cups)",
+     "250 gm (serves approximately 30 cups)"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 51694080491836,
+    "t": "Whole Beans / 1 kg (serves approximately 125 cups)",
+    "p": 1990.0,
+    "o1": "Whole Beans",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51694080524604,
+    "t": "Whole Beans / 500 gm (serves approximately 62 cups)",
+    "p": 1090.0,
+    "o1": "Whole Beans",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51694080557372,
+    "t": "Whole Beans / 250 gm (serves approximately 30 cups)",
+    "p": 590.0,
+    "o1": "Whole Beans",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300272444,
+    "t": "Pour Over / 1 kg (serves approximately 125 cups)",
+    "p": 1990.0,
+    "o1": "Pour Over",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300305212,
+    "t": "Pour Over / 500 gm (serves approximately 62 cups)",
+    "p": 1090.0,
+    "o1": "Pour Over",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300337980,
+    "t": "Pour Over / 250 gm (serves approximately 30 cups)",
+    "p": 590.0,
+    "o1": "Pour Over",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300370748,
+    "t": "Indian Filter / 1 kg (serves approximately 125 cups)",
+    "p": 1990.0,
+    "o1": "Indian Filter",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300403516,
+    "t": "Indian Filter / 500 gm (serves approximately 62 cups)",
+    "p": 1090.0,
+    "o1": "Indian Filter",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300436284,
+    "t": "Indian Filter / 250 gm (serves approximately 30 cups)",
+    "p": 590.0,
+    "o1": "Indian Filter",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300469052,
+    "t": "French Press / 1 kg (serves approximately 125 cups)",
+    "p": 1990.0,
+    "o1": "French Press",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300501820,
+    "t": "French Press / 500 gm (serves approximately 62 cups)",
+    "p": 1090.0,
+    "o1": "French Press",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300534588,
+    "t": "French Press / 250 gm (serves approximately 30 cups)",
+    "p": 590.0,
+    "o1": "French Press",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300567356,
+    "t": "Turkish / 1 kg (serves approximately 125 cups)",
+    "p": 1990.0,
+    "o1": "Turkish",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300600124,
+    "t": "Turkish / 500 gm (serves approximately 62 cups)",
+    "p": 1090.0,
+    "o1": "Turkish",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300632892,
+    "t": "Turkish / 250 gm (serves approximately 30 cups)",
+    "p": 590.0,
+    "o1": "Turkish",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300665660,
+    "t": "Aeropress / 1 kg (serves approximately 125 cups)",
+    "p": 1990.0,
+    "o1": "Aeropress",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300698428,
+    "t": "Aeropress / 500 gm (serves approximately 62 cups)",
+    "p": 1090.0,
+    "o1": "Aeropress",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300731196,
+    "t": "Aeropress / 250 gm (serves approximately 30 cups)",
+    "p": 590.0,
+    "o1": "Aeropress",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300763964,
+    "t": "Moka Pot / 1 kg (serves approximately 125 cups)",
+    "p": 1990.0,
+    "o1": "Moka Pot",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300796732,
+    "t": "Moka Pot / 500 gm (serves approximately 62 cups)",
+    "p": 1090.0,
+    "o1": "Moka Pot",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300829500,
+    "t": "Moka Pot / 250 gm (serves approximately 30 cups)",
+    "p": 590.0,
+    "o1": "Moka Pot",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300862268,
+    "t": "Inverted Aeropress / 1 kg (serves approximately 125 cups)",
+    "p": 1990.0,
+    "o1": "Inverted Aeropress",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300895036,
+    "t": "Inverted Aeropress / 500 gm (serves approximately 62 cups)",
+    "p": 1090.0,
+    "o1": "Inverted Aeropress",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300927804,
+    "t": "Inverted Aeropress / 250 gm (serves approximately 30 cups)",
+    "p": 590.0,
+    "o1": "Inverted Aeropress",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300960572,
+    "t": "Cold Brew / 1 kg (serves approximately 125 cups)",
+    "p": 1990.0,
+    "o1": "Cold Brew",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903300993340,
+    "t": "Cold Brew / 500 gm (serves approximately 62 cups)",
+    "p": 1090.0,
+    "o1": "Cold Brew",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903301026108,
+    "t": "Cold Brew / 250 gm (serves approximately 30 cups)",
+    "p": 590.0,
+    "o1": "Cold Brew",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903301058876,
+    "t": "Coffee Filter / 1 kg (serves approximately 125 cups)",
+    "p": 1990.0,
+    "o1": "Coffee Filter",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903301091644,
+    "t": "Coffee Filter / 500 gm (serves approximately 62 cups)",
+    "p": 1090.0,
+    "o1": "Coffee Filter",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903301124412,
+    "t": "Coffee Filter / 250 gm (serves approximately 30 cups)",
+    "p": 590.0,
+    "o1": "Coffee Filter",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903301157180,
+    "t": "Espresso / 1 kg (serves approximately 125 cups)",
+    "p": 1990.0,
+    "o1": "Espresso",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903301189948,
+    "t": "Espresso / 500 gm (serves approximately 62 cups)",
+    "p": 1090.0,
+    "o1": "Espresso",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903301222716,
+    "t": "Espresso / 250 gm (serves approximately 30 cups)",
+    "p": 590.0,
+    "o1": "Espresso",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   }
+  ],
+  "images": [
+   "CauveryPeak_A_Content_EspressoBlend1.png",
+   "CauveryPeak_A_Content_EspressoBlend2.png"
+  ],
+  "body": "A delicately curated blend by the Masters at Cauvery Peak to give sweet acidity, rich creamy body for a fine Espresso Coffee. MSP Plantations is a family-owned, professionally managed company. 5 generations of coffee knowledge, goes into systematically improving cultural practices, introducing modern agricultural techniques, upgrading infrastructure and optimizing production on a continuous basis. This endeavour is to bring our high-quality produce directly to you THE CONNOISSEUR. The single estate coffee beans are planted, picked, processed, roasted, packed and despatched from the estate and delivered directly to your doorstep in order to ensure freshness, consistency, traceability and quality."
+ },
+ {
+  "handle": "pepper",
+  "title": "PEPPER",
+  "type": "Spices",
+  "tags": [
+   "spices"
+  ],
+  "options": [
+   {
+    "name": "Select Weight",
+    "values": [
+     "1 kg",
+     "500 gm",
+     "250 gm",
+     "100 gm"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 51694081868092,
+    "t": "1 kg",
+    "p": 1100.0,
+    "o1": "1 kg",
+    "o2": null,
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51694081900860,
+    "t": "500 gm",
+    "p": 620.0,
+    "o1": "500 gm",
+    "o2": null,
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51694081966396,
+    "t": "250 gm",
+    "p": 370.0,
+    "o1": "250 gm",
+    "o2": null,
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51694081933628,
+    "t": "100 gm",
+    "p": 220.0,
+    "o1": "100 gm",
+    "o2": null,
+    "o3": null,
+    "av": true
+   }
+  ],
+  "images": [
+   "CauveryPeak_A_Content_WholeBlackPepper1.png",
+   "CauveryPeak_A_Content_WholeBlackPepper2.png"
+  ],
+  "body": "MSP Plantations is a family owned, professionally managed company. 5 generations of coffee and spices knowledge, goes into systematically improving cultural practices, introducing modern agricultural techniques, upgrading infrastructure and optimising production on a continuous basis. This endeavour is to bring our high-quality produce directly to you THE CONNOISSEUR.The single estate coffee beans are planted, picked, processed, packed and despatched from the estate and delivered directly to your doorstep in order to ensure freshness, consistency, traceability and quality."
+ },
+ {
+  "handle": "coffee-powder-she",
+  "title": "SHEVAROYS",
+  "type": "Coffee",
+  "tags": [
+   "coffee",
+   "home"
+  ],
+  "options": [
+   {
+    "name": "Select Grind",
+    "values": [
+     "Whole Beans",
+     "Pour Over",
+     "Indian Filter",
+     "French Press",
+     "Turkish",
+     "Aeropress",
+     "Moka Pot",
+     "Inverted Aeropress",
+     "Cold Brew",
+     "Coffee Filter",
+     "Espresso"
+    ]
+   },
+   {
+    "name": "Select Weight",
+    "values": [
+     "1 kg (serves approximately 125 cups)",
+     "500 gm (serves approximately 62 cups)",
+     "250 gm (serves approximately 30 cups)"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 51694081704252,
+    "t": "Whole Beans / 1 kg (serves approximately 125 cups)",
+    "p": 2020.0,
+    "o1": "Whole Beans",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51694081737020,
+    "t": "Whole Beans / 500 gm (serves approximately 62 cups)",
+    "p": 1120.0,
+    "o1": "Whole Beans",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51694081769788,
+    "t": "Whole Beans / 250 gm (serves approximately 30 cups)",
+    "p": 620.0,
+    "o1": "Whole Beans",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257084220,
+    "t": "Pour Over / 1 kg (serves approximately 125 cups)",
+    "p": 2020.0,
+    "o1": "Pour Over",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257411900,
+    "t": "Pour Over / 500 gm (serves approximately 62 cups)",
+    "p": 1120.0,
+    "o1": "Pour Over",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257739580,
+    "t": "Pour Over / 250 gm (serves approximately 30 cups)",
+    "p": 620.0,
+    "o1": "Pour Over",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257116988,
+    "t": "Indian Filter / 1 kg (serves approximately 125 cups)",
+    "p": 2020.0,
+    "o1": "Indian Filter",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257444668,
+    "t": "Indian Filter / 500 gm (serves approximately 62 cups)",
+    "p": 1120.0,
+    "o1": "Indian Filter",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257772348,
+    "t": "Indian Filter / 250 gm (serves approximately 30 cups)",
+    "p": 620.0,
+    "o1": "Indian Filter",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257149756,
+    "t": "French Press / 1 kg (serves approximately 125 cups)",
+    "p": 2020.0,
+    "o1": "French Press",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257477436,
+    "t": "French Press / 500 gm (serves approximately 62 cups)",
+    "p": 1120.0,
+    "o1": "French Press",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257805116,
+    "t": "French Press / 250 gm (serves approximately 30 cups)",
+    "p": 620.0,
+    "o1": "French Press",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257182524,
+    "t": "Turkish / 1 kg (serves approximately 125 cups)",
+    "p": 2020.0,
+    "o1": "Turkish",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257510204,
+    "t": "Turkish / 500 gm (serves approximately 62 cups)",
+    "p": 1120.0,
+    "o1": "Turkish",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257837884,
+    "t": "Turkish / 250 gm (serves approximately 30 cups)",
+    "p": 620.0,
+    "o1": "Turkish",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257215292,
+    "t": "Aeropress / 1 kg (serves approximately 125 cups)",
+    "p": 2020.0,
+    "o1": "Aeropress",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257542972,
+    "t": "Aeropress / 500 gm (serves approximately 62 cups)",
+    "p": 1120.0,
+    "o1": "Aeropress",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257870652,
+    "t": "Aeropress / 250 gm (serves approximately 30 cups)",
+    "p": 620.0,
+    "o1": "Aeropress",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257248060,
+    "t": "Moka Pot / 1 kg (serves approximately 125 cups)",
+    "p": 2020.0,
+    "o1": "Moka Pot",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257575740,
+    "t": "Moka Pot / 500 gm (serves approximately 62 cups)",
+    "p": 1120.0,
+    "o1": "Moka Pot",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257903420,
+    "t": "Moka Pot / 250 gm (serves approximately 30 cups)",
+    "p": 620.0,
+    "o1": "Moka Pot",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257280828,
+    "t": "Inverted Aeropress / 1 kg (serves approximately 125 cups)",
+    "p": 2020.0,
+    "o1": "Inverted Aeropress",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257608508,
+    "t": "Inverted Aeropress / 500 gm (serves approximately 62 cups)",
+    "p": 1120.0,
+    "o1": "Inverted Aeropress",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257936188,
+    "t": "Inverted Aeropress / 250 gm (serves approximately 30 cups)",
+    "p": 620.0,
+    "o1": "Inverted Aeropress",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257313596,
+    "t": "Cold Brew / 1 kg (serves approximately 125 cups)",
+    "p": 2020.0,
+    "o1": "Cold Brew",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257641276,
+    "t": "Cold Brew / 500 gm (serves approximately 62 cups)",
+    "p": 1120.0,
+    "o1": "Cold Brew",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257968956,
+    "t": "Cold Brew / 250 gm (serves approximately 30 cups)",
+    "p": 620.0,
+    "o1": "Cold Brew",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257346364,
+    "t": "Coffee Filter / 1 kg (serves approximately 125 cups)",
+    "p": 2020.0,
+    "o1": "Coffee Filter",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257674044,
+    "t": "Coffee Filter / 500 gm (serves approximately 62 cups)",
+    "p": 1120.0,
+    "o1": "Coffee Filter",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903258001724,
+    "t": "Coffee Filter / 250 gm (serves approximately 30 cups)",
+    "p": 620.0,
+    "o1": "Coffee Filter",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257379132,
+    "t": "Espresso / 1 kg (serves approximately 125 cups)",
+    "p": 2020.0,
+    "o1": "Espresso",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903257706812,
+    "t": "Espresso / 500 gm (serves approximately 62 cups)",
+    "p": 1120.0,
+    "o1": "Espresso",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903258034492,
+    "t": "Espresso / 250 gm (serves approximately 30 cups)",
+    "p": 620.0,
+    "o1": "Espresso",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   }
+  ],
+  "images": [
+   "CauveryPeak_AllA_Content-02.png",
+   "CauveryPeak_AllA_Content-03.png",
+   "shvslide-1_4d224903-e840-472a-8571-164180d71478.jpg",
+   "shvslide-2_7487278b-02db-4fbd-bdca-bcdc84d37156.jpg",
+   "shvslide-3_3aa884cd-e4cd-4fff-ab12-be12f14c8c9d.jpg",
+   "shvslide-4_bdec328d-1cfa-493a-9928-9d5d695acc13.jpg",
+   "shvslide-5_d446f34d-d1f1-452d-a01e-c29d3c8052fb.jpg"
+  ],
+  "body": "Shevaroys Single Estate Reserve coffee comes to you from the high altitude estate of the Shevaroys. The rich bauxite soil lends to the unique flavour profile of the coffee in addition to the elevation of its location at over 1450mts/ 4800 ft. Shevaroys Reserve coffee is a uniquely curated product with limited production. Productivity is high due to rich soil, conducive micro climatic conditions and intensive cultural practices. The rich bauxite soil, perennial water and elevation produces a sharp flavour profile for discerning coffee enthusiasts."
+ },
+ {
+  "handle": "nutmeg-mace",
+  "title": "NUTMEG & MACE",
+  "type": "Spices",
+  "tags": [
+   "spices"
+  ],
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 51694079803708,
+    "t": "Default Title",
+    "p": 200.0,
+    "o1": "Default Title",
+    "o2": null,
+    "o3": null,
+    "av": true
+   }
+  ],
+  "images": [
+   "CauveryPeak_A_Content_Nutmeg_Mace1.png",
+   "CauveryPeak_A_Content_Nutmeg_Mace2.png"
+  ],
+  "body": "Nutmeg is a popular spice having a long list of health benefits, including its ability to relieve pain, soothe indigestion, and improve cognitive function. It extends its ability to detoxify the body, boost skin quality, alleviate oral conditions, and reduce insomnia. Nutmeg strengthens the immune system and improves blood circulation as well. It has a lot of vitamins and minerals and organic compounds related to essential oils. These beneficial components include dietary fiber, thiamin, vitamin B6, folate, magnesium, copper, and macelignan."
+ },
+ {
+  "handle": "clove",
+  "title": "CLOVES",
+  "type": "Spices",
+  "tags": [
+   "spices"
+  ],
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 51694079705404,
+    "t": "Default Title",
+    "p": 250.0,
+    "o1": "Default Title",
+    "o2": null,
+    "o3": null,
+    "av": true
+   }
+  ],
+  "images": [
+   "CauveryPeak_A_Content_Cloves1.png",
+   "CauveryPeak_A_Content_Cloves2.png"
+  ],
+  "body": "MSP Plantations is a family owned, professionally managed company. 5 generations of coffee and spices knowledge, goes into systematically improving cultural practices, introducing modern agricultural techniques, upgrading infrastructure and optimising production on a continuous basis. This endeavour is to bring our high-quality produce directly to you THE CONNOISSEUR. The single estate coffee beans are planted, picked, processed, packed and despatched from the estate and delivered directly to your doorstep in order to ensure freshness, consistency, traceability and quality."
+ },
+ {
+  "handle": "honey",
+  "title": "HONEY",
+  "type": "Honey",
+  "tags": [
+   "honey"
+  ],
+  "options": [
+   {
+    "name": "Select Weight",
+    "values": [
+     "500 Gm"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 52032340099388,
+    "t": "500 Gm",
+    "p": 600.0,
+    "o1": "500 Gm",
+    "o2": null,
+    "o3": null,
+    "av": true
+   }
+  ],
+  "images": [
+   "CauveryPeak_A_Content_Honey2-19.png",
+   "CauveryPeak_A_Content_Honey2-20.png"
+  ],
+  "body": "MSP Plantations is a family owned, professionally managed company. 5 generations of coffee and spices knowledge, goes into systematically improving cultural practices, introducing modern agricultural techniques, upgrading infrastructure and optimising production on a continuous basis. This endeavour is to bring our high-quality produce directly to you THE CONNOISSEUR. The single estate coffee beans are planted, picked, processed, packed and despatched from the estate and delivered directly to your doorstep in order to ensure freshness, consistency, traceability and quality."
+ },
+ {
+  "handle": "glenfell-4",
+  "title": "GLENFELL",
+  "type": "Coffee",
+  "tags": [
+   "coffee",
+   "home"
+  ],
+  "options": [
+   {
+    "name": "Select Grind",
+    "values": [
+     "Whole Beans",
+     "Pour Over",
+     "Indian Filter",
+     "French Press",
+     "Espresso",
+     "Turkish",
+     "Aeropress",
+     "Moka Pot",
+     "Inverted Aeropress",
+     "Cold Brew",
+     "Coffee Filter"
+    ]
+   },
+   {
+    "name": "Select Weight",
+    "values": [
+     "1 kg (serves approximately 125 cups)",
+     "500 gm (serves approximately 62 cups)",
+     "250 gm (serves approximately 30 cups)"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 51694079541564,
+    "t": "Whole Beans / 1 kg (serves approximately 125 cups)",
+    "p": 1980.0,
+    "o1": "Whole Beans",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51694079574332,
+    "t": "Whole Beans / 500 gm (serves approximately 62 cups)",
+    "p": 1080.0,
+    "o1": "Whole Beans",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51694079607100,
+    "t": "Whole Beans / 250 gm (serves approximately 30 cups)",
+    "p": 580.0,
+    "o1": "Whole Beans",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303145276,
+    "t": "Pour Over / 1 kg (serves approximately 125 cups)",
+    "p": 1980.0,
+    "o1": "Pour Over",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303472956,
+    "t": "Pour Over / 500 gm (serves approximately 62 cups)",
+    "p": 1080.0,
+    "o1": "Pour Over",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303800636,
+    "t": "Pour Over / 250 gm (serves approximately 30 cups)",
+    "p": 580.0,
+    "o1": "Pour Over",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303178044,
+    "t": "Indian Filter / 1 kg (serves approximately 125 cups)",
+    "p": 1980.0,
+    "o1": "Indian Filter",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303505724,
+    "t": "Indian Filter / 500 gm (serves approximately 62 cups)",
+    "p": 1080.0,
+    "o1": "Indian Filter",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303833404,
+    "t": "Indian Filter / 250 gm (serves approximately 30 cups)",
+    "p": 580.0,
+    "o1": "Indian Filter",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303210812,
+    "t": "French Press / 1 kg (serves approximately 125 cups)",
+    "p": 1980.0,
+    "o1": "French Press",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303538492,
+    "t": "French Press / 500 gm (serves approximately 62 cups)",
+    "p": 1080.0,
+    "o1": "French Press",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303866172,
+    "t": "French Press / 250 gm (serves approximately 30 cups)",
+    "p": 580.0,
+    "o1": "French Press",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303243580,
+    "t": "Espresso / 1 kg (serves approximately 125 cups)",
+    "p": 1980.0,
+    "o1": "Espresso",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303571260,
+    "t": "Espresso / 500 gm (serves approximately 62 cups)",
+    "p": 1080.0,
+    "o1": "Espresso",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303898940,
+    "t": "Espresso / 250 gm (serves approximately 30 cups)",
+    "p": 580.0,
+    "o1": "Espresso",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303276348,
+    "t": "Turkish / 1 kg (serves approximately 125 cups)",
+    "p": 1980.0,
+    "o1": "Turkish",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303604028,
+    "t": "Turkish / 500 gm (serves approximately 62 cups)",
+    "p": 1080.0,
+    "o1": "Turkish",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303931708,
+    "t": "Turkish / 250 gm (serves approximately 30 cups)",
+    "p": 580.0,
+    "o1": "Turkish",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303309116,
+    "t": "Aeropress / 1 kg (serves approximately 125 cups)",
+    "p": 1980.0,
+    "o1": "Aeropress",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303636796,
+    "t": "Aeropress / 500 gm (serves approximately 62 cups)",
+    "p": 1080.0,
+    "o1": "Aeropress",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303964476,
+    "t": "Aeropress / 250 gm (serves approximately 30 cups)",
+    "p": 580.0,
+    "o1": "Aeropress",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303341884,
+    "t": "Moka Pot / 1 kg (serves approximately 125 cups)",
+    "p": 1980.0,
+    "o1": "Moka Pot",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303669564,
+    "t": "Moka Pot / 500 gm (serves approximately 62 cups)",
+    "p": 1080.0,
+    "o1": "Moka Pot",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303997244,
+    "t": "Moka Pot / 250 gm (serves approximately 30 cups)",
+    "p": 580.0,
+    "o1": "Moka Pot",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303374652,
+    "t": "Inverted Aeropress / 1 kg (serves approximately 125 cups)",
+    "p": 1980.0,
+    "o1": "Inverted Aeropress",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303702332,
+    "t": "Inverted Aeropress / 500 gm (serves approximately 62 cups)",
+    "p": 1080.0,
+    "o1": "Inverted Aeropress",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888304030012,
+    "t": "Inverted Aeropress / 250 gm (serves approximately 30 cups)",
+    "p": 580.0,
+    "o1": "Inverted Aeropress",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303407420,
+    "t": "Cold Brew / 1 kg (serves approximately 125 cups)",
+    "p": 1980.0,
+    "o1": "Cold Brew",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303735100,
+    "t": "Cold Brew / 500 gm (serves approximately 62 cups)",
+    "p": 1080.0,
+    "o1": "Cold Brew",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888304062780,
+    "t": "Cold Brew / 250 gm (serves approximately 30 cups)",
+    "p": 580.0,
+    "o1": "Cold Brew",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303440188,
+    "t": "Coffee Filter / 1 kg (serves approximately 125 cups)",
+    "p": 1980.0,
+    "o1": "Coffee Filter",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888303767868,
+    "t": "Coffee Filter / 500 gm (serves approximately 62 cups)",
+    "p": 1080.0,
+    "o1": "Coffee Filter",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51888304095548,
+    "t": "Coffee Filter / 250 gm (serves approximately 30 cups)",
+    "p": 580.0,
+    "o1": "Coffee Filter",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   }
+  ],
+  "images": [
+   "Cauvery_Peak_All_A_Content-04.png",
+   "Cauvery_Peak_All_A_Content-05.png",
+   "cpslide-1_1c603930-270a-4568-93cf-5bb76ae4f951.jpg",
+   "cpslide-2_b7510a5e-b952-47b6-8fac-5926c2f282f5.jpg",
+   "cpslide-3_40c20e4d-ded5-40e1-8f72-ce829142a23d.jpg",
+   "glnslide-3_c38e43be-6597-402f-a801-9010e318c60a.jpg",
+   "glnslide-4_f4964691-d8f1-4c5e-ab62-cf2d8fe6c5da.jpg"
+  ],
+  "body": "Glenfell is planted with both Arabica and Robusta varieties and inter-planted with cloves, nutmeg and pepper vines. Heavy shade provided by a mixed canopy of trees provide unique microclimatic conditions."
+ },
+ {
+  "handle": "sample-pack",
+  "title": "3 SINGLE ESTATES SAMPLER PACK",
+  "type": "Cauvery Peak Bundles",
+  "tags": [
+   "cauvery-peak-bundles",
+   "coffee"
+  ],
+  "options": [
+   {
+    "name": "Select Weight",
+    "values": [
+     "100GM x 3Packs",
+     "250GM x 3Packs"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 51694079476028,
+    "t": "100GM x 3Packs",
+    "p": 670.0,
+    "o1": "100GM x 3Packs",
+    "o2": null,
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51694079508796,
+    "t": "250GM x 3Packs",
+    "p": 1640.0,
+    "o1": "250GM x 3Packs",
+    "o2": null,
+    "o3": null,
+    "av": true
+   }
+  ],
+  "images": [
+   "Cauvery_Peak_A_Sampler_Pack_Three_Blends_1.png",
+   "Cauvery_Peak_A_Sampler_Pack_Three_Blends_2.png"
+  ],
+  "body": "Shevaroys - Elevation - 1450m, Hawaiian Red Caturra varietal, Fine Aroma, Medium Body, Crisp Acidity Flavour profile - Distinct citrus after taste Cauvery Peak - Elevation - 1400m, Hawaiian Red Caturra varietal, Sweetly Round Aroma, Full Body, Rich- Low Key Acidity Flavour profile - Mid toned with distinct, clean fruit leaning towards chocolate. Rich long finish Glenfell - Elevation - 1250m, Hawaiian Red Caturra varietal, Mild Aroma, Full body, Low Acidity Flavour profile - Exotic Spicy aftertaste"
+ },
+ {
+  "handle": "coffee-powder-cp",
+  "title": "CAUVERY PEAK",
+  "type": "Coffee",
+  "tags": [
+   "coffee",
+   "home"
+  ],
+  "options": [
+   {
+    "name": "Select Grind",
+    "values": [
+     "Whole Beans",
+     "Pour Over",
+     "Indian Filter",
+     "French Press",
+     "Turkish",
+     "Aeropress",
+     "Moka Pot",
+     "Inverted Aeropress",
+     "Cold Brew",
+     "Coffee Filter",
+     "Espresso"
+    ]
+   },
+   {
+    "name": "Select Weight",
+    "values": [
+     "1 kg (serves approximately 125 cups)",
+     "500 gm (serves approximately 62 cups)",
+     "250 gm (serves approximately 30 cups)"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": 51694079377724,
+    "t": "Whole Beans / 1 kg (serves approximately 125 cups)",
+    "p": 2000.0,
+    "o1": "Whole Beans",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51694079410492,
+    "t": "Whole Beans / 500 gm (serves approximately 62 cups)",
+    "p": 1100.0,
+    "o1": "Whole Beans",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51694079443260,
+    "t": "Whole Beans / 250 gm (serves approximately 30 cups)",
+    "p": 600.0,
+    "o1": "Whole Beans",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903284904252,
+    "t": "Pour Over / 1 kg (serves approximately 125 cups)",
+    "p": 2000.0,
+    "o1": "Pour Over",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285231932,
+    "t": "Pour Over / 500 gm (serves approximately 62 cups)",
+    "p": 1100.0,
+    "o1": "Pour Over",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285559612,
+    "t": "Pour Over / 250 gm (serves approximately 30 cups)",
+    "p": 600.0,
+    "o1": "Pour Over",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903284937020,
+    "t": "Indian Filter / 1 kg (serves approximately 125 cups)",
+    "p": 2000.0,
+    "o1": "Indian Filter",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285264700,
+    "t": "Indian Filter / 500 gm (serves approximately 62 cups)",
+    "p": 1100.0,
+    "o1": "Indian Filter",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285592380,
+    "t": "Indian Filter / 250 gm (serves approximately 30 cups)",
+    "p": 600.0,
+    "o1": "Indian Filter",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903284969788,
+    "t": "French Press / 1 kg (serves approximately 125 cups)",
+    "p": 2000.0,
+    "o1": "French Press",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285297468,
+    "t": "French Press / 500 gm (serves approximately 62 cups)",
+    "p": 1100.0,
+    "o1": "French Press",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285625148,
+    "t": "French Press / 250 gm (serves approximately 30 cups)",
+    "p": 600.0,
+    "o1": "French Press",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285002556,
+    "t": "Turkish / 1 kg (serves approximately 125 cups)",
+    "p": 2000.0,
+    "o1": "Turkish",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285330236,
+    "t": "Turkish / 500 gm (serves approximately 62 cups)",
+    "p": 1100.0,
+    "o1": "Turkish",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285657916,
+    "t": "Turkish / 250 gm (serves approximately 30 cups)",
+    "p": 600.0,
+    "o1": "Turkish",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285035324,
+    "t": "Aeropress / 1 kg (serves approximately 125 cups)",
+    "p": 2000.0,
+    "o1": "Aeropress",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285363004,
+    "t": "Aeropress / 500 gm (serves approximately 62 cups)",
+    "p": 1100.0,
+    "o1": "Aeropress",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285690684,
+    "t": "Aeropress / 250 gm (serves approximately 30 cups)",
+    "p": 600.0,
+    "o1": "Aeropress",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285068092,
+    "t": "Moka Pot / 1 kg (serves approximately 125 cups)",
+    "p": 2000.0,
+    "o1": "Moka Pot",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285395772,
+    "t": "Moka Pot / 500 gm (serves approximately 62 cups)",
+    "p": 1100.0,
+    "o1": "Moka Pot",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285723452,
+    "t": "Moka Pot / 250 gm (serves approximately 30 cups)",
+    "p": 600.0,
+    "o1": "Moka Pot",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285100860,
+    "t": "Inverted Aeropress / 1 kg (serves approximately 125 cups)",
+    "p": 2000.0,
+    "o1": "Inverted Aeropress",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285428540,
+    "t": "Inverted Aeropress / 500 gm (serves approximately 62 cups)",
+    "p": 1100.0,
+    "o1": "Inverted Aeropress",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285756220,
+    "t": "Inverted Aeropress / 250 gm (serves approximately 30 cups)",
+    "p": 600.0,
+    "o1": "Inverted Aeropress",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285133628,
+    "t": "Cold Brew / 1 kg (serves approximately 125 cups)",
+    "p": 2000.0,
+    "o1": "Cold Brew",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285461308,
+    "t": "Cold Brew / 500 gm (serves approximately 62 cups)",
+    "p": 1100.0,
+    "o1": "Cold Brew",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285788988,
+    "t": "Cold Brew / 250 gm (serves approximately 30 cups)",
+    "p": 600.0,
+    "o1": "Cold Brew",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285166396,
+    "t": "Coffee Filter / 1 kg (serves approximately 125 cups)",
+    "p": 2000.0,
+    "o1": "Coffee Filter",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285494076,
+    "t": "Coffee Filter / 500 gm (serves approximately 62 cups)",
+    "p": 1100.0,
+    "o1": "Coffee Filter",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285821756,
+    "t": "Coffee Filter / 250 gm (serves approximately 30 cups)",
+    "p": 600.0,
+    "o1": "Coffee Filter",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285199164,
+    "t": "Espresso / 1 kg (serves approximately 125 cups)",
+    "p": 2000.0,
+    "o1": "Espresso",
+    "o2": "1 kg (serves approximately 125 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285526844,
+    "t": "Espresso / 500 gm (serves approximately 62 cups)",
+    "p": 1100.0,
+    "o1": "Espresso",
+    "o2": "500 gm (serves approximately 62 cups)",
+    "o3": null,
+    "av": true
+   },
+   {
+    "id": 51903285854524,
+    "t": "Espresso / 250 gm (serves approximately 30 cups)",
+    "p": 600.0,
+    "o1": "Espresso",
+    "o2": "250 gm (serves approximately 30 cups)",
+    "o3": null,
+    "av": true
+   }
+  ],
+  "images": [
+   "CauveryPeak_AllA_Content-07.png",
+   "CauveryPeak_AllA_Content-08.png"
+  ],
+  "body": "Kenneth Davids - Coffee expert, author and co founder of Coffee Review rated Cauvery Peak coffee among the top 3 Indian Arabica coffees. This immaculately manicured plantation, at 1400mts/ 4600ft, is unique in India for the Hawaiian Red Catturra (HRC) strain of Arabica coffee which helps produce a truly well balanced cup of coffee. MSP Plantations is a family owned, professionally managed company. 5 generations of coffee knowledge, goes into systematically improving cultural practices, introducing modern agricultural techniques, upgrading infrastructure and optimising production on a continuous basis. This endeavour is to bring our high-quality produce directly to you THE CONNOISSEUR. The single estate coffee beans are planted, picked, processed, roasted, packed and despatched from the estate and delivered directly to your doorstep in order to ensure freshness, consistency, traceability and quality."
+ }
+]

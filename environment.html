@@ -43,6 +43,7 @@
       <span class="burger__box" aria-hidden="true"><i></i><i></i><i></i></span>
       <span class="burger__t">Menu</span>
     </button>
+    <button class="cartbtn" type="button" id="cartbtn" hidden>Basket <b class="num">0</b></button>
   </div>
 </header>
 <div class="drawer" id="sitemenu">
@@ -239,6 +240,23 @@
   <a class="btn btn--gold" href="visit.html">Book the tour</a>
   <a class="btn btn--ghost" href="coffee.html">Shop coffee</a>
 </div>
+<div class="cart" id="cart">
+  <div class="cart__scrim" data-cclose hidden></div>
+  <div class="cart__panel" role="dialog" aria-modal="true" aria-label="Your basket">
+    <div class="cart__head">
+      <p class="mark" style="margin:0">Your basket</p>
+      <button class="drawer__x" type="button" data-cclose aria-label="Close basket">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+      </button>
+    </div>
+    <div class="cart__body" data-clines></div>
+    <div class="cart__foot">
+      <p class="cart__sum"><span>Total</span><b class="num" data-ctotal>&#8377;0</b></p>
+      <a class="btn btn--gold" data-ccheckout href="#">Checkout on the estate store</a>
+      <p class="buy__note" style="margin:0">You will finish on cauverypeakestate.com, where the order is actually taken.</p>
+    </div>
+  </div>
+</div>
 <script>
 (function(){
   var b=document.getElementById('burger'), d=document.getElementById('sitemenu');
@@ -275,6 +293,104 @@
   d.addEventListener('click',function(e){ if(e.target.closest('[data-close]')) close(); });
   // a viewport that grows past the breakpoint must not leave the drawer stuck open
   matchMedia('(min-width:760px)').addEventListener('change',function(e){ if(e.matches) close(); });
+})();
+</script>
+<script>
+(function(){
+  var KEY='cp-basket', STORE='https://cauverypeakestate.com';
+  var read=function(){ try{ return JSON.parse(localStorage.getItem(KEY))||[] }catch(e){ return [] } };
+  var write=function(v){ localStorage.setItem(KEY, JSON.stringify(v)); paint(); };
+  var inr=function(n){ return '\u20B9'+n.toLocaleString('en-IN'); };
+
+  // ---- product / subscription forms -------------------------------
+  document.querySelectorAll('.pdp[data-variants]').forEach(function(scope){
+    var vs, form=scope.querySelector('.buy');
+    try{ vs=JSON.parse(scope.getAttribute('data-variants')) }catch(e){ return }
+    if(!form||!vs) return;
+    var out=scope.querySelector('[data-price]'), unit=scope.querySelector('[data-unit]');
+    var handle=scope.getAttribute('data-handle'), title=scope.getAttribute('data-title');
+    function chosen(){
+      return [1,2,3].map(function(i){
+        var el=form.querySelector('input[name="o'+i+'"]:checked');
+        return el?el.value:null;
+      });
+    }
+    function match(){
+      var c=chosen();
+      return vs.filter(function(v){
+        return c.every(function(x,i){ return x===null || v.o[i]===x; });
+      })[0];
+    }
+    function kilos(s){
+      if(!s) return 0;
+      var m=/([\d.]+)\s*kg/i.exec(s); if(m) return parseFloat(m[1]);
+      m=/([\d.]+)\s*(gm|g)\b/i.exec(s); if(m) return parseFloat(m[1])/1000;
+      return 0;
+    }
+    function months(s){ var m=/(\d+)\s*month/i.exec(s||''); return m?parseInt(m[1],10):0; }
+    function paintPrice(){
+      var v=match(); if(!v) return;
+      out.textContent=inr(v.p);
+      if(unit){
+        var c=chosen(), kg=kilos(c[2]), mo=months(c[0]);
+        unit.textContent = (kg&&mo) ? inr(Math.round(v.p/(kg*mo)))+' per kg · '+mo+' months' : '';
+      }
+      // strike through combinations the store has no variant for
+      form.querySelectorAll('.opt').forEach(function(l){
+        var inp=l.querySelector('input'), i=parseInt(inp.name.slice(1),10)-1;
+        var probe=chosen(); probe[i]=inp.value;
+        var ok=vs.some(function(v){ return probe.every(function(x,j){ return x===null||v.o[j]===x }) });
+        if(ok) l.removeAttribute('data-out'); else l.setAttribute('data-out','');
+      });
+    }
+    form.addEventListener('change', paintPrice);
+    paintPrice();
+    var add=form.querySelector('[data-add]');
+    if(add) add.addEventListener('click', function(){
+      var v=match(); if(!v) return;
+      var b=read(), hit=b.filter(function(l){ return l.id===v.id })[0];
+      if(hit) hit.q++; else b.push({id:v.id,q:1,p:v.p,t:title,o:chosen().filter(Boolean).join(' · '),h:handle});
+      write(b); open();
+    });
+  });
+
+  // ---- basket ------------------------------------------------------
+  var cart=document.getElementById('cart'); if(!cart) return;
+  var lines=cart.querySelector('[data-clines]'), total=cart.querySelector('[data-ctotal]');
+  var go=cart.querySelector('[data-ccheckout]'), scrim=cart.querySelector('.cart__scrim');
+  var btn=document.getElementById('cartbtn'), count=btn?btn.querySelector('b'):null, last=null;
+  function paint(){
+    var b=read(), sum=0;
+    lines.innerHTML = b.length ? '' : '<p class="cart__empty">Nothing in the basket yet.</p>';
+    b.forEach(function(l,i){
+      sum += l.p*l.q;
+      var el=document.createElement('div'); el.className='cart__line';
+      el.innerHTML='<p class="cart__t">'+l.t+'</p><p class="cart__p num">'+inr(l.p*l.q)+'</p>'
+        +'<p class="cart__o">'+(l.o||'')+(l.q>1?' · x'+l.q:'')+'</p>';
+      var rm=document.createElement('button');
+      rm.type='button'; rm.className='cart__rm'; rm.textContent='Remove';
+      rm.addEventListener('click', function(){ var c=read(); c.splice(i,1); write(c); });
+      el.appendChild(rm); lines.appendChild(el);
+    });
+    total.textContent=inr(sum);
+    if(btn){ btn.hidden = !b.length; if(count) count.textContent=b.reduce(function(n,l){return n+l.q},0); }
+    // Shopify takes a cart permalink, so the real checkout gets the real ids
+    go.setAttribute('href', b.length
+      ? STORE+'/cart/'+b.map(function(l){ return l.id+':'+l.q }).join(',')
+      : STORE+'/collections/all');
+  }
+  function open(){ last=document.activeElement; scrim.hidden=false; cart.classList.add('is-open');
+    document.documentElement.classList.add('no-scroll');
+    (cart.querySelector('button,a')||cart).focus(); document.addEventListener('keydown',key,true); }
+  function close(){ cart.classList.remove('is-open');
+    document.documentElement.classList.remove('no-scroll');
+    document.removeEventListener('keydown',key,true); if(last) last.focus();
+    var ms=matchMedia('(prefers-reduced-motion:reduce)').matches?0:260;
+    setTimeout(function(){ if(!cart.classList.contains('is-open')) scrim.hidden=true; },ms); }
+  function key(e){ if(e.key==='Escape'){ e.preventDefault(); close(); } }
+  cart.addEventListener('click', function(e){ if(e.target.closest('[data-cclose]')) close(); });
+  if(btn) btn.addEventListener('click', open);
+  paint();
 })();
 </script>
 </body>

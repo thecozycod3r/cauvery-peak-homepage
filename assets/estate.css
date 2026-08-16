@@ -663,3 +663,96 @@ body{background:var(--paper)}
 .d1,.d2,.d3{font-family:var(--display); font-weight:400}
 .jump a{display:inline-flex; align-items:center; min-height:46px; padding:0 1rem}
 .pick{display:flex; flex-direction:column; min-height:96px}
+
+
+/* ============================================================
+   COMMERCE
+   The store paints elevation, tasting meters, brew advice and the
+   whole weight x price grid into its product JPEGs. Here they are
+   controls and text: selectable, searchable, legible on a phone.
+   ============================================================ */
+.pdp{padding-block:clamp(2rem,5vw,4rem)}
+.pdp__in{display:grid; gap:clamp(1.5rem,4vw,3.5rem); grid-template-columns:1fr}
+@media (min-width:900px){ .pdp__in{grid-template-columns:1fr 1fr; align-items:start} }
+.pdp__fig{position:relative; margin:0; background:var(--sunk); overflow:hidden;
+  aspect-ratio:4/5; display:grid; place-items:center}
+.pdp__bg{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  filter:saturate(.85) contrast(1.02) brightness(.92)}
+.pdp__fig::after{content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(10,20,14,.10),rgba(10,20,14,.55))}
+.pdp__pack{position:relative; z-index:2; width:min(58%,300px); height:auto;
+  filter:drop-shadow(0 22px 40px rgba(10,20,14,.5))}
+@media (min-width:900px){ .pdp__fig{position:sticky; top:calc(var(--hdr) + 1.5rem)} }
+.pdp__buy .d2{margin-top:.2rem}
+
+/* option controls — every combination visible, none hidden in a select */
+.buy{margin-top:clamp(1.5rem,3vw,2.25rem)}
+.opts{border:0; margin:0 0 1.4rem; padding:0}
+.opts legend{padding:0 0 .6rem}
+.opts__row{display:flex; flex-wrap:wrap; gap:.45rem}
+.opt{position:relative; display:inline-flex; flex-direction:column; justify-content:center;
+  min-height:46px; padding:.4rem .85rem; cursor:pointer;
+  border:1px solid color-mix(in srgb,var(--brass) 50%,transparent);
+  font-size:.9rem; line-height:1.2; transition:border-color 140ms, background-color 140ms}
+.opt input{position:absolute; opacity:0; width:0; height:0}
+.opt small{font-family:var(--mono); font-size:.5875rem; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-2); margin-top:.15rem}
+.opt:hover{border-color:var(--c,var(--bauxite))}
+.opt:has(input:checked){background:var(--c,var(--bauxite)); border-color:var(--c,var(--bauxite));
+  color:var(--paper-hi)}
+.opt:has(input:checked) small{color:color-mix(in srgb,var(--paper-hi) 78%,transparent)}
+.opt:has(input:focus-visible){outline:2px solid var(--bauxite); outline-offset:3px}
+.opt[data-out]{opacity:.35; text-decoration:line-through}
+
+.buy__bar{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
+  gap:1rem; padding-top:1.25rem; border-top:var(--hair)}
+.buy__price{font-family:var(--display); font-size:clamp(2rem,5vw,2.9rem); line-height:1;
+  font-variation-settings:"opsz" 100,"WONK" 1; color:var(--ink); margin:0}
+.buy__unit{font-family:var(--mono); font-size:.625rem; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--ink-2); margin:.4rem 0 0}
+.buy__bar .btn{flex:1; min-width:200px}
+.buy__note{font-size:.8125rem; color:var(--ink-2); margin:.9rem 0 0; max-width:44ch}
+.buy--sub .opts__row{gap:.5rem}
+.band .buy__price{color:var(--onDark)}
+
+/* cart drawer — same motion contract as the menu */
+.cartbtn{position:relative; display:inline-flex; align-items:center; gap:.5rem;
+  min-height:44px; padding:0 .5rem; background:none; border:0; cursor:pointer;
+  color:var(--ink); font-family:var(--mono); font-size:.6875rem;
+  letter-spacing:.16em; text-transform:uppercase}
+.cartbtn[hidden]{display:none}
+.cartbtn b{font-weight:500; color:var(--bauxite)}
+.cart{position:fixed; inset:0; z-index:72; visibility:hidden; pointer-events:none;
+  overflow:hidden; transition:visibility 0s linear 260ms}
+.cart.is-open{visibility:visible; pointer-events:auto; transition-delay:0s}
+.cart__scrim{position:absolute; inset:0; background:rgba(10,20,14,.6); opacity:0;
+  transition:opacity 240ms ease-out}
+.cart.is-open .cart__scrim{opacity:1}
+.cart__panel{position:absolute; inset:0 0 0 auto; width:min(92vw,420px);
+  display:flex; flex-direction:column; background:var(--paper-hi); color:var(--ink);
+  transform:translateX(100%); transition:transform 260ms cubic-bezier(.32,.72,0,1)}
+.cart.is-open .cart__panel{transform:translateX(0)}
+.cart__head{display:flex; align-items:center; justify-content:space-between;
+  padding:1rem var(--gut); border-bottom:var(--hair)}
+.cart__body{flex:1; overflow-y:auto; overscroll-behavior:contain; padding:0 var(--gut)}
+.cart__foot{padding:1rem var(--gut) calc(1.25rem + env(safe-area-inset-bottom));
+  border-top:var(--hair); display:grid; gap:.75rem}
+.cart__line{display:grid; grid-template-columns:1fr auto; gap:.35rem 1rem;
+  padding-block:1rem; border-bottom:var(--hair)}
+.cart__t{font-family:var(--display); font-size:1.15rem; line-height:1.1; margin:0;
+  font-variation-settings:"opsz" 60}
+.cart__o{grid-column:1; font-family:var(--mono); font-size:.625rem; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--ink-2); margin:0}
+.cart__p{grid-column:2; grid-row:1; font-family:var(--mono); font-size:.875rem}
+.cart__rm{grid-column:2; justify-self:end; background:none; border:0; cursor:pointer;
+  font-family:var(--mono); font-size:.5875rem; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--bauxite); min-height:38px}
+.cart__sum{display:flex; justify-content:space-between; align-items:baseline;
+  font-family:var(--mono); font-size:.75rem; letter-spacing:.12em; text-transform:uppercase}
+.cart__sum b{font-family:var(--display); font-size:1.9rem; font-weight:400;
+  font-variation-settings:"opsz" 100,"WONK" 1; letter-spacing:0}
+.cart__empty{padding-block:3rem; color:var(--ink-2)}
+@media (prefers-reduced-motion:reduce){
+  .cart__panel{transform:none; opacity:0}
+  .cart.is-open .cart__panel{opacity:1}
+}
