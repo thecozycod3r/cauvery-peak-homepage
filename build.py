@@ -358,11 +358,12 @@ def jsonld(slug, title, desc, og):
 def document(slug, title, desc, og, body):
     canonical = f"{BASE}/" if slug == "index.html" else f"{BASE}/{slug}"
     return f'''<!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#16261C">
+<script>document.documentElement.className="js"</script>
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <meta name="robots" content="noindex, nofollow">
@@ -395,6 +396,7 @@ def document(slug, title, desc, og, body):
 {CART}
 {MENU_JS}
 {SHOP_JS}
+<script src="assets/motion.js" defer></script>
 </body>
 </html>
 '''

@@ -64,7 +64,7 @@ a{color:inherit}
 /* Paper has tooth. A single repeating SVG grain, not a giant PNG. */
 body::before{
   content:""; position:fixed; inset:0; z-index:1; pointer-events:none;
-  opacity:.5; mix-blend-mode:multiply;
+  opacity:.34;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.34'/%3E%3C/svg%3E");
 }
 @media (prefers-reduced-transparency:reduce){ body::before{display:none} }
@@ -764,3 +764,94 @@ body{background:var(--paper)}
 .coffee.is-link:hover,.blend.is-link:hover{box-shadow:0 12px 28px rgba(10,20,14,.10)}
 .coffee.is-link,.blend.is-link{transition:box-shadow 160ms ease-out}
 .cof__go{pointer-events:none}
+
+
+/* ============================================================
+   MOTION
+   Reference points: Aesop and Le Labo for restraint — content
+   arrives rather than performs; Officine Buly for the archival
+   register; Kinfolk for editorial scroll cadence. Nothing bounces.
+   Everything is opacity-led with a short travel, because this is a
+   document, not an app.
+
+   Rules kept: transform and opacity only; custom ease-out rather
+   than the weak built-ins; enter slower than exit; stagger 60ms;
+   reduced motion means gentler, not absent.
+   ============================================================ */
+:root{
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  --ease-drawer:cubic-bezier(.32,.72,0,1);
+}
+
+/* Reveals only exist when scripting does. Without JS every element
+   stays visible — the page must never depend on the animation. */
+.js [data-rise]{opacity:0; transform:translateY(12px);
+  transition:opacity .62s var(--ease-out), transform .62s var(--ease-out);
+  transition-delay:var(--d,0ms); will-change:opacity, transform}
+.js [data-rise].is-in{opacity:1; transform:none; will-change:auto}
+
+/* Images resolve instead of popping. The blur bridges the swap so the
+   eye reads one object arriving, not two states exchanging. */
+.js img[data-img]{opacity:0; filter:blur(12px); transform:scale(1.015);
+  transition:opacity .7s var(--ease-out), filter .7s var(--ease-out), transform .7s var(--ease-out)}
+.js img[data-img].is-loaded{opacity:1; filter:none; transform:none}
+
+/* Masthead condenses once past the hero. A state change, not a
+   per-frame animation. */
+.top{transition:padding .3s var(--ease-out), background-color .3s ease,
+  box-shadow .3s ease, border-color .3s ease}
+.top__logo{transition:height .3s var(--ease-out)}
+.top.is-stuck{box-shadow:0 1px 0 color-mix(in srgb,var(--brass) 34%,transparent),
+  0 10px 30px -18px rgba(10,20,14,.4)}
+.top.is-stuck .top__in{padding-block:.45rem}
+.top.is-stuck .top__logo{height:clamp(30px,3.4vw,38px)}
+
+/* press feedback: scale, not translate — the whole control acknowledges */
+.btn:active{transform:scale(.97)}
+.opt:active{transform:scale(.985)}
+.opt{transition:border-color .14s ease, background-color .14s ease, transform .12s var(--ease-out)}
+
+@media (hover:hover) and (pointer:fine){
+  .cof__go{transition:transform .2s var(--ease-out)}
+  .cof:hover .cof__go,.coffee.is-link:hover .cof__go{transform:translateX(4px)}
+  /* nav underline draws from the left rather than fading in */
+  .top__nav a{position:relative; border-bottom-color:transparent!important}
+  .top__nav a::after{content:""; position:absolute; left:0; right:0; bottom:0; height:1px;
+    background:var(--bauxite); transform:scaleX(0); transform-origin:left;
+    transition:transform .24s var(--ease-out)}
+  .top__nav a:hover::after,.top__nav a[aria-current]::after{transform:scaleX(1)}
+  .plate img,.entry__fig img{transition:transform .7s var(--ease-out)}
+  .plate:hover img{transform:scale(1.02)}
+}
+
+/* cross-document transitions: a quiet crossfade, with the masthead
+   held in place so it does not blink between pages */
+@view-transition{ navigation:auto }
+::view-transition-old(root),::view-transition-new(root){
+  animation-duration:.34s; animation-timing-function:var(--ease-out)}
+.top{view-transition-name:masthead}
+@media (prefers-reduced-motion:reduce){ @view-transition{ navigation:none } }
+
+/* Reduced motion: keep the fades that explain what arrived, drop every
+   translation, scale and parallax. Not a blanket kill. */
+@media (prefers-reduced-motion:reduce){
+  .js [data-rise]{transform:none; transition:opacity .3s ease}
+  .js img[data-img]{filter:none; transform:none; transition:opacity .3s ease}
+  .btn:active,.opt:active{transform:none}
+  .plate:hover img{transform:none}
+  .hero .survey,.hero .d1,.hero .lede,.hero .btns{animation:none; opacity:1}
+}
+
+/* Two earlier blocks blanket-kill every transition under reduced motion.
+   That overshoots: motion sensitivity is to movement, not to a fade, and
+   removing the fade makes content snap in with no explanation of where it
+   came from. Restore opacity — and only opacity. */
+@media (prefers-reduced-motion:reduce){
+  .js [data-rise]{
+    transition:opacity .3s ease!important; transform:none!important}
+  .js img[data-img]{
+    transition:opacity .3s ease!important; filter:none!important; transform:none!important}
+  .top,.top__logo{transition:none!important}
+  .drawer__panel,.cart__panel{
+    transition:opacity .18s ease!important; transform:none!important}
+}
