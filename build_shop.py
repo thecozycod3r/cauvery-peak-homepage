@@ -212,7 +212,12 @@ def product_page(p):
   </div>
 </section>'''
 
-    return f'''<section class="pdp" style="--c:{c}" data-variants='{vjson}' data-handle="{p['handle']}" data-title="{esc(p['title'].title())}">
+    return f'''<nav class="crumb" aria-label="Breadcrumb">
+  <div class="wrap">
+    <a href="shop.html">Shop</a><span aria-hidden="true">/</span><span aria-current="page">{p['title'].title()}</span>
+  </div>
+</nav>
+<section class="pdp" style="--c:{c}" data-variants='{vjson}' data-handle="{p['handle']}" data-title="{esc(p['title'].title())}">
   <div class="wrap pdp__in">
     <figure class="pdp__fig">
       {f'<img class="pdp__bg" src="{bg}" alt="" loading="lazy">' if bg else ''}
@@ -274,6 +279,11 @@ def subscribe_page():
   </div>
 </header>
 
+<nav class="crumb" aria-label="Breadcrumb">
+  <div class="wrap">
+    <a href="shop.html">Shop</a><span aria-hidden="true">/</span><span aria-current="page">Subscription</span>
+  </div>
+</nav>
 <section class="pdp" data-variants='{vjson}' data-handle="coffee" data-title="Coffee subscription">
   <div class="wrap">
     <form class="buy buy--sub" onsubmit="return false">

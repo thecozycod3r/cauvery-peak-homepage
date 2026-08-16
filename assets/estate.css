@@ -855,3 +855,28 @@ body{background:var(--paper)}
   .drawer__panel,.cart__panel{
     transition:opacity .18s ease!important; transform:none!important}
 }
+
+/* The pack render was absolutely positioned into the top-right corner and
+   sat on top of the right-aligned spec values — elevation, "All 3 estates"
+   and the sampler prices were all partly hidden underneath it. It now
+   occupies its own grid cell beside the name, so it can never overlap the
+   data no matter how long a value runs. */
+.cof{display:grid; grid-template-columns:1fr auto; grid-template-rows:auto auto auto 1fr;
+  column-gap:1rem; align-content:start}
+.cof__pack{position:static; grid-column:2; grid-row:1 / span 2;
+  width:56px; justify-self:end; align-self:start; margin-top:.15rem}
+.cof__pack--wide{width:104px; margin-top:.3rem}
+.cof__n{grid-column:1; grid-row:1; padding-right:0}
+.cof__t{grid-column:1; grid-row:2}
+.cof__specs{grid-column:1 / -1; grid-row:3; margin-top:1rem}
+.cof__price{grid-column:1 / -1; grid-row:4; align-self:end; margin-top:0}
+
+/* breadcrumb — a product page needs a way back to the shelf */
+.crumb{padding-block:1rem .25rem}
+.crumb .wrap{display:flex; align-items:center; gap:.6rem;
+  font-family:var(--mono); font-size:.625rem; letter-spacing:.16em; text-transform:uppercase}
+.crumb a{color:var(--bauxite); text-decoration:none;
+  display:inline-flex; align-items:center; min-height:38px}
+.crumb a:hover{text-decoration:underline; text-underline-offset:3px}
+.crumb span[aria-hidden]{color:color-mix(in srgb,var(--ink-2) 60%,transparent)}
+.crumb [aria-current]{color:var(--ink-2)}

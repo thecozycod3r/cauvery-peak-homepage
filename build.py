@@ -151,6 +151,56 @@ def footer():
 
 
 
+# Every editorial page used to dead-end. Each now closes by pointing at the
+# shop, in words that follow from what the page just said rather than a
+# generic banner bolted on the bottom.
+CLOSERS = {
+ "brewing.html":     ("Now the coffee", "You have the method.<br>This is what to put in it.",
+                      "Every bag is ground for your brewer before it ships &mdash; choose the method on the product page and we do the rest."),
+ "grind.html":       ("Pick a coffee", "You do not need a grinder.",
+                      "Whichever grind you landed on is an option on every bag we sell. We grind it to order, after you buy it."),
+ "estate.html":      ("Nine stages done", "All of that, in a bag.",
+                      "Every coffee in the shop went through the nine stages on this page, on this estate."),
+ "environment.html": ("From this ground", "Taste what the forest made.",
+                      "Shade, rainfall and bauxite soil are not a story we tell. They are why the cup tastes the way it does."),
+ "history.html":     ("Still growing it", "A hundred and fifty years,<br>and this season&rsquo;s crop.",
+                      "The Hawaiian Red Caturra that MSP Rajes carried back in 1965 is what you are buying today."),
+ "story.html":       ("What we grow", "That is who we are.<br>This is what we sell.",
+                      "Three single estates, two blends, and the spices and honey grown between them."),
+ "press.html":       ("Judge it yourself", "Read about it, or drink it.",
+                      "Kenneth Davids rated it among the top three Indian Arabicas. The bag costs less than the argument."),
+ "cafes.html":       ("Take some home", "Drink it here.<br>Or drink it at home.",
+                      "The same coffee poured in all three caf&eacute;s, roasted to order and sent from the estate."),
+ "visit.html":       ("Cannot come up?", "We will send it down.",
+                      "The tour is the best way to understand the coffee. Ordering it is the second best."),
+ "contact.html":     ("Or just order", "Roasted after you ask for it.",
+                      "Nothing is roasted before an order exists, which is why it does not sit in a warehouse."),
+ "coffee.html":      ("Buy it", "Pick a grind and a size.",
+                      "Eleven grinds, three pack sizes, and we grind to order after you choose."),
+}
+
+def closer(slug):
+    if slug not in CLOSERS: return ""
+    eb, head, lede = CLOSERS[slug]
+    return f'''<section class="band">
+  <div class="sheet ruled">
+    <div class="ruled__mark">
+      <span class="ruled__i num">&#9679;</span>
+      <span class="ruled__l">The shop</span>
+    </div>
+    <div>
+      <p class="mark">{eb}</p>
+      <h2 class="d2">{head}</h2>
+      <p class="lede" style="margin-top:1.25rem">{lede}</p>
+      <div class="btns" style="margin-top:1.75rem">
+        <a class="btn btn--gold" href="shop.html">Shop the coffee</a>
+        <a class="btn btn--ghost" href="subscribe.html">Start a subscription</a>
+      </div>
+    </div>
+  </div>
+</section>'''
+
+
 CART = '''<div class="cart" id="cart">
   <div class="cart__scrim" data-cclose hidden></div>
   <div class="cart__panel" role="dialog" aria-modal="true" aria-label="Your basket">
@@ -390,6 +440,7 @@ def document(slug, title, desc, og, body):
 {drawer(slug)}
 <main id="main">
 {body}
+{closer(slug)}
 </main>
 {footer()}
 {STICKY}
