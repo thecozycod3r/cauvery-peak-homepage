@@ -144,7 +144,6 @@ def footer():
 {social}
       </div>
       <span class="num">11&deg;46&prime;N 78&deg;12&prime;E &middot; 4,100&ndash;4,800 FT</span>
-      <span class="foot__credit">Roasting photograph: <a href="https://commons.wikimedia.org/wiki/File:Genio_dsc02968.jpg" rel="noopener">Wikimedia Commons</a>, CC BY-SA 4.0 &mdash; placeholder</span>
     </div>
   </div>
 </footer>'''

@@ -892,3 +892,36 @@ body{background:var(--paper)}
   padding-block:.85rem; border-top:var(--hair)}
 .stops__n{font-family:var(--mono); font-size:.625rem; letter-spacing:.16em; color:var(--bauxite)}
 .band .stops__n{color:var(--brass)}
+
+/* Timeline: the year is set ~2.5x the body size, so sharing a baseline
+   with it drops the paragraph 16px and reads as a misalignment — all of a
+   numeral's mass sits above the baseline. Align the cap-heights instead,
+   and hang the marker off the year's optical middle rather than the top
+   of the row. */
+@media (min-width:820px){
+  .tl__i{align-items:start}
+  .tl__b{padding-top:.55rem}
+}
+.tl__i::before{top:.9rem}
+.tl__y{line-height:.95}
+
+/* the two people running the estate now have faces */
+.person{display:grid; gap:0}
+.person__fig{margin:0 0 1.1rem; width:104px}
+.person__fig img{width:100%; aspect-ratio:1/1; object-fit:cover;
+  filter:saturate(.92) contrast(1.03)}
+@media (min-width:560px){
+  .person{grid-template-columns:104px 1fr; column-gap:1.5rem; align-items:start}
+  .person__fig{margin:0; grid-row:1 / span 3}
+  .person__n,.person__r,.person__b{grid-column:2}
+}
+
+/* hours and telephone rows reuse the spec ledger; the addresses run long,
+   so let the value wrap instead of forcing a single line */
+.hours .cof__v{text-align:right; max-width:34ch; margin-left:auto}
+.hours .cof__v a{color:var(--bauxite); text-decoration:none}
+.hours .cof__v a:hover{text-decoration:underline; text-underline-offset:3px}
+.band .hours .cof__v a{color:var(--brass)}
+.hours li{align-items:start}
+.note a{color:var(--bauxite)}
+.band .note a{color:var(--brass)}
