@@ -161,7 +161,12 @@ def product_page(p):
     # the option controls — the 33 grind x weight combinations the store hides
     # behind two dropdowns, laid out so you can see all of them
     ctrls = ""
+    # a single-variant product has nothing to choose; an empty fieldset with one
+    # option in it is furniture, not a control
+    single = len(p["variants"]) == 1
     for i, o in enumerate(axes, start=1):
+        if single:
+            break
         opts = "\n".join(
             f'<label class="opt"><input type="radio" name="o{i}" value="{esc(v)}"'
             f'{" checked" if j==0 else ""}><span>{v.split(" (")[0]}</span>'
