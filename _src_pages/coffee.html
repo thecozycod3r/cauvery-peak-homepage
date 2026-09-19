@@ -2,11 +2,96 @@
   <img class="phero__img" src="assets/cherries.webp" alt="Ripe coffee cherry on the estate" width="900" height="600" fetchpriority="high">
   <div class="wrap phero__in stack">
     <p class="eyebrow eyebrow--d">The coffee</p>
-    <h1 class="d1">Taste the difference of place.</h1>
-    <p class="lede">Three estates at three elevations in the Shevaroy Hills, and two blends drawn from all of them. Every bag grown, processed and roasted on our own ground.</p>
+    <h1 class="d1">Same hill.<br>Three heights.<br>Three cups.</h1>
+    <p class="lede">The only thing that really separates our three coffees is how high up the hill they grow. Here is what that does to the taste &mdash; in plain English, before any of the tasting words.</p>
+    <div class="btns" style="margin-top:1.75rem">
+      <a class="btn btn--gold" href="shop.html">Shop Coffee</a>
+      <a class="btn btn--ghost" href="visit.html">Visit the Estate</a>
+    </div>
   </div>
 </header>
 
+<!-- ============ THE RULE — stated before any tasting vocabulary ============ -->
+<section class="band">
+  <div class="wrap stack">
+    <p class="eyebrow eyebrow--d">The whole idea, in one line</p>
+    <h2 class="d2">Higher is brighter.<br>Lower is rounder.</h2>
+    <p class="lede">Higher up it is colder, so the cherry ripens slowly and the cup comes out light and citrusy. Lower down it is warmer, the cherry ripens faster, and the cup comes out heavy, sweet and low on acidity. That is the entire difference between our three estates. Everything below is detail.</p>
+      <figure class="section">
+        <svg viewBox="0 0 1200 430" role="img" aria-label="Schematic section through the Shevaroy Hills showing Glenfell at 4,100 feet, Cauvery Peak at 4,600 feet and Shevaroys at 4,800 feet.">
+          <defs>
+            <pattern id="hatch" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+              <line x1="0" y1="0" x2="0" y2="9" class="sv-hatch"/>
+            </pattern>
+            <clipPath id="ground">
+              <path d="M0,392 C70,384 140,344 210,318 C300,285 350,268 420,238 C500,203 545,180 600,164 C700,136 810,114 880,106 C915,102 940,101 960,102 C1050,107 1130,140 1200,186 L1200,430 L0,430 Z"/>
+            </clipPath>
+          </defs>
+
+          <!-- altitude grid -->
+          <g class="sv-grid">
+            <line x1="70" y1="40"  x2="1200" y2="40"/>
+            <line x1="70" y1="194" x2="1200" y2="194"/>
+            <line x1="70" y1="349" x2="1200" y2="349"/>
+          </g>
+          <g class="sv-glabel">
+            <text x="62" y="44"  text-anchor="end">5,000 FT</text>
+            <text x="62" y="198" text-anchor="end">4,500 FT</text>
+            <text x="62" y="353" text-anchor="end">4,000 FT</text>
+          </g>
+
+          <!-- the landform -->
+          <path class="sv-hill" d="M0,392 C70,384 140,344 210,318 C300,285 350,268 420,238 C500,203 545,180 600,164 C700,136 810,114 880,106 C915,102 940,101 960,102 C1050,107 1130,140 1200,186 L1200,430 L0,430 Z"/>
+          <rect x="0" y="0" width="1200" height="430" fill="url(#hatch)" clip-path="url(#ground)"/>
+
+          <!-- the three estates, marked identically -->
+          <g style="--c:#00818C; --cd:#3FB3BD">
+            <line class="sv-drop" x1="210" y1="318" x2="210" y2="430"/>
+            <circle class="sv-dot" cx="210" cy="318" r="5"/>
+            <text class="sv-name" x="210" y="292" text-anchor="middle">Glenfell</text>
+            <text class="sv-ft"   x="210" y="274" text-anchor="middle">4,100 FT</text>
+          </g>
+          <g style="--c:#324B50; --cd:#8AA9AE">
+            <line class="sv-drop" x1="600" y1="164" x2="600" y2="430"/>
+            <circle class="sv-dot" cx="600" cy="164" r="5"/>
+            <text class="sv-name" x="600" y="138" text-anchor="middle">Cauvery Peak</text>
+            <text class="sv-ft"   x="600" y="120" text-anchor="middle">4,600 FT</text>
+          </g>
+          <g style="--c:#8E3A21; --cd:#C2613F">
+            <line class="sv-drop" x1="960" y1="102" x2="960" y2="430"/>
+            <circle class="sv-dot" cx="960" cy="102" r="5"/>
+            <text class="sv-name" x="960" y="76" text-anchor="middle">Shevaroys</text>
+            <text class="sv-ft"   x="960" y="58" text-anchor="middle">4,800 FT</text>
+          </g>
+        </svg>
+        <figcaption class="section__cap">
+          <span class="section__cap-t"><b>Schematic section</b> &mdash; Shevaroy Hills</span>
+          <ul class="seclegend">
+            <li style="--c:#8E3A21; --cd:#C2613F"><span class="seclegend__n">Shevaroys</span><span class="seclegend__v num">4,800 ft</span><span class="seclegend__c">bright, citrusy</span></li>
+            <li style="--c:#324B50; --cd:#8AA9AE"><span class="seclegend__n">Cauvery Peak</span><span class="seclegend__v num">4,600 ft</span><span class="seclegend__c">balanced, chocolatey</span></li>
+            <li style="--c:#00818C; --cd:#3FB3BD"><span class="seclegend__n">Glenfell</span><span class="seclegend__v num">4,100 ft</span><span class="seclegend__c">round, lightly spiced</span></li>
+          </ul>
+        </figcaption>
+      </figure>
+    <ul class="terroir">
+      <li class="terroir__i" style="--c:#8E3A21; --cd:#C2613F">
+        <span class="terroir__h">Shevaroys &middot; 4,800 ft</span>
+        <span class="terroir__b">Coldest ground, bauxite soil, mountain springs. The cherry takes the longest to ripen here.</span>
+        <span class="terroir__c">Tastes bright and citrusy</span>
+      </li>
+      <li class="terroir__i" style="--c:#324B50; --cd:#8AA9AE">
+        <span class="terroir__h">Cauvery Peak &middot; 4,600 ft</span>
+        <span class="terroir__b">The middle of the hill, and the Hawaiian Red Caturra seed brought back from Costa Rica in 1965.</span>
+        <span class="terroir__c">Tastes balanced and chocolatey</span>
+      </li>
+      <li class="terroir__i" style="--c:#00818C; --cd:#3FB3BD">
+        <span class="terroir__h">Glenfell &middot; 4,100 ft</span>
+        <span class="terroir__b">Warmest and lowest, under heavy mixed shade, with clove and nutmeg growing between the coffee rows.</span>
+        <span class="terroir__c">Tastes round and faintly spiced</span>
+      </li>
+    </ul>
+  </div>
+</section>
 <section id="coffee">
   <div class="wrap">
         <div class="coffees">
@@ -20,6 +105,8 @@
         <div class="coffee__in">
           <h2 class="coffee__name"><a class="cof__hit" href="p-coffee-powder-she.html">Shevaroys</a></h2>
           <div class="coffee__sub">Estate Reserve</div>
+          <p class="coffee__plain">Bright and citrusy, light in the mouth.</p>
+          <p class="coffee__pick">Buy this if you drink your coffee black, or brew pour over.</p>
           <div class="alt"><span class="alt__n">1,450</span><span class="alt__u">m</span></div>
           <div class="gauge"><span class="gauge__f" style="width:100%"></span></div>
           <ul class="spec">
@@ -41,6 +128,8 @@
         <div class="coffee__in">
           <h2 class="coffee__name"><a class="cof__hit" href="p-coffee-powder-cp.html">Cauvery Peak</a></h2>
           <div class="coffee__sub">Estate Heritage</div>
+          <p class="coffee__plain">Balanced and chocolatey. Full, but not heavy.</p>
+          <p class="coffee__pick">Buy this if you are not sure. It is the one to start on.</p>
           <div class="alt"><span class="alt__n">1,400</span><span class="alt__u">m</span></div>
           <div class="gauge"><span class="gauge__f" style="width:78%"></span></div>
           <ul class="spec">
@@ -62,6 +151,8 @@
         <div class="coffee__in">
           <h2 class="coffee__name"><a class="cof__hit" href="p-glenfell-4.html">Glenfell</a></h2>
           <div class="coffee__sub">Estate Classic</div>
+          <p class="coffee__plain">Round and sweet, low on acidity, faintly spiced.</p>
+          <p class="coffee__pick">Buy this if you take it with milk, or make South Indian filter coffee.</p>
           <div class="alt"><span class="alt__n">1,250</span><span class="alt__u">m</span></div>
           <div class="gauge"><span class="gauge__f" style="width:42%"></span></div>
           <ul class="spec">
@@ -97,20 +188,22 @@
   </div>
 </section>
 
-<section class="band">
-  <div class="wrap stack">
-    <p class="eyebrow eyebrow--d">How to choose</p>
-    <h2 class="d2">Elevation is the shortcut.</h2>
-    <p class="lede">Higher and cooler means slower ripening, brighter acidity and a lighter body — that is Shevaroys at 1,450 m. Lower and warmer means a rounder, fuller cup — that is Glenfell at 1,250 m, with clove and nutmeg growing between the rows. Cauvery Peak sits in the middle and is the one to start with.</p>
-    <div class="btns"><a class="btn btn--gold" href="grind.html">Find your grind</a><a class="btn btn--ghost" href="brewing.html">How to brew it</a></div>
-  </div>
-</section>
 
 <section>
   <div class="wrap stack">
-    <p class="eyebrow">Where it comes from</p>
+    <p class="eyebrow">Not sure yet</p>
+    <h2 class="d2">Try all three<br>before you commit.</h2>
+    <p class="body">The sampler pack has all three single estates in it, so you can taste the hill top to bottom and then buy the one you actually liked.</p>
+    <div class="btns"><a class="btn btn--gold" href="p-sample-pack.html">The three-estate sampler</a><a class="btn btn--ink" href="shop.html">Shop Coffee</a></div>
+    <p class="closer__or" style="margin-top:.25rem">Still deciding how to make it? <a href="grind.html">Find your grind</a> or <a href="brewing.html">read the brewing guide</a>.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap stack">
+    <p class="eyebrow eyebrow--d">Where it comes from</p>
     <h2 class="d2">Nine stages, all of them ours.</h2>
-    <p class="body">Every bag on this page was picked, pulped, washed, dried, milled, roasted and packed on the estate that grew it.</p>
-    <div class="btns"><a class="btn btn--ink" href="estate.html">See the process</a></div>
+    <p class="lede">Every bag on this page was picked, pulped, washed, dried, milled, roasted and packed on the estate that grew it. You can come and watch it happen.</p>
+    <div class="btns"><a class="btn btn--gold" href="p-coffee-experience-tours-11.html">Book the Experience</a><a class="btn btn--ghost" href="estate.html">See the process</a></div>
   </div>
 </section>

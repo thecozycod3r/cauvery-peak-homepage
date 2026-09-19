@@ -15,19 +15,28 @@ SRC = os.path.join(HERE, "_src_pages")
 # where this build is actually served from — used for canonical + og:url
 BASE = "https://thecozycod3r.github.io/cauvery-peak-homepage"
 
+# The nav carries the story. The three things we want people to DO are
+# buttons, not nav items — "Coffee" and "Shop" used to be two doors to the
+# same job and the visitor had to guess which one bought a bag.
 NAV = [
-    ("Coffee",   "coffee.html"),
-    ("Visit",    "visit.html"),
+    ("The coffee", "coffee.html"),
     ("The estate", "estate.html"),
-    ("Learn",    "brewing.html"),
-    ("Shop",     "shop.html"),
+    ("Visit",      "visit.html"),
+    ("Learn",      "brewing.html"),
 ]
 
+# The three actions. One name and one destination for each, used in the
+# header, the drawer, the mobile bar, every page closer and the footer.
+ACT_SHOP  = ("Shop Coffee",        "shop.html")
+ACT_VISIT = ("Visit the Estate",   "visit.html")
+ACT_BOOK  = ("Book the Experience","p-coffee-experience-tours-11.html")
+
 FOOT = [
-    ("Coffee", [("Single estates","shop.html"),("Blends","shop.html"),
+    ("Shop Coffee", [("Single estates","shop.html"),("Blends","shop.html"),
                 ("Subscriptions","subscribe.html"),("Spices &amp; honey","shop.html")]),
-    ("Visit",  [("Estate tour","visit.html"),("Estate caf&eacute;","cafes.html"),
-                ("Lake View Village","cafes.html"),("Glenfell kiosk","cafes.html")]),
+    ("Visit the Estate",  [("Book the Experience","p-coffee-experience-tours-11.html"),
+                ("What the tour covers","visit.html"),
+                ("The three caf&eacute;s","cafes.html"),("Find us","contact.html")]),
     ("The estate", [("Grower to Connoisseur","estate.html"),("Our story","story.html"),
                     ("History","history.html"),("The environment","environment.html")]),
     ("Learn",  [("Brewing guide","brewing.html"),("Grind guide","grind.html"),
@@ -73,7 +82,10 @@ def header(active):
       <span class="burger__box" aria-hidden="true"><i></i><i></i><i></i></span>
       <span class="burger__t">Menu</span>
     </button>
-    <button class="cartbtn" type="button" id="cartbtn" hidden>Basket <b class="num">0</b></button>
+    <div class="top__act">
+      <a class="btn btn--fill btn--sm top__cta" href="{ACT_SHOP[1]}">{ACT_SHOP[0]}</a>
+      <button class="cartbtn" type="button" id="cartbtn" hidden>Basket <b class="num">0</b></button>
+    </div>
   </div>
 </header>'''
 
@@ -100,8 +112,9 @@ def drawer(active):
 {groups}
     </nav>
     <div class="drawer__cta">
-      <a class="btn btn--gold" href="visit.html">Book the tour</a>
-      <a class="btn btn--ink" href="coffee.html">Shop coffee</a>
+      <a class="btn btn--fill" href="{ACT_SHOP[1]}">{ACT_SHOP[0]}</a>
+      <a class="btn btn--ink" href="{ACT_VISIT[1]}">{ACT_VISIT[0]}</a>
+      <a class="btn btn--ink" href="{ACT_BOOK[1]}">{ACT_BOOK[0]}</a>
     </div>
     <p class="drawer__meta">MSP Plantations &middot; Yercaud, Tamil Nadu</p>
   </div>
@@ -153,48 +166,79 @@ def footer():
 # Every editorial page used to dead-end. Each now closes by pointing at the
 # shop, in words that follow from what the page just said rather than a
 # generic banner bolted on the bottom.
+# Every editorial page used to dead-end, and then it closed on the shop and
+# only the shop. Each closer now names the action that actually follows from
+# what the page just said, and offers a second door beside it — so the
+# storytelling leads somewhere instead of looping into more storytelling.
+# (eyebrow, heading, lede, primary action, secondary action)
+SHOP, VISIT, BOOK = "shop", "visit", "book"
 CLOSERS = {
  "brewing.html":     ("Now the coffee", "You have the method.<br>This is what to put in it.",
-                      "Every bag is ground for your brewer before it ships &mdash; choose the method on the product page and we do the rest."),
+                      "Every bag is ground for your brewer before it ships &mdash; choose the method on the product page and we do the rest.",
+                      SHOP, VISIT),
  "grind.html":       ("Pick a coffee", "You do not need a grinder.",
-                      "Whichever grind you landed on is an option on every bag we sell. We grind it to order, after you buy it."),
- "estate.html":      ("Nine stages done", "All of that, in a bag.",
-                      "Every coffee in the shop went through the nine stages on this page, on this estate."),
+                      "Whichever grind you landed on is an option on every bag we sell. We grind it to order, after you buy it.",
+                      SHOP, VISIT),
+ "estate.html":      ("Nine stages done", "All of that, in a bag.<br>Or all of it, in person.",
+                      "Every coffee in the shop went through the nine stages on this page. The tour walks you past seven of them.",
+                      SHOP, BOOK),
  "environment.html": ("From this ground", "Taste what the forest made.",
-                      "Shade, rainfall and bauxite soil are not a story we tell. They are why the cup tastes the way it does."),
+                      "Shade, rainfall and bauxite soil are not a story we tell. They are why the cup tastes the way it does.",
+                      SHOP, VISIT),
  "history.html":     ("Still growing it", "A hundred and fifty years,<br>and this season&rsquo;s crop.",
-                      "The Hawaiian Red Caturra that MSP Rajes carried back in 1965 is what you are buying today."),
+                      "The Hawaiian Red Caturra that MSP Rajes carried back in 1965 is what you are buying today.",
+                      SHOP, VISIT),
  "story.html":       ("What we grow", "That is who we are.<br>This is what we sell.",
-                      "Three single estates, two blends, and the spices and honey grown between them."),
+                      "Three single estates, two blends, and the spices and honey grown between them.",
+                      SHOP, VISIT),
  "press.html":       ("Judge it yourself", "Read about it, or drink it.",
-                      "Kenneth Davids rated it among the top three Indian Arabicas. The bag costs less than the argument."),
+                      "Kenneth Davids rated it among the top three Indian Arabicas. The bag costs less than the argument.",
+                      SHOP, VISIT),
  "cafes.html":       ("Take some home", "Drink it here.<br>Or drink it at home.",
-                      "The same coffee poured in all three caf&eacute;s, roasted to order and sent from the estate."),
+                      "The same coffee poured in all three caf&eacute;s, roasted to order and sent from the estate.",
+                      BOOK, SHOP),
  "visit.html":       ("Cannot come up?", "We will send it down.",
-                      "The tour is the best way to understand the coffee. Ordering it is the second best."),
+                      "The tour is the best way to understand the coffee. Ordering it is the second best.",
+                      BOOK, SHOP),
  "contact.html":     ("Or just order", "Roasted after you ask for it.",
-                      "Nothing is roasted before an order exists, which is why it does not sit in a warehouse."),
+                      "Nothing is roasted before an order exists, which is why it does not sit in a warehouse.",
+                      SHOP, BOOK),
  "coffee.html":      ("Buy it", "Pick a grind and a size.",
-                      "Eleven grinds, three pack sizes, and we grind to order after you choose."),
+                      "Eleven grinds, three pack sizes, and we grind to order after you choose.",
+                      SHOP, BOOK),
 }
 
+ACTIONS = {SHOP: ACT_SHOP, VISIT: ACT_VISIT, BOOK: ACT_BOOK}
+
 def closer(slug):
+    """Close the page on the action that follows from it, and name the other
+    two so no page is ever a dead end."""
     if slug not in CLOSERS: return ""
-    eb, head, lede = CLOSERS[slug]
+    eb, head, lede, a1, a2 = CLOSERS[slug]
+    l1, h1 = ACTIONS[a1]
+    l2, h2 = ACTIONS[a2]
+    # the third door, unless it points back at the page you are already on
+    rest = [k for k in (SHOP, VISIT, BOOK)
+            if k not in (a1, a2) and ACTIONS[k][1] != slug]
+    third = ""
+    if rest:
+        l3, h3 = ACTIONS[rest[0]]
+        third = f'<p class="closer__or">Or <a href="{h3}">{l3.lower()}</a>.</p>'
     return f'''<section class="band">
   <div class="sheet ruled">
     <div class="ruled__mark">
       <span class="ruled__i num">&#9679;</span>
-      <span class="ruled__l">The shop</span>
+      <span class="ruled__l">What next</span>
     </div>
     <div>
       <p class="mark">{eb}</p>
       <h2 class="d2">{head}</h2>
       <p class="lede" style="margin-top:1.25rem">{lede}</p>
       <div class="btns" style="margin-top:1.75rem">
-        <a class="btn btn--gold" href="shop.html">Shop the coffee</a>
-        <a class="btn btn--ghost" href="subscribe.html">Start a subscription</a>
+        <a class="btn btn--gold" href="{h1}">{l1}</a>
+        <a class="btn btn--ghost" href="{h2}">{l2}</a>
       </div>
+      {third}
     </div>
   </div>
 </section>'''
@@ -218,9 +262,24 @@ CART = '''<div class="cart" id="cart">
   </div>
 </div>'''
 
-STICKY = '''<div class="sticky">
-  <a class="btn btn--gold" href="visit.html">Book the tour</a>
-  <a class="btn btn--ghost" href="coffee.html">Shop coffee</a>
+# The bar repeats the hero's own two buttons, so on the homepage it used to
+# sit directly under an identical "Shop Coffee". It stays hidden until the
+# first screen has scrolled away and there is no longer a CTA in view.
+STICKY_JS = """<script>
+(function(){
+  var bar=document.querySelector('.sticky'); if(!bar) return;
+  var hero=document.querySelector('.hero,.phero');
+  if(!hero){ bar.classList.add('is-on'); return; }
+  if(!('IntersectionObserver' in window)){ bar.classList.add('is-on'); return; }
+  new IntersectionObserver(function(es){
+    bar.classList.toggle('is-on', !es[0].isIntersecting);
+  },{threshold:0}).observe(hero);
+})();
+</script>"""
+
+STICKY = f'''<div class="sticky">
+  <a class="btn btn--gold" href="{ACT_SHOP[1]}">{ACT_SHOP[0]}</a>
+  <a class="btn btn--ghost" href="{ACT_BOOK[1]}">{ACT_BOOK[0]}</a>
 </div>'''
 
 # Small enough to inline. Runs on every page; the drawer is inert until opened.
@@ -443,6 +502,7 @@ def document(slug, title, desc, og, body):
 </main>
 {footer()}
 {STICKY}
+{STICKY_JS}
 {CART}
 {MENU_JS}
 {SHOP_JS}

@@ -1,0 +1,4 @@
+{
+  "site": "https://thecozycod3r.github.io/cauvery-peak-homepage",
+  "exclude": ["cmp/**", "_src_pages/**"]
+}

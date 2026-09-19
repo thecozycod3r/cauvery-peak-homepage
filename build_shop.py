@@ -130,7 +130,7 @@ def shop_page():
     for title, blurb, handles in GROUPS:
         items = [BY[h] for h in handles if h in BY]
         if not items: continue
-        out.append(f'''    <p class="cgroup">{title}</p>
+        out.append(f'''    <h2 class="cgroup">{title}</p>
     {f'<p class="body" style="margin:-.4rem 0 1.25rem">{blurb}</p>' if blurb else ''}
     <div class="coffees" style="margin:0 0 clamp(2.5rem,5vw,3.5rem)">
 {chr(10).join(card(p) for p in items)}
@@ -205,7 +205,7 @@ def product_page(p):
         gallery = f'''
 <section>
   <div class="wrap">
-    <p class="cgroup">On the estate</p>
+    <h2 class="cgroup">On the estate</p>
     <div class="plates plates--3">
 {figs}
     </div>

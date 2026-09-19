@@ -925,3 +925,254 @@ body{background:var(--paper)}
 .hours li{align-items:start}
 .note a{color:var(--bauxite)}
 .band .note a{color:var(--brass)}
+
+/* ==========================================================================
+   The journey — one name and one door per action
+   ========================================================================== */
+
+/* The header carried no call to action at all: a logo, four links and a
+   basket button that stayed hidden until something was already in it. */
+.top__act{display:flex; align-items:center; gap:.6rem}
+.btn--sm{min-height:40px; padding:0 1rem; font-size:.6875rem; letter-spacing:.14em}
+.top__cta{display:none}
+@media (min-width:900px){ .top__cta{display:inline-flex} }
+
+/* the third door, named in text so no page ends on only two */
+.closer__or{font-size:.9375rem; color:var(--ink-2); margin:1.1rem 0 0}
+.closer__or a{color:var(--bauxite); text-underline-offset:3px}
+.band .closer__or{color:var(--onDark-2)}
+.band .closer__or a{color:var(--brass)}
+
+/* three actions will not fit side by side on a phone */
+.drawer__cta{display:grid; gap:.5rem}
+
+/* ==========================================================================
+   Terroir — what elevation does to the cup, said before the tasting words
+   ========================================================================== */
+.terroir{list-style:none; margin:clamp(1.75rem,4vw,2.5rem) 0 0; padding:0;
+  display:grid; gap:0; grid-template-columns:1fr}
+@media (min-width:900px){
+  .terroir{grid-template-columns:repeat(3,1fr); gap:clamp(1.5rem,3vw,2.5rem)}
+}
+.terroir__i{display:grid; gap:.5rem; align-content:start;
+  border-top:2px solid var(--c,var(--brass)); padding-block:1.1rem}
+@media (max-width:899px){ .terroir__i+.terroir__i{margin-top:0} }
+.terroir__h{font-family:var(--mono); font-size:.6875rem; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--c,var(--brass)); font-weight:600}
+.terroir__b{font-size:.9375rem; line-height:1.5; color:var(--onDark-2); max-width:38ch}
+.terroir__c{font-family:var(--display); font-size:clamp(1.15rem,2vw,1.4rem);
+  line-height:1.15; color:var(--onDark); margin-top:.15rem}
+
+/* the plain-English verdict, set above the specification table so a
+   non-expert never has to parse "crisp acidity" to choose a bag */
+.coffee__plain,.cof__plain{font-family:var(--display); font-size:1.1rem; line-height:1.25;
+  color:var(--ink); margin:.85rem 0 0; max-width:30ch}
+.coffee__pick{font-size:.875rem; line-height:1.45; color:var(--ink-2);
+  margin:.5rem 0 .35rem; max-width:34ch}
+.cof__plain{font-size:1.02rem; margin:.5rem 0 .9rem}
+
+/* ==========================================================================
+   Mobile pass — measured at 390px, not eyeballed
+   ========================================================================== */
+
+/* Footer links measured 165x42 and the logo link 38x30. Apple and Google both
+   want 44. Two pixels is invisible on a desk and a missed tap on a bus. */
+.foot__l a{min-height:44px}
+.top__home{min-height:44px; min-width:44px; align-items:center}
+.burger{min-height:44px; min-width:44px}
+.cartbtn{min-height:44px}
+.btn--sm{min-height:44px}
+.foot__legal a{display:inline-flex; align-items:center; min-height:44px}
+.foot__pl{display:inline-flex; align-items:center; min-height:44px}
+
+/* Contrast measured against the actual painted background:
+   brass #A98247 on paper #EDEFEA is 3.04:1 and teal #00818C is 4.01:1 —
+   both under 4.5. Brass is fine on the dark canopy and stays there; on a
+   light ground the same role is played by bauxite, which measures 6.1:1.
+   The per-estate accent (--c) is kept for rules, bands and packshots, where
+   it is decoration, and dropped from small text. */
+.cgroup{color:var(--bauxite)}
+.band .cgroup{color:var(--brass)}
+.cof__t{color:var(--ink-2)}
+.cof__go{color:var(--bauxite)}
+.terroir__h{color:var(--brass)}          /* sits on canopy — 4.5:1, passes */
+
+/* The burger label sat on a transparent header over a photograph, so its
+   contrast depended on whatever had scrolled underneath it. Give the header
+   an opaque floor on small screens, where the burger is the only nav. */
+@media (max-width:859px){
+  .top{background:var(--paper)}
+}
+.skip{min-height:44px; display:inline-flex; align-items:center}
+.drawer__home{min-height:44px; display:inline-flex; align-items:center}
+.foot__social a{width:44px; height:44px}
+
+/* ==========================================================================
+   The schematic on a phone
+   ==========================================================================
+   The section is drawn in a 1200-unit viewBox. On a 390px screen it renders
+   273px wide — a scale of 0.23 — so the 19px estate names came out at 4.3px
+   and the altitude labels at 2.5px. Measured, not guessed. Scaling the SVG
+   type up to compensate makes "Cauvery Peak" a third of the drawing wide and
+   the three labels collide.
+   So on small screens the drawing keeps the landform and the three markers,
+   which read fine at any size, and the naming moves to real HTML underneath,
+   where it scales, wraps, and is legible to a screen reader. The legend
+   carries the taste verdict too, so the diagram states the whole idea. */
+.seclegend{list-style:none; margin:.9rem 0 0; padding:0; display:grid; gap:0}
+.seclegend li{display:grid; grid-template-columns:auto 1fr auto; align-items:baseline;
+  gap:.5rem .7rem; padding-block:.55rem; border-top:var(--hair)}
+.seclegend li::before{content:""; width:10px; height:10px; border-radius:50%;
+  background:var(--c); align-self:center}
+.seclegend__n{font-family:var(--display); font-size:1.05rem; line-height:1.1}
+.seclegend__v{font-family:var(--mono); font-size:.6875rem; letter-spacing:.1em;
+  color:var(--ink-2); justify-self:end}
+.seclegend__c{grid-column:2 / -1; font-size:.8125rem; color:var(--ink-2)}
+.band .seclegend__v,.band .seclegend__c{color:var(--onDark-2)}
+.band .seclegend__n{color:var(--onDark)}
+.section__cap-t{display:block}
+
+@media (max-width:719px){
+  /* unreadable at this scale — the legend below says the same thing */
+  .sv-name,.sv-ft,.sv-glabel{display:none}
+  .section svg{aspect-ratio:auto}
+}
+@media (min-width:720px){
+  .seclegend{grid-template-columns:repeat(3,1fr); gap:0 clamp(1.5rem,3vw,2.5rem)}
+  .seclegend li{border-top:2px solid var(--c)}
+  .seclegend li::before{display:none}
+  .seclegend__c{grid-column:1 / -1}
+}
+
+/* the plain-English verdict needs its own row: every other child of .cof is
+   explicitly placed, so an auto-placed one landed after the price */
+.cof{grid-template-rows:auto auto auto auto 1fr}
+.cof__plain{grid-column:1 / -1; grid-row:3; margin:.55rem 0 0}
+.cof__specs{grid-row:4}
+.cof__price{grid-row:5}
+
+/* the mobile bar is dead weight while the hero's own buttons are on screen */
+.sticky{transform:translateY(110%); transition:transform .28s var(--ease-out,ease-out);
+  will-change:transform}
+.sticky.is-on{transform:none}
+.no-js .sticky,html:not(.js) .sticky{transform:none}
+@media (prefers-reduced-motion:reduce){ .sticky{transition:none} }
+
+/* The legend inherits the caption's engraved mono-uppercase. That is right
+   for a drawing label and wrong for the one line on the page that is
+   supposed to sound like a person describing a taste. */
+.seclegend{text-transform:none; letter-spacing:normal; font-family:var(--sans)}
+.seclegend__n{text-transform:none; letter-spacing:-.01em; color:var(--ink)}
+.seclegend__c{text-transform:none; letter-spacing:normal; font-family:var(--sans)}
+.seclegend__v{text-transform:uppercase; letter-spacing:.12em; color:var(--bauxite)}
+.band .seclegend__v{color:var(--brass)}
+
+/* with the names gone on a phone, the three markers carry the drawing —
+   at 0.23 scale a 1.5px rule is a third of a pixel */
+@media (max-width:719px){
+  .sv-drop{stroke-width:5; stroke-dasharray:10 8}
+  .sv-dot{r:14}
+  .sv-hill{stroke-width:4}
+  .sv-grid{stroke-width:3; stroke-dasharray:7 14}
+}
+
+/* On the canopy band the estate accents are set for a light ground: the mid
+   estate's slate measures ~1.4:1 against #16261C and disappears. Elements
+   that carry an accent also carry --cd, the value for a dark ground. */
+.band .seclegend li::before{background:var(--cd,var(--c))}
+.band .seclegend li{border-top-color:var(--cd,var(--c))}
+.band .sv-drop{stroke:var(--cd,var(--c,var(--brass)))}
+.band .sv-dot{fill:var(--cd,var(--c,var(--brass)))}
+.band .sv-ft{fill:var(--cd,var(--c,var(--brass)))}
+.band .terroir__i{border-top-color:var(--cd,var(--c,var(--brass)))}
+.band .terroir__h{color:var(--cd,var(--brass))}
+
+/* The drawer head is sticky and opaque, but the panel's own 1rem of top
+   padding sat above it — so the menu list scrolled up through that strip
+   and "The three cafés" appeared above the word "Cauvery Peak". Move the
+   padding into the head itself so its background reaches the panel edge. */
+.drawer__panel{padding-top:0}
+.drawer__head{padding-block:1rem .55rem; top:0;
+  border-bottom:1px solid color-mix(in srgb,var(--brass) 28%,transparent)}
+
+/* the mobile bar is z-50 under a z-70 drawer, but the panel is 86vw so the
+   bar's left edge stayed lit beside it */
+html.no-scroll .sticky{transform:translateY(110%)}
+
+/* ==========================================================================
+   Measured mobile fixes, round two
+   ========================================================================== */
+
+/* A café page on a phone converts through the phone number, and every one of
+   them was a 15px tap target. */
+.hours .cof__v a,.note a{display:inline-flex; align-items:center; min-height:44px}
+.crumb a{min-height:44px}
+.closer__or a{display:inline-block; padding-block:.7rem}
+
+/* .note keeps a light background (--sunk) even inside a .band, so the band's
+   brass link colour was painting brass on near-white: 3.21:1. The surface
+   decides the colour here, not the section. */
+.band .note a{color:var(--bauxite)}
+
+/* .phero is the interior-page hero and never got .hero's light button and
+   caption colours, so "Visit the Estate" was --ink on a dark photograph:
+   1.12:1, effectively invisible. */
+.phero .btn{color:#F2F5F0}
+.phero .btn--gold,.phero .btn--fill{background:var(--bauxite); border-color:var(--bauxite); color:#F7F4F1}
+.phero .btn--gold:hover,.phero .btn--fill:hover{background:var(--bauxite-hi); border-color:var(--bauxite-hi)}
+.phero .btn--ghost,.phero .btn--ink{border-color:rgba(242,245,240,.55); color:#F2F5F0}
+.phero .btn--ghost:hover,.phero .btn--ink:hover{background:#F2F5F0; color:var(--ink)}
+
+/* the drawing's caption sits on the canopy on coffee.html and kept its
+   light-ground colours: 2.09:1 */
+.band .section__cap{color:var(--onDark-2)}
+.band .section__cap b{color:var(--brass)}
+
+/* --cd values were picked to be visible as a dot; as 11px uppercase type
+   the warmest of them measured 3.82:1. Lighten the one that carries text. */
+.band .terroir__h{color:color-mix(in srgb,var(--cd,var(--brass)) 72%,#F2F5F0)}
+
+/* the per-estate accent as small text on paper: teal measured 4.01:1 */
+.coffee__sub{color:var(--ink-2)}
+.coffee__name a{color:var(--ink)}
+
+/* .noimg is an honest "we have not photographed this yet" placeholder. It was
+   styled for a dark ground but renders on a light card: brass 3.21:1 and the
+   body copy 2.42:1, light-on-light. */
+.noimg__t{color:var(--bauxite)}
+.noimg__b{color:var(--ink-2)}
+
+/* Explicit values rather than color-mix: the mixed result serialises as
+   color(srgb …), which several contrast tools — including the one used to
+   check this page — cannot parse. */
+.band .terroir__h{color:#D9A07E}
+.terroir__i[style*="8E3A21"] .terroir__h{color:#E0A084}
+.terroir__i[style*="324B50"] .terroir__h{color:#A8C4C9}
+.terroir__i[style*="00818C"] .terroir__h{color:#72CBD4}
+
+/* a two-word breadcrumb was 30px wide */
+.crumb a{padding-inline:.6rem; margin-inline:-.6rem}
+
+/* contact.html puts the phone numbers straight onto the .phero photograph.
+   The spec list is styled for paper — keys at --ink-2 and values at --ink —
+   so every number measured 2.09:1 and "Tuesdays" 1.12:1 against the hero.
+   These are the contact details on the contact page; they have to be the
+   most legible thing on it. */
+.phero .cof__specs .cof__k{color:rgba(242,245,240,.74)}
+.phero .cof__specs .cof__v{color:#F2F5F0}
+.phero .cof__specs .cof__v a{color:#F0DCB4}
+.phero .cof__specs li{border-top-color:rgba(242,245,240,.28)}
+.phero .cof__lead{border-bottom-color:rgba(242,245,240,.34)}
+
+/* The selected variant chip painted the per-product accent behind light text.
+   That is fine for the dark accents and fails for the light ones — the brass
+   sampler measured 3.04:1 — and the sub-label's 78% alpha took the slate
+   product to 2.25:1. The accent still identifies the product through the
+   chip's border; the selected state now uses one dark fill for every product
+   so the contrast does not depend on which bag you are looking at. */
+.opt:has(input:checked){background:var(--canopy); border-color:var(--canopy); color:var(--paper-hi)}
+.opt:has(input:checked) small{color:rgba(237,239,234,.9)}
+.opt:has(input:checked):hover{background:var(--canopy-2); border-color:var(--canopy-2)}
+
+/* the lede sat on the h1's descenders ("itself." into "Grown,") */
+.hero .lede,.phero .lede{margin-top:clamp(.9rem,1.6vw,1.4rem)}

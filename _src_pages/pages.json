@@ -3,7 +3,7 @@
   "file": "home.html",
   "slug": "index.html",
   "title": "Cauvery Peak — coffee, from the estate itself",
-  "desc": "Coffee grown, processed and roasted at 4,600 ft in the Shevaroy Hills, Yercaud. A working single-estate plantation farmed by the same family for five generations.",
+  "desc": "Coffee grown, processed and roasted at 4,600 ft in the Shevaroy Hills, Yercaud, on a plantation farmed by one family for five generations.",
   "og": "og-index.jpg"
  },
  {
@@ -86,9 +86,9 @@
  {
   "file": "shop.html",
   "slug": "shop.html",
-  "title": "Shop — Cauvery Peak",
+  "title": "Shop estate coffee, spices & honey — Cauvery Peak",
   "og": "og-coffee.jpg",
-  "desc": "Estate coffee, spices and honey from a 150-year-old plantation in the Shevaroy Hills, Yercaud. Roasted to order."
+  "desc": "Three single-estate coffees, two blends, and the spices and honey grown between them. Roasted to order on a 150-year-old plantation in Yercaud."
  },
  {
   "file": "subscribe.html",
@@ -144,7 +144,7 @@
   "slug": "p-pepper.html",
   "og": "og-coffee.jpg",
   "title": "Pepper — Cauvery Peak",
-  "desc": "MSP Plantations is a family owned, professionally managed company. 5 generations of coffee and spices knowledge, goes into systematically improving cu"
+  "desc": "Black pepper grown on vines climbing the shade trees of our Yercaud coffee estate, harvested and dried on the same boundary as the coffee."
  },
  {
   "file": "p-coffee-powder-she.html",
@@ -158,21 +158,21 @@
   "slug": "p-nutmeg-mace.html",
   "og": "og-coffee.jpg",
   "title": "Nutmeg & Mace — Cauvery Peak",
-  "desc": "Nutmeg is a popular spice having a long list of health benefits, including its ability to relieve pain, soothe indigestion, and improve cognitive func"
+  "desc": "Nutmeg and mace from the mixed shade canopy over our Yercaud coffee, picked on the estate and dried alongside the season's parchment."
  },
  {
   "file": "p-clove.html",
   "slug": "p-clove.html",
   "og": "og-coffee.jpg",
   "title": "Cloves — Cauvery Peak",
-  "desc": "MSP Plantations is a family owned, professionally managed company. 5 generations of coffee and spices knowledge, goes into systematically improving cu"
+  "desc": "Cloves grown between the coffee rows at Glenfell, the lowest and warmest of our three Shevaroy Hills estates — the same trees that spice the cup."
  },
  {
   "file": "p-honey.html",
   "slug": "p-honey.html",
   "og": "og-coffee.jpg",
   "title": "Honey — Cauvery Peak",
-  "desc": "MSP Plantations is a family owned, professionally managed company. 5 generations of coffee and spices knowledge, goes into systematically improving cu"
+  "desc": "Honey from the hives kept among the coffee and spice on our Yercaud estate, where five generations of the same family have farmed the Shevaroy Hills."
  },
  {
   "file": "p-glenfell-4.html",

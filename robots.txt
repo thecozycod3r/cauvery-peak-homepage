@@ -1,0 +1,12 @@
+# This is the REVIEW BUILD of the Cauvery Peak site, served from
+# thecozycod3r.github.io. It is a copy of a real shop that trades at
+# cauverypeakestate.com. If search engines index this host, it competes
+# with the client's own store for the client's own brand terms.
+#
+# So: nothing here is crawlable, and every page also carries a noindex
+# meta tag as a second lock. At launch, on the real domain, this file
+# becomes "Allow: /" plus the Sitemap line below, and build.py drops the
+# noindex. Neither change should be made on this host.
+
+User-agent: *
+Disallow: /
