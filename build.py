@@ -43,17 +43,24 @@ FOOT = [
                 ("In the press","press.html"),("Contact","contact.html")]),
 ]
 
-# real destinations on the live store — no placeholder hrefs anywhere on the site
+# These used to point at cauverypeakestate.com, so clicking "Privacy" on the
+# review build dropped you onto the old site in the old design — which rather
+# defeats a design review. The pages now live here, carrying the store's own
+# policy text verbatim. The live store remains the authoritative copy; if the
+# client edits a policy in Shopify, re-run scripts/fetch_policies.py.
 LEGAL = [
-    ("Privacy",  "https://cauverypeakestate.com/policies/privacy-policy"),
-    ("Terms",    "https://cauverypeakestate.com/policies/terms-of-service"),
-    ("Shipping", "https://cauverypeakestate.com/policies/shipping-policy"),
-    ("Returns",  "https://cauverypeakestate.com/policies/refund-policy"),
+    ("Privacy",  "privacy.html"),
+    ("Terms",    "terms.html"),
+    ("Shipping", "shipping.html"),
+    ("Returns",  "returns.html"),
 ]
 
 # Instagram is confirmed. Facebook and WhatsApp are omitted rather than linked
 # to "#" — the WhatsApp number is one of the disputed ones (see README).
-SOCIAL = [("Instagram", "https://www.instagram.com/cauverypeakcoffee/")]
+# (name, url, visible handle). The handle is shown beside the icon: a lone
+# glyph in a box was not recognisable as Instagram, and the handle is what
+# someone actually needs if they want to find the account themselves.
+SOCIAL = [("Instagram", "https://www.instagram.com/cauverypeakcoffee/", "@cauverypeakcoffee")]
 
 PLACES = [
     ("cp", "Cauvery Peak Estate Caf&eacute;", "On the plantation, 15 km from Yercaud town."),
@@ -61,7 +68,11 @@ PLACES = [
     ("gf", "Glenfell Kiosk",                  "17th hairpin bend, Salem&ndash;Yercaud ghat road."),
 ]
 
-IG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4zm0 10.9A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.1a1.5 1.5 0 1 1-1.6-1.6 1.5 1.5 0 0 1 1.6 1.6z"/></svg>'
+IG = ('<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'
+      '<rect x="3" y="3" width="18" height="18" rx="5"/>'
+      '<circle cx="12" cy="12" r="4"/>'
+      '<circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/>'
+      '</svg>')
 SOCIAL_SVG = {"Instagram": IG}
 
 
@@ -100,7 +111,7 @@ def drawer(active):
                 for t, h in items))
         for title, items in FOOT)
     return f'''<div class="drawer" id="sitemenu">
-  <div class="drawer__scrim" data-close hidden></div>
+  <div class="drawer__scrim" data-close></div>
   <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
     <div class="drawer__head">
       <a href="index.html" class="drawer__home">Cauvery Peak</a>
@@ -132,10 +143,12 @@ def footer():
         <p class="foot__pd">{desc}</p>
         <a class="foot__pl" href="cafes.html">More &rarr;</a>
       </div>''' for c, name, desc in PLACES)
-    legal = "".join(f'<li><a href="{h}" rel="noopener">{t}</a></li>' for t, h in LEGAL)
+    legal = "".join(f'<li><a href="{h}">{t}</a></li>' for t, h in LEGAL)
     social = "\n".join(
-        f'        <a href="{h}" aria-label="{n}" rel="me noopener" target="_blank">{SOCIAL_SVG[n]}</a>'
-        for n, h in SOCIAL)
+        f'        <a class="foot__soc" href="{h}" rel="me noopener" target="_blank">'
+        f'<span class="foot__ico">{SOCIAL_SVG[n]}</span>'
+        f'<span class="foot__handle"><span class="foot__net">{n}</span>{handle}</span></a>'
+        for n, h, handle in SOCIAL)
     return f'''<footer class="foot">
   <div class="sheet">
     <div class="foot__grid">
@@ -227,7 +240,7 @@ def closer(slug):
     return f'''<section class="band">
   <div class="sheet ruled">
     <div class="ruled__mark">
-      <span class="ruled__i num">&#9679;</span>
+      <span class="ruled__i ruled__i--dot num">&#9679;</span>
       <span class="ruled__l">What next</span>
     </div>
     <div>
@@ -245,7 +258,7 @@ def closer(slug):
 
 
 CART = '''<div class="cart" id="cart">
-  <div class="cart__scrim" data-cclose hidden></div>
+  <div class="cart__scrim" data-cclose></div>
   <div class="cart__panel" role="dialog" aria-modal="true" aria-label="Your basket">
     <div class="cart__head">
       <p class="mark" style="margin:0">Your basket</p>
@@ -346,7 +359,7 @@ SHOP_JS = r"""<script>
   // ---- basket ------------------------------------------------------
   var cart=document.getElementById('cart'); if(!cart) return;
   var lines=cart.querySelector('[data-clines]'), total=cart.querySelector('[data-ctotal]');
-  var go=cart.querySelector('[data-ccheckout]'), scrim=cart.querySelector('.cart__scrim');
+  var go=cart.querySelector('[data-ccheckout]');
   var btn=document.getElementById('cartbtn'), count=btn?btn.querySelector('b'):null, last=null;
   function paint(){
     var b=read(), sum=0;
@@ -368,14 +381,12 @@ SHOP_JS = r"""<script>
       ? STORE+'/cart/'+b.map(function(l){ return l.id+':'+l.q }).join(',')
       : STORE+'/collections/all');
   }
-  function open(){ last=document.activeElement; scrim.hidden=false; cart.classList.add('is-open');
+  function open(){ last=document.activeElement; cart.classList.add('is-open');
     document.documentElement.classList.add('no-scroll');
     (cart.querySelector('button,a')||cart).focus(); document.addEventListener('keydown',key,true); }
   function close(){ cart.classList.remove('is-open');
     document.documentElement.classList.remove('no-scroll');
-    document.removeEventListener('keydown',key,true); if(last) last.focus();
-    var ms=matchMedia('(prefers-reduced-motion:reduce)').matches?0:260;
-    setTimeout(function(){ if(!cart.classList.contains('is-open')) scrim.hidden=true; },ms); }
+    document.removeEventListener('keydown',key,true); if(last) last.focus(); }
   function key(e){ if(e.key==='Escape'){ e.preventDefault(); close(); } }
   cart.addEventListener('click', function(e){ if(e.target.closest('[data-cclose]')) close(); });
   if(btn) btn.addEventListener('click', open);
@@ -387,11 +398,10 @@ MENU_JS = '''<script>
 (function(){
   var b=document.getElementById('burger'), d=document.getElementById('sitemenu');
   if(!b||!d) return;
-  var panel=d.querySelector('.drawer__panel'), scrim=d.querySelector('.drawer__scrim'), last=null;
+  var panel=d.querySelector('.drawer__panel'), last=null;
   var Q='a[href],button:not([disabled])';
   function open(){
     last=document.activeElement;
-    scrim.hidden=false;
     d.classList.add('is-open'); b.setAttribute('aria-expanded','true');
     document.documentElement.classList.add('no-scroll');
     (panel.querySelector(Q)||panel).focus();
@@ -402,9 +412,6 @@ MENU_JS = '''<script>
     document.documentElement.classList.remove('no-scroll');
     document.removeEventListener('keydown',key,true);
     if(last) last.focus();
-    // keep the scrim in the tree until the panel has travelled back out
-    var ms=matchMedia('(prefers-reduced-motion:reduce)').matches?0:260;
-    setTimeout(function(){ if(!d.classList.contains('is-open')) scrim.hidden=true; },ms);
   }
   function key(e){
     if(e.key==='Escape'){ e.preventDefault(); close(); return; }
@@ -432,7 +439,7 @@ def jsonld(slug, title, desc, og):
         "url": BASE + "/",
         "logo": BASE + "/assets/logo_dark.webp",
         "foundingDate": "1867",
-        "sameAs": [h for _, h in SOCIAL] + ["https://cauverypeakestate.com"],
+        "sameAs": [h for _, h, _ in SOCIAL] + ["https://cauverypeakestate.com"],
         "address": {"@type": "PostalAddress", "addressLocality": "Yercaud",
                     "addressRegion": "Tamil Nadu", "addressCountry": "IN"},
     }
@@ -463,6 +470,16 @@ def jsonld(slug, title, desc, og):
         for b in blocks)
 
 
+
+# GitHub Pages serves assets with a 10-minute cache. Without a version in the
+# URL, a visitor arriving just after a deploy gets the new HTML with the old
+# stylesheet and script — a page that half-matches itself. A short content
+# hash changes the URL exactly when the file changes, and never otherwise.
+import hashlib
+def v(path):
+    with open(os.path.join(HERE, path), "rb") as f:
+        return f"{path}?v={hashlib.md5(f.read()).hexdigest()[:8]}"
+
 def document(slug, title, desc, og, body):
     canonical = f"{BASE}/" if slug == "index.html" else f"{BASE}/{slug}"
     return f'''<!doctype html>
@@ -489,8 +506,8 @@ def document(slug, title, desc, og, body):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="assets/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/archivo.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css">
-<link rel="stylesheet" href="assets/estate.css">
+<link rel="stylesheet" href="{v('assets/site.css')}">
+<link rel="stylesheet" href="{v('assets/estate.css')}">
 {jsonld(slug, title, desc, og)}
 </head>
 <body>
@@ -506,7 +523,7 @@ def document(slug, title, desc, og, body):
 {CART}
 {MENU_JS}
 {SHOP_JS}
-<script src="assets/motion.js" defer></script>
+<script src="{v('assets/motion.js')}" defer></script>
 </body>
 </html>
 '''

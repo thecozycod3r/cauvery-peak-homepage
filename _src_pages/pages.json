@@ -194,5 +194,33 @@
   "og": "og-coffee.jpg",
   "title": "Cauvery Peak — Cauvery Peak",
   "desc": "Kenneth Davids - Coffee expert, author and co founder of Coffee Review rated Cauvery Peak coffee among the top 3 Indian Arabica coffees. This immacula"
+ },
+ {
+  "file": "privacy.html",
+  "slug": "privacy.html",
+  "title": "Privacy Policy — Cauvery Peak",
+  "desc": "How Cauvery Peak Estate collects, uses and protects your personal information when you shop with us.",
+  "og": "og-default.jpg"
+ },
+ {
+  "file": "terms.html",
+  "slug": "terms.html",
+  "title": "Terms of Service — Cauvery Peak",
+  "desc": "The terms on which Cauvery Peak Estate sells coffee, spices and estate experiences through this store.",
+  "og": "og-default.jpg"
+ },
+ {
+  "file": "shipping.html",
+  "slug": "shipping.html",
+  "title": "Shipping Policy — Cauvery Peak",
+  "desc": "Where Cauvery Peak Estate ships, how long orders take, and what despatch from the estate costs.",
+  "og": "og-default.jpg"
+ },
+ {
+  "file": "returns.html",
+  "slug": "returns.html",
+  "title": "Return and Refund Policy — Cauvery Peak",
+  "desc": "How to return an order to Cauvery Peak Estate, what is eligible, and how refunds are processed.",
+  "og": "og-default.jpg"
  }
 ]
