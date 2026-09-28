@@ -21,7 +21,8 @@ BASE = "https://thecozycod3r.github.io/cauvery-peak-homepage"
 NAV = [
     ("The coffee", "coffee.html"),
     ("The estate", "estate.html"),
-    ("Visit",      "visit.html"),
+    ("The tour",   "visit.html"),
+    ("Caf&eacute;s", "cafes.html"),
     ("Learn",      "brewing.html"),
 ]
 
@@ -99,7 +100,13 @@ YT = ('<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentCo
 SOCIAL_SVG = {"Instagram": IG, "YouTube": YT}
 
 
+# pages that belong under a nav item without being its target
+NAV_SECTION = {"p-coffee-experience-tours-11.html": "visit.html", "bbc-news-tamil.html": "visit.html",
+               "cafe-cauvery-peak.html": "cafes.html", "cafe-lake-view.html": "cafes.html",
+               "cafe-glenfell.html": "cafes.html", "grind.html": "brewing.html"}
+
 def header(active):
+    active = NAV_SECTION.get(active, active)
     links = "\n".join(
         f'      <a href="{href}"{" aria-current=\"page\"" if href == active else ""}>{label}</a>'
         for label, href in NAV)
