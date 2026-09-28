@@ -2,8 +2,8 @@ import { chromium } from 'playwright';
 import audit from './audit.mjs';
 import fs from 'fs';
 
-const pages = JSON.parse(fs.readFileSync('pages/pages.json')).map(p => p.slug);
-const base = 'http://localhost:8731/site/';
+const pages = JSON.parse(fs.readFileSync('_src_pages/pages.json')).map(p => p.slug);
+const base = 'http://localhost:8731/';
 const browser = await chromium.launch();
 let fails = 0, warns = 0;
 

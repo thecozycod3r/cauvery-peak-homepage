@@ -32,15 +32,17 @@ ACT_VISIT = ("Visit the Estate",   "visit.html")
 ACT_BOOK  = ("Book the Experience","p-coffee-experience-tours-11.html")
 
 FOOT = [
-    ("Shop Coffee", [("Single estates","shop.html"),("Blends","shop.html"),
-                ("Subscriptions","subscribe.html"),("Spices &amp; honey","shop.html")]),
+    ("Shop Coffee", [("Estate coffee","shop-coffee.html"),("Samplers &amp; drip bags","shop-samplers.html"),
+                ("Subscriptions","subscribe.html"),("Spices &amp; honey","shop-spices-honey.html")]),
     ("Visit the Estate",  [("Book the Experience","p-coffee-experience-tours-11.html"),
                 ("What the tour covers","visit.html"),
                 ("The three caf&eacute;s","cafes.html"),("Find us","contact.html")]),
     ("The estate", [("Grower to Connoisseur","estate.html"),("Our story","story.html"),
-                    ("History","history.html"),("The environment","environment.html")]),
+                    ("History","history.html"),("The environment","environment.html"),
+                    ("Careers","careers.html")]),
     ("Learn",  [("Brewing guide","brewing.html"),("Grind guide","grind.html"),
-                ("In the press","press.html"),("Contact","contact.html")]),
+                ("In the press","press.html"),("On BBC News Tamil","bbc-news-tamil.html"),
+                ("Contact","contact.html")]),
 ]
 
 # These used to point at cauverypeakestate.com, so clicking "Privacy" on the
@@ -60,20 +62,41 @@ LEGAL = [
 # (name, url, visible handle). The handle is shown beside the icon: a lone
 # glyph in a box was not recognisable as Instagram, and the handle is what
 # someone actually needs if they want to find the account themselves.
-SOCIAL = [("Instagram", "https://www.instagram.com/cauverypeakcoffee/", "@cauverypeakcoffee")]
+# YouTube is the channel the live contact page links to.
+SOCIAL = [("Instagram", "https://www.instagram.com/cauverypeakcoffee/", "@cauverypeakcoffee"),
+          ("YouTube", "https://www.youtube.com/@cauverypeak2249", "@cauverypeak2249")]
 
 PLACES = [
-    ("cp", "Cauvery Peak Estate Caf&eacute;", "On the plantation, 15 km from Yercaud town."),
-    ("sh", "Lake View Village Caf&eacute;",   "Yercaud Main Road. Parking available."),
-    ("gf", "Glenfell Kiosk",                  "17th hairpin bend, Salem&ndash;Yercaud ghat road."),
+    ("cp", "Cauvery Peak Estate Caf&eacute;", "On the plantation, 15 km from Yercaud town.", "cafe-cauvery-peak.html"),
+    ("sh", "Lake View Village Caf&eacute;",   "Yercaud Main Road. Parking available.",       "cafe-lake-view.html"),
+    ("gf", "Glenfell Kiosk",                  "17th hairpin bend, Salem&ndash;Yercaud ghat road.", "cafe-glenfell.html"),
 ]
+
+# Confirmed by MSP Plantations, 16 Aug 2026. The live store's own café pages
+# still disagree with these (Glenfell and Lake View say 6pm, and each lists a
+# mobile number one digit off) — these are the ones to trust.
+CAFES = {
+ "cafe-cauvery-peak.html": {"name":"Cauvery Peak Estate Café", "opens":"07:30", "closes":"17:00",
+     "tel":["+917598435955","+919487458387"], "street":"MSP Plantations, Cauvery Peak Estate",
+     "postal":"636602", "img":"cafe/cp-1.webp"},
+ "cafe-lake-view.html": {"name":"Lake View Village Café", "opens":"08:00", "closes":"17:00",
+     "tel":["+917598435955","+916380805161"], "street":"MSP Plantations, Yercaud Main Road",
+     "postal":None, "img":"cafe/lv-1.webp"},
+ "cafe-glenfell.html": {"name":"Glenfell Estate Kiosk", "opens":"07:30", "closes":"17:00",
+     "tel":["+917598435955","+919489180236"], "street":"MSP Plantations, 17th Hairpin Bend, Salem–Yercaud Ghat Road",
+     "postal":None, "img":"cafe/gf-3.webp"},
+}
 
 IG = ('<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'
       '<rect x="3" y="3" width="18" height="18" rx="5"/>'
       '<circle cx="12" cy="12" r="4"/>'
       '<circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/>'
       '</svg>')
-SOCIAL_SVG = {"Instagram": IG}
+YT = ('<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round">'
+      '<rect x="2.5" y="5" width="19" height="14" rx="4"/>'
+      '<path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor" stroke="none"/>'
+      '</svg>')
+SOCIAL_SVG = {"Instagram": IG, "YouTube": YT}
 
 
 def header(active):
@@ -95,6 +118,13 @@ def header(active):
     </button>
     <div class="top__act">
       <a class="btn btn--fill btn--sm top__cta" href="{ACT_SHOP[1]}">{ACT_SHOP[0]}</a>
+      <a class="iconbtn" href="search.html" aria-label="Search"{' aria-current="page"' if active == "search.html" else ""}>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></svg>
+      </a>
+      <a class="iconbtn" href="wishlist.html" id="wishbtn" aria-label="Wishlist" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+        <b class="num">0</b>
+      </a>
       <button class="cartbtn" type="button" id="cartbtn" hidden>Basket <b class="num">0</b></button>
     </div>
   </div>
@@ -141,8 +171,8 @@ def footer():
         f'''      <div class="foot__place" style="--c:var(--{c})">
         <h2 class="foot__pn">{name}</h2>
         <p class="foot__pd">{desc}</p>
-        <a class="foot__pl" href="cafes.html">More &rarr;</a>
-      </div>''' for c, name, desc in PLACES)
+        <a class="foot__pl" href="{href}">Hours &amp; directions &rarr;</a>
+      </div>''' for c, name, desc, href in PLACES)
     legal = "".join(f'<li><a href="{h}">{t}</a></li>' for t, h in LEGAL)
     social = "\n".join(
         f'        <a class="foot__soc" href="{h}" rel="me noopener" target="_blank">'
@@ -193,7 +223,7 @@ CLOSERS = {
                       "Whichever grind you landed on is an option on every bag we sell. We grind it to order, after you buy it.",
                       SHOP, VISIT),
  "estate.html":      ("Nine stages done", "All of that, in a bag.<br>Or all of it, in person.",
-                      "Every coffee in the shop went through the nine stages on this page. The tour walks you past seven of them.",
+                      "Every coffee in the shop went through the nine stages on this page. The tour takes you through the mills and the roasting room where they happen.",
                       SHOP, BOOK),
  "environment.html": ("From this ground", "Taste what the forest made.",
                       "Shade, rainfall and bauxite soil are not a story we tell. They are why the cup tastes the way it does.",
@@ -216,6 +246,21 @@ CLOSERS = {
  "contact.html":     ("Or just order", "Roasted after you ask for it.",
                       "Nothing is roasted before an order exists, which is why it does not sit in a warehouse.",
                       SHOP, BOOK),
+ "cafe-cauvery-peak.html": ("While you are here", "Walk the estate<br>behind the café.",
+                      "The Coffee Experience Tour starts where you are sitting &mdash; seventy-five minutes through the mills and the roasting room.",
+                      BOOK, SHOP),
+ "cafe-lake-view.html": ("Fifteen kilometres on", "The coffee comes<br>from up the road.",
+                      "The estate itself is a short drive from here, and the tour runs from the plantation café.",
+                      VISIT, SHOP),
+ "cafe-glenfell.html": ("Halfway up", "Keep climbing.<br>The estate is at the top.",
+                      "Glenfell is the lowest of the three estates. Cauvery Peak, where the tour runs, is up the hill.",
+                      VISIT, SHOP),
+ "bbc-news-tamil.html": ("You have seen the film", "Now take the tour.",
+                      "Seventy-five minutes, &#8377;600 a person, in your own vehicle with a coffee guide: the wet mill, the dry mill, roasting and grinding, the estate museum, and the caf&eacute; to finish. Closed Tuesdays.",
+                      BOOK, SHOP),
+ "careers.html":     ("Meanwhile", "See the place first.",
+                      "The best way to know whether you want to work here is to walk it.",
+                      VISIT, SHOP),
  "coffee.html":      ("Buy it", "Pick a grind and a size.",
                       "Eleven grinds, three pack sizes, and we grind to order after you choose.",
                       SHOP, BOOK),
@@ -268,9 +313,10 @@ CART = '''<div class="cart" id="cart">
     </div>
     <div class="cart__body" data-clines></div>
     <div class="cart__foot">
+      <p class="cart__ship"><span>Shipping</span><b>Free across India</b></p>
       <p class="cart__sum"><span>Total</span><b class="num" data-ctotal>&#8377;0</b></p>
-      <a class="btn btn--gold" data-ccheckout href="https://cauverypeakestate.com/collections/all">Checkout on the estate store</a>
-      <p class="buy__note" style="margin:0">You will finish on cauverypeakestate.com, where the order is actually taken.</p>
+      <a class="btn btn--gold" data-ccheckout href="https://cauverypeakestate.com/collections/all">Secure checkout</a>
+      <p class="buy__note" style="margin:0">Roasted after you order and dispatched in 3&ndash;5 business days. Payment is taken on the estate&rsquo;s Shopify checkout.</p>
     </div>
   </div>
 </div>'''
@@ -295,6 +341,29 @@ STICKY = f'''<div class="sticky">
   <a class="btn btn--ghost" href="{ACT_BOOK[1]}">{ACT_BOOK[0]}</a>
 </div>'''
 
+STICKY_BUY = '''<div class="sticky sticky--buy">
+  <p class="sticky__p num" data-sticky-price></p>
+  <button class="btn btn--gold" type="button" data-sticky-add>Add to cart</button>
+</div>'''
+STICKY_BUY_JS = """<script>
+(function(){
+  var bar=document.querySelector('.sticky--buy'), add=document.querySelector('.pdp [data-add]'),
+      price=document.querySelector('.pdp [data-price]'), out=bar&&bar.querySelector('[data-sticky-price]');
+  if(!bar||!add||!price) return;
+  var btn=bar.querySelector('[data-sticky-add]'); btn.textContent=add.textContent;
+  function sync(){ out.textContent=price.textContent }
+  sync(); new MutationObserver(sync).observe(price,{childList:true,characterData:true,subtree:true});
+  btn.addEventListener('click',function(){ add.click() });
+  // on only once the real button is above the viewport. A scroll check, not an
+  // IntersectionObserver: a fling or a restored scroll position can jump from
+  // below the button to above it without ever intersecting, and IO would miss it.
+  var queued=false;
+  function check(){ queued=false; bar.classList.toggle('is-on', add.getBoundingClientRect().bottom<0) }
+  addEventListener('scroll',function(){ if(!queued){ queued=true; requestAnimationFrame(check) } },{passive:true});
+  addEventListener('resize',check); check();
+})();
+</script>"""
+
 # Small enough to inline. Runs on every page; the drawer is inert until opened.
 
 SHOP_JS = r"""<script>
@@ -310,6 +379,8 @@ SHOP_JS = r"""<script>
     try{ vs=JSON.parse(scope.getAttribute('data-variants')) }catch(e){ return }
     if(!form||!vs) return;
     var out=scope.querySelector('[data-price]'), unit=scope.querySelector('[data-unit]');
+    var save=scope.querySelector('[data-save]'), singles=null;
+    try{ singles=JSON.parse(scope.getAttribute('data-singles')||'null') }catch(e){}
     var handle=scope.getAttribute('data-handle'), title=scope.getAttribute('data-title');
     function chosen(){
       return [1,2,3].map(function(i){
@@ -337,6 +408,12 @@ SHOP_JS = r"""<script>
         var c=chosen(), kg=kilos(c[2]), mo=months(c[0]);
         unit.textContent = (kg&&mo) ? inr(Math.round(v.p/(kg*mo)))+' per kg · '+mo+' months' : '';
       }
+      // what the term saves against buying the same bag every month
+      if(save){
+        var c2=chosen(), one=singles&&singles[c2[1]]&&singles[c2[1]][c2[2]], m2=months(c2[0]);
+        var d=one&&m2 ? one*m2-v.p : 0;
+        save.textContent = d>0 ? 'Saves '+inr(Math.round(d))+' ('+Math.round(100*d/(one*m2))+'%) against '+m2+' single bags' : '';
+      }
       // strike through combinations the store has no variant for
       form.querySelectorAll('.opt').forEach(function(l){
         var inp=l.querySelector('input'), i=parseInt(inp.name.slice(1),10)-1;
@@ -356,6 +433,61 @@ SHOP_JS = r"""<script>
     });
   });
 
+  // ---- wishlist ----------------------------------------------------
+  // Kept in this browser only. Same pattern as the basket: no account, no server.
+  var WKEY='cp-wish';
+  var wread=function(){ try{ return JSON.parse(localStorage.getItem(WKEY))||[] }catch(e){ return [] } };
+  var wwrite=function(v){ try{ localStorage.setItem(WKEY, JSON.stringify(v)) }catch(e){} wpaint(); };
+  var wbtn=document.getElementById('wishbtn');
+  function wpaint(){
+    var w=wread();
+    if(wbtn){ wbtn.hidden=!w.length; wbtn.querySelector('b').textContent=w.length;
+      wbtn.setAttribute('aria-label','Wishlist, '+w.length+' saved'); }
+    document.querySelectorAll('[data-wish]').forEach(function(b){
+      var on=w.indexOf(b.getAttribute('data-wish'))>-1;
+      b.setAttribute('aria-pressed', on?'true':'false');
+      var l=b.querySelector('[data-wish-label]'); if(l) l.textContent=on?'Saved':'Save';
+    });
+    var grid=document.querySelector('[data-wishlist]'); if(!grid) return;
+    var data={}; try{ data=JSON.parse(grid.getAttribute('data-wishdata')) }catch(e){}
+    var items=w.filter(function(h){ return data[h] });
+    grid.innerHTML='';
+    items.forEach(function(h){
+      var d=data[h], a=document.createElement('article');
+      a.className='cof'; a.style.setProperty('--c', d.c);
+      a.innerHTML='<img class="cof__pack" src="'+d.i+'" alt="" loading="lazy">'
+        +'<h3 class="cof__n"><a class="cof__hit" href="p-'+h+'.html"></a></h3><p class="cof__t"></p>'
+        +'<p class="cof__price"><b class="num">From '+inr(d.p)+'</b></p>';
+      a.querySelector('.cof__hit').textContent=d.t; a.querySelector('.cof__t').textContent=d.s;
+      var rm=document.createElement('button'); rm.type='button'; rm.className='cart__rm wl-rm'; rm.textContent='Remove';
+      rm.addEventListener('click', function(){ wwrite(wread().filter(function(x){ return x!==h })) });
+      a.appendChild(rm); grid.appendChild(a);
+    });
+    var empty=document.querySelector('[data-wish-empty]'); if(empty) empty.hidden=!!items.length;
+  }
+  document.querySelectorAll('[data-wish]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var h=b.getAttribute('data-wish'), w=wread(), i=w.indexOf(h);
+      if(i>-1) w.splice(i,1); else w.push(h);
+      wwrite(w);
+    });
+  });
+  window.addEventListener('storage', function(e){ if(e.key===WKEY) wpaint() });
+  wpaint();
+
+  // ---- collection sort ---------------------------------------------
+  document.querySelectorAll('[data-sortable]').forEach(function(grid){
+    var sel=grid.parentNode.querySelector('[data-sort]'), n=grid.parentNode.querySelector('[data-count]');
+    var cards=[].slice.call(grid.children);
+    if(n) n.textContent=cards.length+' product'+(cards.length>1?'s':'');
+    if(!sel) return;
+    sel.addEventListener('change', function(){
+      var k=sel.value, list=cards.slice();
+      if(k) list.sort(function(a,b){ var d=+a.getAttribute('data-price')-(+b.getAttribute('data-price')); return k==='lo'?d:-d });
+      list.forEach(function(c){ grid.appendChild(c) });
+    });
+  });
+
   // ---- basket ------------------------------------------------------
   var cart=document.getElementById('cart'); if(!cart) return;
   var lines=cart.querySelector('[data-clines]'), total=cart.querySelector('[data-ctotal]');
@@ -363,12 +495,12 @@ SHOP_JS = r"""<script>
   var btn=document.getElementById('cartbtn'), count=btn?btn.querySelector('b'):null, last=null;
   function paint(){
     var b=read(), sum=0;
-    lines.innerHTML = b.length ? '' : '<p class="cart__empty">Nothing in the basket yet.</p>';
+    lines.innerHTML = b.length ? '' : '<p class="cart__empty">Nothing in the basket yet. <a href="shop.html">Shop coffee</a></p>';
     b.forEach(function(l,i){
       sum += l.p*l.q;
       var el=document.createElement('div'); el.className='cart__line';
       el.innerHTML='<p class="cart__t">'+l.t+'</p><p class="cart__p num">'+inr(l.p*l.q)+'</p>'
-        +'<p class="cart__o">'+(l.o||'')+(l.q>1?' · x'+l.q:'')+'</p>';
+        +'<p class="cart__o">'+(l.o||'').replace(/\s*\([^)]*\)/g,'')+(l.q>1?' · x'+l.q:'')+'</p>';
       var rm=document.createElement('button');
       rm.type='button'; rm.className='cart__rm'; rm.textContent='Remove';
       rm.addEventListener('click', function(){ var c=read(); c.splice(i,1); write(c); });
@@ -465,6 +597,33 @@ def jsonld(slug, title, desc, og):
                         "addressRegion": "Tamil Nadu", "addressCountry": "IN"},
             "geo": {"@type": "GeoCoordinates", "latitude": 11.7753, "longitude": 78.2095},
         })
+    if slug == "bbc-news-tamil.html":
+        blocks.append({
+            "@context": "https://schema.org", "@type": "VideoObject",
+            "name": "ஏற்காட்டில் 150 ஆண்டு பழைமையான காபி எஸ்டேட்",
+            "alternateName": "A 150-year-old coffee estate in Yercaud",
+            "description": "BBC News Tamil on the Coffee Experience Tour at Cauvery Peak Estate, Yercaud.",
+            "inLanguage": "ta", "uploadDate": "2026-09-27", "duration": "PT1M7S",
+            "thumbnailUrl": "https://i.ytimg.com/vi/rXsLBvO9Dkw/maxresdefault.jpg",
+            "embedUrl": "https://www.youtube-nocookie.com/embed/rXsLBvO9Dkw",
+            "contentUrl": "https://www.youtube.com/shorts/rXsLBvO9Dkw",
+            "publisher": {"@type": "Organization", "name": "BBC News Tamil"},
+            "about": {"@type": "TouristAttraction", "name": "Cauvery Peak Estate"},
+        })
+    if slug in CAFES:
+        c = CAFES[slug]
+        addr = {"@type": "PostalAddress", "streetAddress": c["street"], "addressLocality": "Yercaud",
+                "addressRegion": "Tamil Nadu", "addressCountry": "IN"}
+        if c["postal"]: addr["postalCode"] = c["postal"]
+        blocks.append({
+            "@context": "https://schema.org", "@type": "CafeOrCoffeeShop",
+            "name": c["name"], "url": f"{BASE}/{slug}", "image": f"{BASE}/assets/{c['img']}",
+            "telephone": c["tel"][0], "servesCuisine": "Coffee", "address": addr,
+            "parentOrganization": {"@type": "Organization", "name": "Cauvery Peak"},
+            "openingHoursSpecification": [{"@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                "opens": c["opens"], "closes": c["closes"]}],
+        })
     return "\n".join(
         '<script type="application/ld+json">%s</script>' % json.dumps(b, separators=(",", ":"))
         for b in blocks)
@@ -518,8 +677,7 @@ def document(slug, title, desc, og, body):
 {closer(slug)}
 </main>
 {footer()}
-{STICKY}
-{STICKY_JS}
+{STICKY_BUY + STICKY_BUY_JS if 'class="pdp' in body else STICKY + STICKY_JS}
 {CART}
 {MENU_JS}
 {SHOP_JS}

@@ -23,8 +23,8 @@
 <link rel="preload" href="assets/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css?v=50b50e81">
-<link rel="stylesheet" href="assets/estate.css?v=b06d423b">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Cauvery Peak","legalName":"MSP Plantations","url":"https://thecozycod3r.github.io/cauvery-peak-homepage/","logo":"https://thecozycod3r.github.io/cauvery-peak-homepage/assets/logo_dark.webp","foundingDate":"1867","sameAs":["https://www.instagram.com/cauverypeakcoffee/","https://cauverypeakestate.com"],"address":{"@type":"PostalAddress","addressLocality":"Yercaud","addressRegion":"Tamil Nadu","addressCountry":"IN"}}</script>
+<link rel="stylesheet" href="assets/estate.css?v=12b45fd2">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Cauvery Peak","legalName":"MSP Plantations","url":"https://thecozycod3r.github.io/cauvery-peak-homepage/","logo":"https://thecozycod3r.github.io/cauvery-peak-homepage/assets/logo_dark.webp","foundingDate":"1867","sameAs":["https://www.instagram.com/cauverypeakcoffee/","https://www.youtube.com/@cauverypeak2249","https://cauverypeakestate.com"],"address":{"@type":"PostalAddress","addressLocality":"Yercaud","addressRegion":"Tamil Nadu","addressCountry":"IN"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thecozycod3r.github.io/cauvery-peak-homepage/"},{"@type":"ListItem","position":2,"name":"Glenfell","item":"https://thecozycod3r.github.io/cauvery-peak-homepage/p-glenfell-4.html"}]}</script>
 </head>
 <body>
@@ -46,6 +46,13 @@
     </button>
     <div class="top__act">
       <a class="btn btn--fill btn--sm top__cta" href="shop.html">Shop Coffee</a>
+      <a class="iconbtn" href="search.html" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></svg>
+      </a>
+      <a class="iconbtn" href="wishlist.html" id="wishbtn" aria-label="Wishlist" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+        <b class="num">0</b>
+      </a>
       <button class="cartbtn" type="button" id="cartbtn" hidden>Basket <b class="num">0</b></button>
     </div>
   </div>
@@ -63,10 +70,10 @@
       <div class="dnav__g">
         <h2 class="dnav__h">Shop Coffee</h2>
         <ul class="dnav__l">
-          <li><a href="shop.html">Single estates</a></li>
-          <li><a href="shop.html">Blends</a></li>
+          <li><a href="shop-coffee.html">Estate coffee</a></li>
+          <li><a href="shop-samplers.html">Samplers &amp; drip bags</a></li>
           <li><a href="subscribe.html">Subscriptions</a></li>
-          <li><a href="shop.html">Spices &amp; honey</a></li>
+          <li><a href="shop-spices-honey.html">Spices &amp; honey</a></li>
         </ul>
       </div>
       <div class="dnav__g">
@@ -85,6 +92,7 @@
           <li><a href="story.html">Our story</a></li>
           <li><a href="history.html">History</a></li>
           <li><a href="environment.html">The environment</a></li>
+          <li><a href="careers.html">Careers</a></li>
         </ul>
       </div>
       <div class="dnav__g">
@@ -93,6 +101,7 @@
           <li><a href="brewing.html">Brewing guide</a></li>
           <li><a href="grind.html">Grind guide</a></li>
           <li><a href="press.html">In the press</a></li>
+          <li><a href="bbc-news-tamil.html">On BBC News Tamil</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -114,14 +123,13 @@
 <section class="pdp" style="--c:#00818C" data-variants='[{"id":51694079541564,"p":1980.0,"o":["Whole Beans","1 kg (serves approximately 125 cups)",null],"av":true},{"id":51694079574332,"p":1080.0,"o":["Whole Beans","500 gm (serves approximately 62 cups)",null],"av":true},{"id":51694079607100,"p":580.0,"o":["Whole Beans","250 gm (serves approximately 30 cups)",null],"av":true},{"id":51888303145276,"p":1980.0,"o":["Pour Over","1 kg (serves approximately 125 cups)",null],"av":true},{"id":51888303472956,"p":1080.0,"o":["Pour Over","500 gm (serves approximately 62 cups)",null],"av":true},{"id":51888303800636,"p":580.0,"o":["Pour Over","250 gm (serves approximately 30 cups)",null],"av":true},{"id":51888303178044,"p":1980.0,"o":["Indian Filter","1 kg (serves approximately 125 cups)",null],"av":true},{"id":51888303505724,"p":1080.0,"o":["Indian Filter","500 gm (serves approximately 62 cups)",null],"av":true},{"id":51888303833404,"p":580.0,"o":["Indian Filter","250 gm (serves approximately 30 cups)",null],"av":true},{"id":51888303210812,"p":1980.0,"o":["French Press","1 kg (serves approximately 125 cups)",null],"av":true},{"id":51888303538492,"p":1080.0,"o":["French Press","500 gm (serves approximately 62 cups)",null],"av":true},{"id":51888303866172,"p":580.0,"o":["French Press","250 gm (serves approximately 30 cups)",null],"av":true},{"id":51888303243580,"p":1980.0,"o":["Espresso","1 kg (serves approximately 125 cups)",null],"av":true},{"id":51888303571260,"p":1080.0,"o":["Espresso","500 gm (serves approximately 62 cups)",null],"av":true},{"id":51888303898940,"p":580.0,"o":["Espresso","250 gm (serves approximately 30 cups)",null],"av":true},{"id":51888303276348,"p":1980.0,"o":["Turkish","1 kg (serves approximately 125 cups)",null],"av":true},{"id":51888303604028,"p":1080.0,"o":["Turkish","500 gm (serves approximately 62 cups)",null],"av":true},{"id":51888303931708,"p":580.0,"o":["Turkish","250 gm (serves approximately 30 cups)",null],"av":true},{"id":51888303309116,"p":1980.0,"o":["Aeropress","1 kg (serves approximately 125 cups)",null],"av":true},{"id":51888303636796,"p":1080.0,"o":["Aeropress","500 gm (serves approximately 62 cups)",null],"av":true},{"id":51888303964476,"p":580.0,"o":["Aeropress","250 gm (serves approximately 30 cups)",null],"av":true},{"id":51888303341884,"p":1980.0,"o":["Moka Pot","1 kg (serves approximately 125 cups)",null],"av":true},{"id":51888303669564,"p":1080.0,"o":["Moka Pot","500 gm (serves approximately 62 cups)",null],"av":true},{"id":51888303997244,"p":580.0,"o":["Moka Pot","250 gm (serves approximately 30 cups)",null],"av":true},{"id":51888303374652,"p":1980.0,"o":["Inverted Aeropress","1 kg (serves approximately 125 cups)",null],"av":true},{"id":51888303702332,"p":1080.0,"o":["Inverted Aeropress","500 gm (serves approximately 62 cups)",null],"av":true},{"id":51888304030012,"p":580.0,"o":["Inverted Aeropress","250 gm (serves approximately 30 cups)",null],"av":true},{"id":51888303407420,"p":1980.0,"o":["Cold Brew","1 kg (serves approximately 125 cups)",null],"av":true},{"id":51888303735100,"p":1080.0,"o":["Cold Brew","500 gm (serves approximately 62 cups)",null],"av":true},{"id":51888304062780,"p":580.0,"o":["Cold Brew","250 gm (serves approximately 30 cups)",null],"av":true},{"id":51888303440188,"p":1980.0,"o":["Coffee Filter","1 kg (serves approximately 125 cups)",null],"av":true},{"id":51888303767868,"p":1080.0,"o":["Coffee Filter","500 gm (serves approximately 62 cups)",null],"av":true},{"id":51888304095548,"p":580.0,"o":["Coffee Filter","250 gm (serves approximately 30 cups)",null],"av":true}]' data-handle="glenfell-4" data-title="Glenfell">
   <div class="wrap pdp__in">
     <figure class="pdp__fig">
-      <img class="pdp__bg" src="assets/est_gf.webp" alt="" loading="lazy" width="500" height="500">
-      <img class="pdp__pack" src="assets/p_gf.webp" alt="Glenfell" loading="eager" width="330" height="416">
+      <img class="pdp__bg" src="assets/est_gf.webp" alt="" loading="lazy">
+      <img class="pdp__pack" src="assets/p_gf.webp" alt="Glenfell" loading="eager">
     </figure>
     <div class="pdp__buy">
       <p class="eyebrow">Estate Classic</p>
       <h1 class="d2">Glenfell</h1>
-      <p class="body" style="margin-top:1rem">Glenfell is planted with both Arabica and Robusta varieties and inter-planted with cloves, nutmeg and pepper vines. Heavy shade provided by a mixed canopy of trees provide unique microclimatic conditions.</p>
-      <ul class="cof__specs" style="margin-top:1.5rem"><li><span class="cof__k">Elevation</span><span class="cof__lead"></span><span class="cof__v">1,250 m &middot; 4,100 ft</span></li>
+      <ul class="cof__specs" style="margin-top:1.25rem"><li><span class="cof__k">Elevation</span><span class="cof__lead"></span><span class="cof__v">1,250 m &middot; 4,100 ft</span></li>
 <li><span class="cof__k">Acidity</span><span class="cof__lead"></span><span class="cof__v">Low</span></li>
 <li><span class="cof__k">Body</span><span class="cof__lead"></span><span class="cof__v">Full</span></li>
 <li><span class="cof__k">Aftertaste</span><span class="cof__lead"></span><span class="cof__v">Exotic, spicy</span></li>
@@ -130,6 +138,7 @@
       <form class="buy" onsubmit="return false">
       <fieldset class="opts">
         <legend class="cof__k">Grind</legend>
+        <p class="opts__hint">No grinder? Choose how you brew and we grind it to order. <a href="grind.html">Which grind?</a></p>
         <div class="opts__row">
 <label class="opt"><input type="radio" name="o1" value="Whole Beans" checked><span>Whole Beans</span></label>
 <label class="opt"><input type="radio" name="o1" value="Pour Over"><span>Pour Over</span></label>
@@ -146,30 +155,42 @@
       </fieldset>
       <fieldset class="opts">
         <legend class="cof__k">Weight</legend>
+        
         <div class="opts__row">
-<label class="opt"><input type="radio" name="o2" value="1 kg (serves approximately 125 cups)" checked><span>1 kg</span><small>serves approximately 125 cups</small></label>
+<label class="opt"><input type="radio" name="o2" value="1 kg (serves approximately 125 cups)"><span>1 kg</span><small>serves approximately 125 cups</small></label>
 <label class="opt"><input type="radio" name="o2" value="500 gm (serves approximately 62 cups)"><span>500 gm</span><small>serves approximately 62 cups</small></label>
-<label class="opt"><input type="radio" name="o2" value="250 gm (serves approximately 30 cups)"><span>250 gm</span><small>serves approximately 30 cups</small></label>
+<label class="opt"><input type="radio" name="o2" value="250 gm (serves approximately 30 cups)" checked><span>250 gm</span><small>serves approximately 30 cups</small></label>
         </div>
       </fieldset>
 
         <div class="buy__bar">
           <p class="buy__price num" data-price>&#8377;580</p>
           <button class="btn btn--gold" type="button" data-add>Add to cart</button>
+          <button class="wish" type="button" data-wish="glenfell-4" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+            <span data-wish-label>Save</span>
+          </button>
         </div>
-        <p class="buy__note">Roasted after your order is placed. Checkout is handled by the estate&rsquo;s own store.</p>
       </form>
+      <ul class="assure">
+        <li><b>Free shipping</b> anywhere in India</li>
+        <li><b>Roasted after you order</b>, dispatched in 3&ndash;5 business days</li>
+        <li><b>Arrived damaged?</b> We replace it or refund in full &mdash; <a href="returns.html">returns</a></li>
+        <li><b>Secure checkout</b> on the estate&rsquo;s Shopify store</li>
+      </ul>
+      <div class="pdp__about"><h2 class="cof__k">About this product</h2><p class="body">Glenfell is planted with both Arabica and Robusta varieties and inter-planted with cloves, nutmeg and pepper vines. Heavy shade provided by a mixed canopy of trees provide unique microclimatic conditions.</p></div>
     </div>
   </div>
 </section>
+
 
 <section>
   <div class="wrap">
     <h2 class="cgroup">On the estate</h2>
     <div class="plates plates--3">
-      <figure class="plate"><img src="assets/shop/glenfell-4-2.webp" alt="Glenfell" loading="lazy" width="500" height="500"><figcaption><span class="plate__n num">01</span><span>Glenfell</span></figcaption></figure>
-      <figure class="plate"><img src="assets/shop/glenfell-4-3.webp" alt="Glenfell" loading="lazy" width="500" height="500"><figcaption><span class="plate__n num">02</span><span>Glenfell</span></figcaption></figure>
-      <figure class="plate"><img src="assets/shop/glenfell-4-4.webp" alt="Glenfell" loading="lazy" width="500" height="500"><figcaption><span class="plate__n num">03</span><span>Glenfell</span></figcaption></figure>
+      <figure class="plate"><img src="assets/shop/glenfell-4-2.webp" alt="Glenfell" loading="lazy"><figcaption><span class="plate__n num">01</span><span>Glenfell</span></figcaption></figure>
+      <figure class="plate"><img src="assets/shop/glenfell-4-3.webp" alt="Glenfell" loading="lazy"><figcaption><span class="plate__n num">02</span><span>Glenfell</span></figcaption></figure>
+      <figure class="plate"><img src="assets/shop/glenfell-4-4.webp" alt="Glenfell" loading="lazy"><figcaption><span class="plate__n num">03</span><span>Glenfell</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -196,10 +217,10 @@
         <div>
           <h2 class="foot__h">Shop Coffee</h2>
           <ul class="foot__l">
-            <li><a href="shop.html">Single estates</a></li>
-            <li><a href="shop.html">Blends</a></li>
+            <li><a href="shop-coffee.html">Estate coffee</a></li>
+            <li><a href="shop-samplers.html">Samplers &amp; drip bags</a></li>
             <li><a href="subscribe.html">Subscriptions</a></li>
-            <li><a href="shop.html">Spices &amp; honey</a></li>
+            <li><a href="shop-spices-honey.html">Spices &amp; honey</a></li>
           </ul>
         </div>
         <div>
@@ -218,6 +239,7 @@
             <li><a href="story.html">Our story</a></li>
             <li><a href="history.html">History</a></li>
             <li><a href="environment.html">The environment</a></li>
+            <li><a href="careers.html">Careers</a></li>
           </ul>
         </div>
         <div>
@@ -226,6 +248,7 @@
             <li><a href="brewing.html">Brewing guide</a></li>
             <li><a href="grind.html">Grind guide</a></li>
             <li><a href="press.html">In the press</a></li>
+            <li><a href="bbc-news-tamil.html">On BBC News Tamil</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -235,41 +258,48 @@
       <div class="foot__place" style="--c:var(--cp)">
         <h2 class="foot__pn">Cauvery Peak Estate Caf&eacute;</h2>
         <p class="foot__pd">On the plantation, 15 km from Yercaud town.</p>
-        <a class="foot__pl" href="cafes.html">More &rarr;</a>
+        <a class="foot__pl" href="cafe-cauvery-peak.html">Hours &amp; directions &rarr;</a>
       </div>
       <div class="foot__place" style="--c:var(--sh)">
         <h2 class="foot__pn">Lake View Village Caf&eacute;</h2>
         <p class="foot__pd">Yercaud Main Road. Parking available.</p>
-        <a class="foot__pl" href="cafes.html">More &rarr;</a>
+        <a class="foot__pl" href="cafe-lake-view.html">Hours &amp; directions &rarr;</a>
       </div>
       <div class="foot__place" style="--c:var(--gf)">
         <h2 class="foot__pn">Glenfell Kiosk</h2>
         <p class="foot__pd">17th hairpin bend, Salem&ndash;Yercaud ghat road.</p>
-        <a class="foot__pl" href="cafes.html">More &rarr;</a>
+        <a class="foot__pl" href="cafe-glenfell.html">Hours &amp; directions &rarr;</a>
       </div>
     </div>
     <div class="foot__bar">
       <ul class="foot__legal"><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="shipping.html">Shipping</a></li><li><a href="returns.html">Returns</a></li></ul>
       <div class="foot__social">
         <a class="foot__soc" href="https://www.instagram.com/cauverypeakcoffee/" rel="me noopener" target="_blank"><span class="foot__ico"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span><span class="foot__handle"><span class="foot__net">Instagram</span>@cauverypeakcoffee</span></a>
+        <a class="foot__soc" href="https://www.youtube.com/@cauverypeak2249" rel="me noopener" target="_blank"><span class="foot__ico"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor" stroke="none"/></svg></span><span class="foot__handle"><span class="foot__net">YouTube</span>@cauverypeak2249</span></a>
       </div>
       <span class="num">11&deg;46&prime;N 78&deg;12&prime;E &middot; 4,100&ndash;4,800 FT</span>
     </div>
   </div>
 </footer>
-<div class="sticky">
-  <a class="btn btn--gold" href="shop.html">Shop Coffee</a>
-  <a class="btn btn--ghost" href="p-coffee-experience-tours-11.html">Book the Experience</a>
-</div>
-<script>
+<div class="sticky sticky--buy">
+  <p class="sticky__p num" data-sticky-price></p>
+  <button class="btn btn--gold" type="button" data-sticky-add>Add to cart</button>
+</div><script>
 (function(){
-  var bar=document.querySelector('.sticky'); if(!bar) return;
-  var hero=document.querySelector('.hero,.phero');
-  if(!hero){ bar.classList.add('is-on'); return; }
-  if(!('IntersectionObserver' in window)){ bar.classList.add('is-on'); return; }
-  new IntersectionObserver(function(es){
-    bar.classList.toggle('is-on', !es[0].isIntersecting);
-  },{threshold:0}).observe(hero);
+  var bar=document.querySelector('.sticky--buy'), add=document.querySelector('.pdp [data-add]'),
+      price=document.querySelector('.pdp [data-price]'), out=bar&&bar.querySelector('[data-sticky-price]');
+  if(!bar||!add||!price) return;
+  var btn=bar.querySelector('[data-sticky-add]'); btn.textContent=add.textContent;
+  function sync(){ out.textContent=price.textContent }
+  sync(); new MutationObserver(sync).observe(price,{childList:true,characterData:true,subtree:true});
+  btn.addEventListener('click',function(){ add.click() });
+  // on only once the real button is above the viewport. A scroll check, not an
+  // IntersectionObserver: a fling or a restored scroll position can jump from
+  // below the button to above it without ever intersecting, and IO would miss it.
+  var queued=false;
+  function check(){ queued=false; bar.classList.toggle('is-on', add.getBoundingClientRect().bottom<0) }
+  addEventListener('scroll',function(){ if(!queued){ queued=true; requestAnimationFrame(check) } },{passive:true});
+  addEventListener('resize',check); check();
 })();
 </script>
 <div class="cart" id="cart">
@@ -283,9 +313,10 @@
     </div>
     <div class="cart__body" data-clines></div>
     <div class="cart__foot">
+      <p class="cart__ship"><span>Shipping</span><b>Free across India</b></p>
       <p class="cart__sum"><span>Total</span><b class="num" data-ctotal>&#8377;0</b></p>
-      <a class="btn btn--gold" data-ccheckout href="https://cauverypeakestate.com/collections/all">Checkout on the estate store</a>
-      <p class="buy__note" style="margin:0">You will finish on cauverypeakestate.com, where the order is actually taken.</p>
+      <a class="btn btn--gold" data-ccheckout href="https://cauverypeakestate.com/collections/all">Secure checkout</a>
+      <p class="buy__note" style="margin:0">Roasted after you order and dispatched in 3&ndash;5 business days. Payment is taken on the estate&rsquo;s Shopify checkout.</p>
     </div>
   </div>
 </div>
@@ -336,6 +367,8 @@
     try{ vs=JSON.parse(scope.getAttribute('data-variants')) }catch(e){ return }
     if(!form||!vs) return;
     var out=scope.querySelector('[data-price]'), unit=scope.querySelector('[data-unit]');
+    var save=scope.querySelector('[data-save]'), singles=null;
+    try{ singles=JSON.parse(scope.getAttribute('data-singles')||'null') }catch(e){}
     var handle=scope.getAttribute('data-handle'), title=scope.getAttribute('data-title');
     function chosen(){
       return [1,2,3].map(function(i){
@@ -363,6 +396,12 @@
         var c=chosen(), kg=kilos(c[2]), mo=months(c[0]);
         unit.textContent = (kg&&mo) ? inr(Math.round(v.p/(kg*mo)))+' per kg · '+mo+' months' : '';
       }
+      // what the term saves against buying the same bag every month
+      if(save){
+        var c2=chosen(), one=singles&&singles[c2[1]]&&singles[c2[1]][c2[2]], m2=months(c2[0]);
+        var d=one&&m2 ? one*m2-v.p : 0;
+        save.textContent = d>0 ? 'Saves '+inr(Math.round(d))+' ('+Math.round(100*d/(one*m2))+'%) against '+m2+' single bags' : '';
+      }
       // strike through combinations the store has no variant for
       form.querySelectorAll('.opt').forEach(function(l){
         var inp=l.querySelector('input'), i=parseInt(inp.name.slice(1),10)-1;
@@ -382,6 +421,61 @@
     });
   });
 
+  // ---- wishlist ----------------------------------------------------
+  // Kept in this browser only. Same pattern as the basket: no account, no server.
+  var WKEY='cp-wish';
+  var wread=function(){ try{ return JSON.parse(localStorage.getItem(WKEY))||[] }catch(e){ return [] } };
+  var wwrite=function(v){ try{ localStorage.setItem(WKEY, JSON.stringify(v)) }catch(e){} wpaint(); };
+  var wbtn=document.getElementById('wishbtn');
+  function wpaint(){
+    var w=wread();
+    if(wbtn){ wbtn.hidden=!w.length; wbtn.querySelector('b').textContent=w.length;
+      wbtn.setAttribute('aria-label','Wishlist, '+w.length+' saved'); }
+    document.querySelectorAll('[data-wish]').forEach(function(b){
+      var on=w.indexOf(b.getAttribute('data-wish'))>-1;
+      b.setAttribute('aria-pressed', on?'true':'false');
+      var l=b.querySelector('[data-wish-label]'); if(l) l.textContent=on?'Saved':'Save';
+    });
+    var grid=document.querySelector('[data-wishlist]'); if(!grid) return;
+    var data={}; try{ data=JSON.parse(grid.getAttribute('data-wishdata')) }catch(e){}
+    var items=w.filter(function(h){ return data[h] });
+    grid.innerHTML='';
+    items.forEach(function(h){
+      var d=data[h], a=document.createElement('article');
+      a.className='cof'; a.style.setProperty('--c', d.c);
+      a.innerHTML='<img class="cof__pack" src="'+d.i+'" alt="" loading="lazy">'
+        +'<h3 class="cof__n"><a class="cof__hit" href="p-'+h+'.html"></a></h3><p class="cof__t"></p>'
+        +'<p class="cof__price"><b class="num">From '+inr(d.p)+'</b></p>';
+      a.querySelector('.cof__hit').textContent=d.t; a.querySelector('.cof__t').textContent=d.s;
+      var rm=document.createElement('button'); rm.type='button'; rm.className='cart__rm wl-rm'; rm.textContent='Remove';
+      rm.addEventListener('click', function(){ wwrite(wread().filter(function(x){ return x!==h })) });
+      a.appendChild(rm); grid.appendChild(a);
+    });
+    var empty=document.querySelector('[data-wish-empty]'); if(empty) empty.hidden=!!items.length;
+  }
+  document.querySelectorAll('[data-wish]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var h=b.getAttribute('data-wish'), w=wread(), i=w.indexOf(h);
+      if(i>-1) w.splice(i,1); else w.push(h);
+      wwrite(w);
+    });
+  });
+  window.addEventListener('storage', function(e){ if(e.key===WKEY) wpaint() });
+  wpaint();
+
+  // ---- collection sort ---------------------------------------------
+  document.querySelectorAll('[data-sortable]').forEach(function(grid){
+    var sel=grid.parentNode.querySelector('[data-sort]'), n=grid.parentNode.querySelector('[data-count]');
+    var cards=[].slice.call(grid.children);
+    if(n) n.textContent=cards.length+' product'+(cards.length>1?'s':'');
+    if(!sel) return;
+    sel.addEventListener('change', function(){
+      var k=sel.value, list=cards.slice();
+      if(k) list.sort(function(a,b){ var d=+a.getAttribute('data-price')-(+b.getAttribute('data-price')); return k==='lo'?d:-d });
+      list.forEach(function(c){ grid.appendChild(c) });
+    });
+  });
+
   // ---- basket ------------------------------------------------------
   var cart=document.getElementById('cart'); if(!cart) return;
   var lines=cart.querySelector('[data-clines]'), total=cart.querySelector('[data-ctotal]');
@@ -389,12 +483,12 @@
   var btn=document.getElementById('cartbtn'), count=btn?btn.querySelector('b'):null, last=null;
   function paint(){
     var b=read(), sum=0;
-    lines.innerHTML = b.length ? '' : '<p class="cart__empty">Nothing in the basket yet.</p>';
+    lines.innerHTML = b.length ? '' : '<p class="cart__empty">Nothing in the basket yet. <a href="shop.html">Shop coffee</a></p>';
     b.forEach(function(l,i){
       sum += l.p*l.q;
       var el=document.createElement('div'); el.className='cart__line';
       el.innerHTML='<p class="cart__t">'+l.t+'</p><p class="cart__p num">'+inr(l.p*l.q)+'</p>'
-        +'<p class="cart__o">'+(l.o||'')+(l.q>1?' · x'+l.q:'')+'</p>';
+        +'<p class="cart__o">'+(l.o||'').replace(/\s*\([^)]*\)/g,'')+(l.q>1?' · x'+l.q:'')+'</p>';
       var rm=document.createElement('button');
       rm.type='button'; rm.className='cart__rm'; rm.textContent='Remove';
       rm.addEventListener('click', function(){ var c=read(); c.splice(i,1); write(c); });

@@ -1,0 +1,38 @@
+live_path,new_page,note
+/,index.html,
+/collections/all,shop.html,
+/collections/frontpage,shop.html,Shopify's default homepage collection
+/collections/coffee,shop-coffee.html,
+/collections/spices,shop-spices-honey.html,spices and honey merged: one product in honey alone
+/collections/honey,shop-spices-honey.html,
+/collections/cauvery-peak-bundles,shop-samplers.html,
+/collections/tour,visit.html,one product; the visit page sells it better
+/collections/subscribe,subscribe.html,
+/products/coffee,subscribe.html,
+/products/coffee-6-package-subscription,subscribe.html,already 404 on the live store
+/products/coffee-12-package-subscription,subscribe.html,already 404 on the live store
+/products/coffee-24-package-subscription,subscribe.html,already 404 on the live store
+/pages/coffee-subscription,subscribe.html,
+/pages/about,story.html,
+/pages/history,history.html,
+/pages/grower-to-connoisseur,estate.html,
+/pages/our-environment,environment.html,
+/pages/news-media,press.html,
+/blogs/news,press.html,blog has no posts on the live store
+/pages/brewing-coffee,brewing.html,
+/pages/coffee-grind-guide,grind.html,
+/pages/cafes,cafes.html,
+/pages/cauvery-peak,cafe-cauvery-peak.html,
+/pages/lakeview-village,cafe-lake-view.html,
+/pages/glenfell,cafe-glenfell.html,
+/pages/careers,careers.html,
+/pages/contact,contact.html,
+/pages/wishlist,wishlist.html,
+/search,search.html,
+/policies/privacy-policy,privacy.html,
+/policies/terms-of-service,terms.html,
+/policies/shipping-policy,shipping.html,
+/policies/refund-policy,returns.html,
+/products/<handle>,p-<handle>.html,all 16 products keep their Shopify handle
+/account,(Shopify),sign-in stays on the store
+/cart,(Shopify),basket hands off via /cart/<variant>:<qty>

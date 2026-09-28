@@ -35,6 +35,34 @@
   "og": "og-cafes.jpg"
  },
  {
+  "file": "cafe-cauvery-peak.html",
+  "slug": "cafe-cauvery-peak.html",
+  "og": "og-cafes.jpg",
+  "title": "Cauvery Peak Estate Café, Yercaud — Cauvery Peak",
+  "desc": "A café on a 150-year-old coffee estate, 15 km from Yercaud town. Open 7.30am–5pm, closed Tuesdays. Estate coffee, spices, honey, and the start of the estate tour."
+ },
+ {
+  "file": "cafe-lake-view.html",
+  "slug": "cafe-lake-view.html",
+  "og": "og-cafes.jpg",
+  "title": "Lake View Village Café, Yercaud Main Road — Cauvery Peak",
+  "desc": "A modern, spacious café on Yercaud Main Road with ample parking. Estate coffee, local snacks and a retail corner. Open 8am–5pm, closed Tuesdays."
+ },
+ {
+  "file": "cafe-glenfell.html",
+  "slug": "cafe-glenfell.html",
+  "og": "og-cafes.jpg",
+  "title": "Glenfell Estate Kiosk, 17th Hairpin Bend — Cauvery Peak",
+  "desc": "A roadside coffee kiosk with valley views at the 17th hairpin bend on the Salem–Yercaud Ghat Road. Open 7.30am–5pm, closed Tuesdays."
+ },
+ {
+  "file": "careers.html",
+  "slug": "careers.html",
+  "og": "og-default.jpg",
+  "title": "Careers — Cauvery Peak",
+  "desc": "Work on a 150-year-old coffee estate in Yercaud: the nursery, the mills, the roastery, three cafés and the estate tour."
+ },
+ {
   "file": "history.html",
   "slug": "history.html",
   "title": "A legacy of 150 years — Cauvery Peak",
@@ -77,6 +105,13 @@
   "og": "og-press.jpg"
  },
  {
+  "file": "bbc-news-tamil.html",
+  "slug": "bbc-news-tamil.html",
+  "og": "og-visit.jpg",
+  "title": "Cauvery Peak on BBC News Tamil — a 150-year-old coffee estate in Yercaud",
+  "desc": "BBC News Tamil filmed the Coffee Experience Tour at Cauvery Peak, Yercaud: the lake, the Kombai valley, picking to roasting, and the café. Watch the film."
+ },
+ {
   "file": "contact.html",
   "slug": "contact.html",
   "title": "Contact — Cauvery Peak",
@@ -84,11 +119,39 @@
   "og": "og-contact.jpg"
  },
  {
+  "file": "privacy.html",
+  "slug": "privacy.html",
+  "title": "Privacy Policy — Cauvery Peak",
+  "desc": "How Cauvery Peak Estate collects, uses and protects your personal information when you shop with us.",
+  "og": "og-default.jpg"
+ },
+ {
+  "file": "terms.html",
+  "slug": "terms.html",
+  "title": "Terms of Service — Cauvery Peak",
+  "desc": "The terms on which Cauvery Peak Estate sells coffee, spices and estate experiences through this store.",
+  "og": "og-default.jpg"
+ },
+ {
+  "file": "shipping.html",
+  "slug": "shipping.html",
+  "title": "Shipping Policy — Cauvery Peak",
+  "desc": "Where Cauvery Peak Estate ships, how long orders take, and what despatch from the estate costs.",
+  "og": "og-default.jpg"
+ },
+ {
+  "file": "returns.html",
+  "slug": "returns.html",
+  "title": "Return and Refund Policy — Cauvery Peak",
+  "desc": "How to return an order to Cauvery Peak Estate, what is eligible, and how refunds are processed.",
+  "og": "og-default.jpg"
+ },
+ {
   "file": "shop.html",
   "slug": "shop.html",
-  "title": "Shop estate coffee, spices & honey — Cauvery Peak",
+  "title": "Shop — Cauvery Peak",
   "og": "og-coffee.jpg",
-  "desc": "Three single-estate coffees, two blends, and the spices and honey grown between them. Roasted to order on a 150-year-old plantation in Yercaud."
+  "desc": "Estate coffee, spices and honey from a 150-year-old plantation in the Shevaroy Hills, Yercaud. Roasted to order."
  },
  {
   "file": "subscribe.html",
@@ -144,7 +207,7 @@
   "slug": "p-pepper.html",
   "og": "og-coffee.jpg",
   "title": "Pepper — Cauvery Peak",
-  "desc": "Black pepper grown on vines climbing the shade trees of our Yercaud coffee estate, harvested and dried on the same boundary as the coffee."
+  "desc": "MSP Plantations is a family owned, professionally managed company. 5 generations of coffee and spices knowledge, goes into systematically improving cu"
  },
  {
   "file": "p-coffee-powder-she.html",
@@ -158,21 +221,21 @@
   "slug": "p-nutmeg-mace.html",
   "og": "og-coffee.jpg",
   "title": "Nutmeg & Mace — Cauvery Peak",
-  "desc": "Nutmeg and mace from the mixed shade canopy over our Yercaud coffee, picked on the estate and dried alongside the season's parchment."
+  "desc": "Nutmeg is a popular spice having a long list of health benefits, including its ability to relieve pain, soothe indigestion, and improve cognitive func"
  },
  {
   "file": "p-clove.html",
   "slug": "p-clove.html",
   "og": "og-coffee.jpg",
   "title": "Cloves — Cauvery Peak",
-  "desc": "Cloves grown between the coffee rows at Glenfell, the lowest and warmest of our three Shevaroy Hills estates — the same trees that spice the cup."
+  "desc": "MSP Plantations is a family owned, professionally managed company. 5 generations of coffee and spices knowledge, goes into systematically improving cu"
  },
  {
   "file": "p-honey.html",
   "slug": "p-honey.html",
   "og": "og-coffee.jpg",
   "title": "Honey — Cauvery Peak",
-  "desc": "Honey from the hives kept among the coffee and spice on our Yercaud estate, where five generations of the same family have farmed the Shevaroy Hills."
+  "desc": "MSP Plantations is a family owned, professionally managed company. 5 generations of coffee and spices knowledge, goes into systematically improving cu"
  },
  {
   "file": "p-glenfell-4.html",
@@ -196,31 +259,45 @@
   "desc": "Kenneth Davids - Coffee expert, author and co founder of Coffee Review rated Cauvery Peak coffee among the top 3 Indian Arabica coffees. This immacula"
  },
  {
-  "file": "privacy.html",
-  "slug": "privacy.html",
-  "title": "Privacy Policy — Cauvery Peak",
-  "desc": "How Cauvery Peak Estate collects, uses and protects your personal information when you shop with us.",
-  "og": "og-default.jpg"
+  "file": "p-drip-bags.html",
+  "slug": "p-drip-bags.html",
+  "og": "og-coffee.jpg",
+  "title": "Drip Bags - Pack Of 6 — Cauvery Peak",
+  "desc": "A specially curated collection of drip bags by the Masters at Cauvery Peak, featuring 3 distinctive premium single-estate coffees —Shevaroys Estate Re"
  },
  {
-  "file": "terms.html",
-  "slug": "terms.html",
-  "title": "Terms of Service — Cauvery Peak",
-  "desc": "The terms on which Cauvery Peak Estate sells coffee, spices and estate experiences through this store.",
-  "og": "og-default.jpg"
+  "file": "shop-coffee.html",
+  "slug": "shop-coffee.html",
+  "og": "og-coffee.jpg",
+  "title": "Coffee — Cauvery Peak",
+  "desc": "Estate coffee from Cauvery Peak, Yercaud: three single estates at 1,250–1,450 m, two blends, samplers and drip bags. Roasted to order."
  },
  {
-  "file": "shipping.html",
-  "slug": "shipping.html",
-  "title": "Shipping Policy — Cauvery Peak",
-  "desc": "Where Cauvery Peak Estate ships, how long orders take, and what despatch from the estate costs.",
-  "og": "og-default.jpg"
+  "file": "shop-spices-honey.html",
+  "slug": "shop-spices-honey.html",
+  "og": "og-coffee.jpg",
+  "title": "Spices & honey — Cauvery Peak",
+  "desc": "Pepper, cloves, nutmeg, mace and honey grown among the coffee on the Cauvery Peak estates in the Shevaroy Hills, Yercaud."
  },
  {
-  "file": "returns.html",
-  "slug": "returns.html",
-  "title": "Return and Refund Policy — Cauvery Peak",
-  "desc": "How to return an order to Cauvery Peak Estate, what is eligible, and how refunds are processed.",
-  "og": "og-default.jpg"
+  "file": "shop-samplers.html",
+  "slug": "shop-samplers.html",
+  "og": "og-coffee.jpg",
+  "title": "Samplers & drip bags — Cauvery Peak",
+  "desc": "Cauvery Peak sampler packs and single-estate drip bags: the easiest way to taste the three Shevaroy Hills estates side by side."
+ },
+ {
+  "file": "wishlist.html",
+  "slug": "wishlist.html",
+  "og": "og-default.jpg",
+  "title": "Wishlist — Cauvery Peak",
+  "desc": "Products you have saved for later at Cauvery Peak."
+ },
+ {
+  "file": "search.html",
+  "slug": "search.html",
+  "og": "og-default.jpg",
+  "title": "Search — Cauvery Peak",
+  "desc": "Search Cauvery Peak's coffee, spices, honey, the estate tour and every page on the site."
  }
 ]

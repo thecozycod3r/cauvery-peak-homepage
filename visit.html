@@ -23,8 +23,8 @@
 <link rel="preload" href="assets/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css?v=50b50e81">
-<link rel="stylesheet" href="assets/estate.css?v=b06d423b">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Cauvery Peak","legalName":"MSP Plantations","url":"https://thecozycod3r.github.io/cauvery-peak-homepage/","logo":"https://thecozycod3r.github.io/cauvery-peak-homepage/assets/logo_dark.webp","foundingDate":"1867","sameAs":["https://www.instagram.com/cauverypeakcoffee/","https://cauverypeakestate.com"],"address":{"@type":"PostalAddress","addressLocality":"Yercaud","addressRegion":"Tamil Nadu","addressCountry":"IN"}}</script>
+<link rel="stylesheet" href="assets/estate.css?v=12b45fd2">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Cauvery Peak","legalName":"MSP Plantations","url":"https://thecozycod3r.github.io/cauvery-peak-homepage/","logo":"https://thecozycod3r.github.io/cauvery-peak-homepage/assets/logo_dark.webp","foundingDate":"1867","sameAs":["https://www.instagram.com/cauverypeakcoffee/","https://www.youtube.com/@cauverypeak2249","https://cauverypeakestate.com"],"address":{"@type":"PostalAddress","addressLocality":"Yercaud","addressRegion":"Tamil Nadu","addressCountry":"IN"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://thecozycod3r.github.io/cauvery-peak-homepage/"},{"@type":"ListItem","position":2,"name":"Visit the estate","item":"https://thecozycod3r.github.io/cauvery-peak-homepage/visit.html"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TouristAttraction","name":"Cauvery Peak Estate","url":"https://thecozycod3r.github.io/cauvery-peak-homepage/visit.html","description":"A working 150-year-old coffee plantation in the Shevaroy Hills, open for guided tours.","image":"https://thecozycod3r.github.io/cauvery-peak-homepage/assets/og-visit.jpg","address":{"@type":"PostalAddress","addressLocality":"Yercaud","addressRegion":"Tamil Nadu","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":11.7753,"longitude":78.2095}}</script>
 </head>
@@ -47,6 +47,13 @@
     </button>
     <div class="top__act">
       <a class="btn btn--fill btn--sm top__cta" href="shop.html">Shop Coffee</a>
+      <a class="iconbtn" href="search.html" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></svg>
+      </a>
+      <a class="iconbtn" href="wishlist.html" id="wishbtn" aria-label="Wishlist" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+        <b class="num">0</b>
+      </a>
       <button class="cartbtn" type="button" id="cartbtn" hidden>Basket <b class="num">0</b></button>
     </div>
   </div>
@@ -64,10 +71,10 @@
       <div class="dnav__g">
         <h2 class="dnav__h">Shop Coffee</h2>
         <ul class="dnav__l">
-          <li><a href="shop.html">Single estates</a></li>
-          <li><a href="shop.html">Blends</a></li>
+          <li><a href="shop-coffee.html">Estate coffee</a></li>
+          <li><a href="shop-samplers.html">Samplers &amp; drip bags</a></li>
           <li><a href="subscribe.html">Subscriptions</a></li>
-          <li><a href="shop.html">Spices &amp; honey</a></li>
+          <li><a href="shop-spices-honey.html">Spices &amp; honey</a></li>
         </ul>
       </div>
       <div class="dnav__g">
@@ -86,6 +93,7 @@
           <li><a href="story.html">Our story</a></li>
           <li><a href="history.html">History</a></li>
           <li><a href="environment.html">The environment</a></li>
+          <li><a href="careers.html">Careers</a></li>
         </ul>
       </div>
       <div class="dnav__g">
@@ -94,6 +102,7 @@
           <li><a href="brewing.html">Brewing guide</a></li>
           <li><a href="grind.html">Grind guide</a></li>
           <li><a href="press.html">In the press</a></li>
+          <li><a href="bbc-news-tamil.html">On BBC News Tamil</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -112,7 +121,7 @@
   <div class="wrap phero__in stack">
     <p class="eyebrow eyebrow--d">Yercaud, Tamil Nadu</p>
     <h1 class="d1">Experience coffee at the source.</h1>
-    <p class="lede">You can buy Arabica from a hundred brands. You cannot walk their plantation, watch the mill run, and drink the coffee standing on the ground it grew on.</p>
+    <p class="lede">You can buy Arabica from a hundred brands. You cannot tour their plantation, watch the mill run, and drink the coffee on the ground it grew on.</p>
   </div>
 </header>
 
@@ -122,7 +131,7 @@
       <div class="stack">
         <p class="eyebrow">The Coffee Experience Tour</p>
         <h2 class="d2">Follow a coffee bean from plant to cup.</h2>
-        <p class="body">A guided tour of a 150-year-old working estate — scenic peaks, valleys and lakes, and every stage of coffee making still happening around you. The first estate in India to open its full process to visitors.</p>
+        <p class="body">A 75-minute guided journey through a 150-year-old working plantation &mdash; scenic peaks, valleys and lakes, and the bean-to-cup story told where it happens. Perfect for families, nature lovers and coffee enthusiasts alike.</p>
       </div>
       <ul class="tourfacts">
         <li><span class="tourfacts__n">75</span><span class="tourfacts__l">minutes</span></li>
@@ -130,6 +139,11 @@
         <li><span class="tourfacts__n">4,600</span><span class="tourfacts__l">feet up</span></li>
       </ul>
     </div>
+    <a class="latest" href="bbc-news-tamil.html" style="margin-top:2rem">
+      <span class="latest__k">As seen on BBC News Tamil</span>
+      <span class="latest__t">&ldquo;If you&rsquo;re a coffee lover, don&rsquo;t miss this estate.&rdquo;</span>
+      <span class="latest__go">Watch the film &rarr;</span>
+    </a>
   </div>
 </section>
 
@@ -137,16 +151,15 @@
   <div class="wrap">
     <div class="stack" style="margin-bottom:2rem">
       <p class="eyebrow eyebrow--d">What you'll see</p>
-      <h2 class="d2">Seven stops, one bean.</h2>
+      <h2 class="d2">Five stops, one bean.</h2>
     </div>
     <ol class="wl">
-        <li class="wl__i"><h3 class="wl__t">Walk the plantation</h3><p class="wl__b">Through working blocks of Arabica under two tiers of shade, on all-weather roads.</p></li>
-        <li class="wl__i"><h3 class="wl__t">See the wet mill</h3><p class="wl__b">Where cherry is pulped, fermented and washed — the same day it comes off the tree.</p></li>
-        <li class="wl__i"><h3 class="wl__t">Stand on the drying terraces</h3><p class="wl__b">Acres of concrete where parchment is sun-dried and turned by hand.</p></li>
-        <li class="wl__i"><h3 class="wl__t">Watch the dry mill</h3><p class="wl__b">Where the parchment skin comes off and the green bean is graded.</p></li>
-        <li class="wl__i"><h3 class="wl__t">Smell the roasting room</h3><p class="wl__b">Small-batch roasting and grinding, on the estate.</p></li>
-        <li class="wl__i"><h3 class="wl__t">Visit the estate museum</h3><p class="wl__b">Documents, implements and photographs going back to the 1800s.</p></li>
-        <li class="wl__i"><h3 class="wl__t">Finish with a tasting</h3><p class="wl__b">At the estate café, looking out over the nursery.</p></li>
+        <li class="wl__i"><h3 class="wl__t">Drive the estate</h3><p class="wl__b">In your own vehicle, on all-weather roads, through scenic peaks, valleys and lakes, with a coffee guide telling the estate&rsquo;s history.</p></li>
+        <li class="wl__i"><h3 class="wl__t">The wet mill</h3><p class="wl__b">Where ripe cherry is sorted and pulped the day it is picked, then fermented and washed.</p></li>
+        <li class="wl__i"><h3 class="wl__t">The dry mill</h3><p class="wl__b">Where the last two layers of skin come off and defective, damaged and broken beans are sorted out.</p></li>
+        <li class="wl__i"><h3 class="wl__t">Roasting &amp; grinding</h3><p class="wl__b">Where beans are roasted only after an order has been placed.</p></li>
+        <li class="wl__i"><h3 class="wl__t">The estate museum</h3><p class="wl__b">The history of 150 years of coffee on this hill.</p></li>
+        <li class="wl__i"><h3 class="wl__t">The caf&eacute;</h3><p class="wl__b">Where the journey ends with the aroma of fresh coffee and a tasting of the estate&rsquo;s coffees.</p></li>
     </ol>
   </div>
 </section>
@@ -163,11 +176,12 @@
         <div class="kv"><dt class="kv__k">Getting around</dt><dd class="kv__v">You travel the estate in your own vehicle, on all-weather roads, with a coffee guide alongside.</dd></div>
         <div class="kv"><dt class="kv__k">Parking</dt><dd class="kv__v">On site, at the estate café.</dd></div>
         <div class="kv"><dt class="kv__k">Facilities</dt><dd class="kv__v">Well-appointed rest rooms, and the café for coffee and retail.</dd></div>
-        <div class="kv"><dt class="kv__k">Best time to visit</dt><dd class="kv__v">Harvest runs through the cool months, when the mills are working and the terraces are full.</dd></div>
-        <div class="kv"><dt class="kv__k">What to wear</dt><dd class="kv__v">Closed shoes. It is a working plantation on a hillside, and the ground can be wet.</dd></div>
-        <div class="kv"><dt class="kv__k">Bringing children</dt><dd class="kv__v">Families are welcome — it is an easy walk, not a hike.</dd></div>
+        <div class="kv"><dt class="kv__k">Price</dt><dd class="kv__v">&#8377;600 per person.</dd></div>
+        <div class="kv"><dt class="kv__k">When</dt><dd class="kv__v">Every day except Tuesday. The estate caf&eacute;, where the tour starts, is open 7.30am&ndash;5.00pm.</dd></div>
+        <div class="kv"><dt class="kv__k">Tour details</dt><dd class="kv__v"><a href="tel:+919487458387">+91 94874 58387</a> &mdash; for tours, direct orders and order tracking.</dd></div>
+        <div class="kv"><dt class="kv__k">Bringing children</dt><dd class="kv__v">Perfect for families &mdash; you travel in your own vehicle.</dd></div>
     </dl>
-    <div class="note"><b>To confirm with MSP Plantations:</b> opening hours, telephone numbers and the days each location closes. The current live site gives three different answers across its pages, so nothing is stated here until the estate confirms it.</div>
+    <div class="note"><b>Closed on Tuesdays.</b> Hours and numbers for all three locations are on <a href="cafes.html">the caf&eacute;s page</a>.</div>
   </div>
 </section>
 
@@ -175,7 +189,7 @@
   <div class="wrap stack">
     <p class="eyebrow eyebrow--d">Book</p>
     <h2 class="d2">Come and see where your coffee begins.</h2>
-    <p class="lede">Tours run from the estate café. Message us to pick a date and time.</p>
+    <p class="lede">Tours run from the estate caf&eacute;. Book online, or call <a href="tel:+919487458387">+91 94874 58387</a> for tour details.</p>
     <div class="btns"><a class="btn btn--gold" href="p-coffee-experience-tours-11.html">Book the Experience</a><a class="btn btn--ghost" href="cafes.html">Find the caf&eacute;s</a></div>
   </div>
 </section>
@@ -210,10 +224,10 @@
         <div>
           <h2 class="foot__h">Shop Coffee</h2>
           <ul class="foot__l">
-            <li><a href="shop.html">Single estates</a></li>
-            <li><a href="shop.html">Blends</a></li>
+            <li><a href="shop-coffee.html">Estate coffee</a></li>
+            <li><a href="shop-samplers.html">Samplers &amp; drip bags</a></li>
             <li><a href="subscribe.html">Subscriptions</a></li>
-            <li><a href="shop.html">Spices &amp; honey</a></li>
+            <li><a href="shop-spices-honey.html">Spices &amp; honey</a></li>
           </ul>
         </div>
         <div>
@@ -232,6 +246,7 @@
             <li><a href="story.html">Our story</a></li>
             <li><a href="history.html">History</a></li>
             <li><a href="environment.html">The environment</a></li>
+            <li><a href="careers.html">Careers</a></li>
           </ul>
         </div>
         <div>
@@ -240,6 +255,7 @@
             <li><a href="brewing.html">Brewing guide</a></li>
             <li><a href="grind.html">Grind guide</a></li>
             <li><a href="press.html">In the press</a></li>
+            <li><a href="bbc-news-tamil.html">On BBC News Tamil</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -249,23 +265,24 @@
       <div class="foot__place" style="--c:var(--cp)">
         <h2 class="foot__pn">Cauvery Peak Estate Caf&eacute;</h2>
         <p class="foot__pd">On the plantation, 15 km from Yercaud town.</p>
-        <a class="foot__pl" href="cafes.html">More &rarr;</a>
+        <a class="foot__pl" href="cafe-cauvery-peak.html">Hours &amp; directions &rarr;</a>
       </div>
       <div class="foot__place" style="--c:var(--sh)">
         <h2 class="foot__pn">Lake View Village Caf&eacute;</h2>
         <p class="foot__pd">Yercaud Main Road. Parking available.</p>
-        <a class="foot__pl" href="cafes.html">More &rarr;</a>
+        <a class="foot__pl" href="cafe-lake-view.html">Hours &amp; directions &rarr;</a>
       </div>
       <div class="foot__place" style="--c:var(--gf)">
         <h2 class="foot__pn">Glenfell Kiosk</h2>
         <p class="foot__pd">17th hairpin bend, Salem&ndash;Yercaud ghat road.</p>
-        <a class="foot__pl" href="cafes.html">More &rarr;</a>
+        <a class="foot__pl" href="cafe-glenfell.html">Hours &amp; directions &rarr;</a>
       </div>
     </div>
     <div class="foot__bar">
       <ul class="foot__legal"><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="shipping.html">Shipping</a></li><li><a href="returns.html">Returns</a></li></ul>
       <div class="foot__social">
         <a class="foot__soc" href="https://www.instagram.com/cauverypeakcoffee/" rel="me noopener" target="_blank"><span class="foot__ico"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span><span class="foot__handle"><span class="foot__net">Instagram</span>@cauverypeakcoffee</span></a>
+        <a class="foot__soc" href="https://www.youtube.com/@cauverypeak2249" rel="me noopener" target="_blank"><span class="foot__ico"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor" stroke="none"/></svg></span><span class="foot__handle"><span class="foot__net">YouTube</span>@cauverypeak2249</span></a>
       </div>
       <span class="num">11&deg;46&prime;N 78&deg;12&prime;E &middot; 4,100&ndash;4,800 FT</span>
     </div>
@@ -274,8 +291,7 @@
 <div class="sticky">
   <a class="btn btn--gold" href="shop.html">Shop Coffee</a>
   <a class="btn btn--ghost" href="p-coffee-experience-tours-11.html">Book the Experience</a>
-</div>
-<script>
+</div><script>
 (function(){
   var bar=document.querySelector('.sticky'); if(!bar) return;
   var hero=document.querySelector('.hero,.phero');
@@ -297,9 +313,10 @@
     </div>
     <div class="cart__body" data-clines></div>
     <div class="cart__foot">
+      <p class="cart__ship"><span>Shipping</span><b>Free across India</b></p>
       <p class="cart__sum"><span>Total</span><b class="num" data-ctotal>&#8377;0</b></p>
-      <a class="btn btn--gold" data-ccheckout href="https://cauverypeakestate.com/collections/all">Checkout on the estate store</a>
-      <p class="buy__note" style="margin:0">You will finish on cauverypeakestate.com, where the order is actually taken.</p>
+      <a class="btn btn--gold" data-ccheckout href="https://cauverypeakestate.com/collections/all">Secure checkout</a>
+      <p class="buy__note" style="margin:0">Roasted after you order and dispatched in 3&ndash;5 business days. Payment is taken on the estate&rsquo;s Shopify checkout.</p>
     </div>
   </div>
 </div>
@@ -350,6 +367,8 @@
     try{ vs=JSON.parse(scope.getAttribute('data-variants')) }catch(e){ return }
     if(!form||!vs) return;
     var out=scope.querySelector('[data-price]'), unit=scope.querySelector('[data-unit]');
+    var save=scope.querySelector('[data-save]'), singles=null;
+    try{ singles=JSON.parse(scope.getAttribute('data-singles')||'null') }catch(e){}
     var handle=scope.getAttribute('data-handle'), title=scope.getAttribute('data-title');
     function chosen(){
       return [1,2,3].map(function(i){
@@ -377,6 +396,12 @@
         var c=chosen(), kg=kilos(c[2]), mo=months(c[0]);
         unit.textContent = (kg&&mo) ? inr(Math.round(v.p/(kg*mo)))+' per kg · '+mo+' months' : '';
       }
+      // what the term saves against buying the same bag every month
+      if(save){
+        var c2=chosen(), one=singles&&singles[c2[1]]&&singles[c2[1]][c2[2]], m2=months(c2[0]);
+        var d=one&&m2 ? one*m2-v.p : 0;
+        save.textContent = d>0 ? 'Saves '+inr(Math.round(d))+' ('+Math.round(100*d/(one*m2))+'%) against '+m2+' single bags' : '';
+      }
       // strike through combinations the store has no variant for
       form.querySelectorAll('.opt').forEach(function(l){
         var inp=l.querySelector('input'), i=parseInt(inp.name.slice(1),10)-1;
@@ -396,6 +421,61 @@
     });
   });
 
+  // ---- wishlist ----------------------------------------------------
+  // Kept in this browser only. Same pattern as the basket: no account, no server.
+  var WKEY='cp-wish';
+  var wread=function(){ try{ return JSON.parse(localStorage.getItem(WKEY))||[] }catch(e){ return [] } };
+  var wwrite=function(v){ try{ localStorage.setItem(WKEY, JSON.stringify(v)) }catch(e){} wpaint(); };
+  var wbtn=document.getElementById('wishbtn');
+  function wpaint(){
+    var w=wread();
+    if(wbtn){ wbtn.hidden=!w.length; wbtn.querySelector('b').textContent=w.length;
+      wbtn.setAttribute('aria-label','Wishlist, '+w.length+' saved'); }
+    document.querySelectorAll('[data-wish]').forEach(function(b){
+      var on=w.indexOf(b.getAttribute('data-wish'))>-1;
+      b.setAttribute('aria-pressed', on?'true':'false');
+      var l=b.querySelector('[data-wish-label]'); if(l) l.textContent=on?'Saved':'Save';
+    });
+    var grid=document.querySelector('[data-wishlist]'); if(!grid) return;
+    var data={}; try{ data=JSON.parse(grid.getAttribute('data-wishdata')) }catch(e){}
+    var items=w.filter(function(h){ return data[h] });
+    grid.innerHTML='';
+    items.forEach(function(h){
+      var d=data[h], a=document.createElement('article');
+      a.className='cof'; a.style.setProperty('--c', d.c);
+      a.innerHTML='<img class="cof__pack" src="'+d.i+'" alt="" loading="lazy">'
+        +'<h3 class="cof__n"><a class="cof__hit" href="p-'+h+'.html"></a></h3><p class="cof__t"></p>'
+        +'<p class="cof__price"><b class="num">From '+inr(d.p)+'</b></p>';
+      a.querySelector('.cof__hit').textContent=d.t; a.querySelector('.cof__t').textContent=d.s;
+      var rm=document.createElement('button'); rm.type='button'; rm.className='cart__rm wl-rm'; rm.textContent='Remove';
+      rm.addEventListener('click', function(){ wwrite(wread().filter(function(x){ return x!==h })) });
+      a.appendChild(rm); grid.appendChild(a);
+    });
+    var empty=document.querySelector('[data-wish-empty]'); if(empty) empty.hidden=!!items.length;
+  }
+  document.querySelectorAll('[data-wish]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var h=b.getAttribute('data-wish'), w=wread(), i=w.indexOf(h);
+      if(i>-1) w.splice(i,1); else w.push(h);
+      wwrite(w);
+    });
+  });
+  window.addEventListener('storage', function(e){ if(e.key===WKEY) wpaint() });
+  wpaint();
+
+  // ---- collection sort ---------------------------------------------
+  document.querySelectorAll('[data-sortable]').forEach(function(grid){
+    var sel=grid.parentNode.querySelector('[data-sort]'), n=grid.parentNode.querySelector('[data-count]');
+    var cards=[].slice.call(grid.children);
+    if(n) n.textContent=cards.length+' product'+(cards.length>1?'s':'');
+    if(!sel) return;
+    sel.addEventListener('change', function(){
+      var k=sel.value, list=cards.slice();
+      if(k) list.sort(function(a,b){ var d=+a.getAttribute('data-price')-(+b.getAttribute('data-price')); return k==='lo'?d:-d });
+      list.forEach(function(c){ grid.appendChild(c) });
+    });
+  });
+
   // ---- basket ------------------------------------------------------
   var cart=document.getElementById('cart'); if(!cart) return;
   var lines=cart.querySelector('[data-clines]'), total=cart.querySelector('[data-ctotal]');
@@ -403,12 +483,12 @@
   var btn=document.getElementById('cartbtn'), count=btn?btn.querySelector('b'):null, last=null;
   function paint(){
     var b=read(), sum=0;
-    lines.innerHTML = b.length ? '' : '<p class="cart__empty">Nothing in the basket yet.</p>';
+    lines.innerHTML = b.length ? '' : '<p class="cart__empty">Nothing in the basket yet. <a href="shop.html">Shop coffee</a></p>';
     b.forEach(function(l,i){
       sum += l.p*l.q;
       var el=document.createElement('div'); el.className='cart__line';
       el.innerHTML='<p class="cart__t">'+l.t+'</p><p class="cart__p num">'+inr(l.p*l.q)+'</p>'
-        +'<p class="cart__o">'+(l.o||'')+(l.q>1?' · x'+l.q:'')+'</p>';
+        +'<p class="cart__o">'+(l.o||'').replace(/\s*\([^)]*\)/g,'')+(l.q>1?' · x'+l.q:'')+'</p>';
       var rm=document.createElement('button');
       rm.type='button'; rm.className='cart__rm'; rm.textContent='Remove';
       rm.addEventListener('click', function(){ var c=read(); c.splice(i,1); write(c); });

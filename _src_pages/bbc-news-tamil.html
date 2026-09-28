@@ -1,0 +1,66 @@
+<header class="phero">
+  <img class="phero__img" src="assets/cafe_cp.webp" alt="The pergola at the Cauvery Peak estate café, where BBC News Tamil filmed" width="1200" height="900" fetchpriority="high">
+  <div class="wrap phero__in stack">
+    <p class="eyebrow eyebrow--d">BBC News Tamil &middot; 27 September 2026</p>
+    <h1 class="d1">Cauvery Peak,<br>on BBC News Tamil.</h1>
+    <p class="lede">BBC News Tamil came up the hill, took the Coffee Experience Tour and filmed it. This is what they saw.</p>
+  </div>
+</header>
+
+<nav class="crumb" aria-label="Breadcrumb">
+  <div class="wrap">
+    <a href="press.html">In the press</a><span aria-hidden="true">/</span><span aria-current="page">BBC News Tamil</span>
+  </div>
+</nav>
+
+<section style="padding-top:1.5rem">
+  <div class="wrap feature">
+    <div class="feature__video">
+      <button class="yt" type="button" data-yt="rXsLBvO9Dkw" aria-label="Play the BBC News Tamil film about Cauvery Peak (67 seconds, opens a YouTube player)">
+        <img src="https://i.ytimg.com/vi/rXsLBvO9Dkw/oar2.jpg" alt="" width="1080" height="1920" loading="lazy">
+        <span class="yt__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+        <span class="yt__len num">1:07</span>
+      </button>
+      <p class="feature__src">Watch on <a href="https://www.youtube.com/shorts/rXsLBvO9Dkw" rel="noopener" target="_blank">YouTube</a> or <a href="https://www.instagram.com/reels/DdzCxBBDZF6/" rel="noopener" target="_blank">Instagram</a>. In Tamil.</p>
+    </div>
+    <div class="feature__copy">
+      <p class="cut__pub">BBC News Tamil &middot; YouTube and Instagram</p>
+      <h2 class="d2">A 150-year-old coffee estate in Yercaud</h2>
+      <p class="feature__ta" lang="ta">ஏற்காட்டில் 150 ஆண்டு பழைமையான காபி எஸ்டேட்</p>
+      <p class="body" style="margin-top:.9rem">A short film for BBC News Tamil, following the estate tour through to the caf&eacute;.</p>
+
+      <h3 class="cgroup" style="margin-top:2rem">What the film shows</h3>
+      <ol class="stops">
+        <li><span class="stops__n num">01</span><span>One of India&rsquo;s oldest coffee estates, 15&nbsp;km from Yercaud, dating from British times and now in its fifth generation</span></li>
+        <li><span class="stops__n num">02</span><span>A guided tour open to the public, at &#8377;600 per person</span></li>
+        <li><span class="stops__n num">03</span><span>The lake built on the estate to hold the hill&rsquo;s water</span></li>
+        <li><span class="stops__n num">04</span><span>A short way on, the Kombai valley</span></li>
+        <li><span class="stops__n num">05</span><span>Picking, drying and roasting, explained where each happens</span></li>
+        <li><span class="stops__n num">06</span><span>The caf&eacute; at the end, with the estate&rsquo;s coffee in many styles</span></li>
+      </ol>
+
+      <blockquote class="cite" style="margin-top:2rem">
+        <p class="cite__q">&ldquo;If you&rsquo;re a coffee lover, don&rsquo;t miss this estate.&rdquo;</p>
+        <footer class="cite__y">BBC News Tamil &middot; our translation from the Tamil narration</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+
+<script>
+(function(){
+  // Load YouTube only when asked: no third-party requests or cookies until play
+  document.querySelectorAll('[data-yt]').forEach(function(b){
+    b.addEventListener('click', function(){
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube-nocookie.com/embed/'+b.getAttribute('data-yt')+'?autoplay=1&playsinline=1&rel=0';
+      f.title='BBC News Tamil: A 150-year-old coffee estate in Yercaud';
+      f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.setAttribute('allowfullscreen','');
+      f.className='yt__frame';
+      b.replaceWith(f); f.focus();
+    });
+  });
+})();
+</script>

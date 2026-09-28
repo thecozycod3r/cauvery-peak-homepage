@@ -1384,3 +1384,180 @@ html{scrollbar-gutter:stable}
    reads as a name, so it comes out of that treatment */
 .foot__handle{text-transform:none; letter-spacing:0; font-family:var(--sans)}
 .foot__net{text-transform:uppercase}
+
+/* ==========================================================================
+   Pages carried over from the live store (Sep 2026): collections, search,
+   wishlist, the three café pages, careers, the press archive
+   ========================================================================== */
+
+/* header: search and saved, as icons beside the basket */
+.iconbtn{position:relative; display:inline-flex; align-items:center; justify-content:center; gap:.3rem;
+  min-width:44px; min-height:44px; color:var(--ink); text-decoration:none}
+.iconbtn[hidden]{display:none}
+.iconbtn svg{width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round}
+.iconbtn b{font-family:var(--mono); font-size:.6875rem; font-weight:500; color:var(--bauxite)}
+.iconbtn:hover,.iconbtn[aria-current]{color:var(--bauxite)}
+.iconbtn:focus-visible{outline:2px solid var(--bauxite); outline-offset:2px}
+.top__act{gap:.25rem}
+
+/* save-for-later on a product */
+.wish{display:inline-flex; align-items:center; gap:.45rem; min-height:44px; padding:0 .9rem;
+  background:none; border:var(--hair); color:var(--ink); cursor:pointer;
+  font-family:var(--mono); font-size:.6875rem; letter-spacing:.14em; text-transform:uppercase}
+.wish svg{width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.6;
+  transition:fill .15s ease}
+.wish[aria-pressed="true"]{color:var(--bauxite); border-color:var(--bauxite)}
+.wish[aria-pressed="true"] svg{fill:currentColor}
+.wish:focus-visible{outline:2px solid var(--bauxite); outline-offset:2px}
+.buy__bar{flex-wrap:wrap}
+.buy__save{margin:.25rem 0 0; font-family:var(--mono); font-size:.6875rem; letter-spacing:.06em; color:var(--bauxite)}
+.buy__save:empty{display:none}
+
+/* wishlist cards carry a remove button under the price, above the card link */
+.wl-rm{position:relative; z-index:2; align-self:flex-start; margin-top:.5rem}
+.wl-empty{max-width:40rem}
+
+/* collection sort */
+.sortbar{display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  border-bottom:var(--hair); padding-bottom:.75rem}
+.sortbar__n{margin:0; font-family:var(--mono); font-size:.6875rem; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-2)}
+.sortbar__l{display:flex; align-items:center; gap:.6rem; font-family:var(--mono); font-size:.6875rem;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2)}
+.sortbar select{min-height:44px; padding:0 2rem 0 .75rem; border:var(--hair); border-radius:0;
+  background:var(--paper-hi); color:var(--ink); font:inherit; letter-spacing:.06em; text-transform:none}
+
+/* search */
+.sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+.sbox{display:flex; gap:.5rem; margin-top:1.5rem; max-width:40rem}
+.sbox input{flex:1; min-width:0; min-height:48px; padding:0 1rem; border:1px solid color-mix(in srgb,var(--brass) 60%,transparent);
+  border-radius:0; background:var(--paper-hi); color:var(--ink); font-size:1rem}
+.sbox input:focus-visible{outline:2px solid var(--brass); outline-offset:2px}
+.sbox__pop{margin:.9rem 0 0; font-size:.875rem; color:var(--onDark-2)}
+.sbox__pop a{color:var(--onDark)}
+.sres{list-style:none; margin:1.25rem 0 0; padding:0; display:grid; gap:0; max-width:48rem}
+.sres__i{border-top:var(--hair); padding:1.1rem 0}
+.sres__k{margin:0; font-family:var(--mono); font-size:.625rem; letter-spacing:.18em; text-transform:uppercase; color:var(--bauxite)}
+.sres__t{margin:.3rem 0; font-family:var(--display); font-size:1.35rem; line-height:1.2; font-weight:400}
+.sres__t a{color:var(--ink); text-decoration:none}
+.sres__t a:hover{text-decoration:underline; text-underline-offset:4px}
+.sres__d{margin:0; font-size:.9375rem; color:var(--ink-2)}
+
+/* café page: the practical card beside the description */
+.visitcard{background:var(--paper-hi); border-top:2px solid var(--c,var(--bauxite)); padding:1.25rem 1.25rem 1.4rem; align-self:start}
+.cafe__copy.stack > * + *{margin-top:1rem}
+
+/* drip bags: the four steps the pack artwork shows */
+.steps4{list-style:none; margin:0; padding:0; display:grid; gap:1.25rem; grid-template-columns:1fr 1fr}
+@media (min-width:900px){ .steps4{grid-template-columns:repeat(4,1fr)} }
+.steps4 li{border-top:var(--hair); padding-top:.9rem}
+.steps4 b{font-family:var(--mono); font-size:.6875rem; font-weight:500; color:var(--bauxite)}
+.steps4 h3{margin:.35rem 0 .3rem; font-family:var(--display); font-size:1.3rem; font-weight:400}
+.steps4 p{margin:0; font-size:.9375rem; color:var(--ink-2)}
+.trio .cof__k{text-transform:none; letter-spacing:0; font-family:var(--sans); font-size:.9375rem; color:var(--ink)}
+
+/* press: scans are portrait pages, not photographs — show the top of the
+   page (where the headline is) rather than centre-cropping it */
+.cut__fig--scan img{aspect-ratio:4/5; object-fit:cover; object-position:top; background:var(--sunk);
+  border:var(--hair)}
+.cut .cite{margin:1.1rem 0 0; padding-top:.9rem}
+.cut .cite__q{font-size:1.15rem}
+.cut__pages{margin:1rem 0 0; font-family:var(--mono); font-size:.6875rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-2)}
+.cut__pages a{display:inline-flex; align-items:center; justify-content:center; min-width:36px; min-height:36px;
+  color:var(--bauxite); border:var(--hair); margin-left:.25rem; text-decoration:none}
+.cut__pages a:hover{border-color:var(--bauxite)}
+/* two channels now (Instagram, YouTube): let them stack on a phone */
+.foot__social{display:flex; flex-wrap:wrap; gap:.75rem 1.5rem; min-width:0; max-width:100%}
+/* inline links in running copy: widen the tap area vertically without
+   touching the line box (same trick as .doc a) */
+.body a,.ticks a,.sbox__pop a,.hours .cof__v a{padding-block:.75rem}
+.sbox__pop a{display:inline-block; padding-inline:.15rem}
+.cut__pages a{min-width:44px; min-height:44px}
+/* café pages: the detail section and the gallery belong together; the
+   .cafes list spacing (built for three stacked cafés) is too loose here */
+.cafes--one{padding-bottom:0}
+
+/* BBC News Tamil feature: a vertical video beside what it shows */
+.feature{display:grid; gap:clamp(1.75rem,4vw,3.5rem)}
+@media (min-width:860px){ .feature{grid-template-columns:minmax(260px,360px) 1fr; align-items:start} }
+.feature__video{max-width:360px; width:100%; margin-inline:auto}
+@media (min-width:860px){ .feature__video{position:sticky; top:6rem} }
+.yt,.yt__frame{display:block; width:100%; aspect-ratio:9/16; border:0; background:var(--sunk)}
+.yt{position:relative; padding:0; cursor:pointer; overflow:hidden; border-top:2px solid var(--bauxite)}
+.yt img{width:100%; height:100%; object-fit:cover; transition:transform .4s var(--ease-out,ease)}
+.yt:hover img{transform:scale(1.02)}
+.yt__play{position:absolute; left:50%; top:50%; width:72px; height:72px; margin:-36px 0 0 -36px;
+  display:grid; place-items:center; border-radius:50%; background:rgba(10,20,14,.72); color:#fff;
+  transition:background .2s ease}
+.yt__play svg{width:30px; height:30px; fill:currentColor; margin-left:4px}
+.yt:hover .yt__play,.yt:focus-visible .yt__play{background:var(--bauxite)}
+.yt:focus-visible{outline:2px solid var(--bauxite); outline-offset:3px}
+.yt__len{position:absolute; right:.6rem; bottom:.6rem; padding:.2rem .45rem; background:rgba(10,20,14,.78);
+  color:#fff; font-family:var(--mono); font-size:.6875rem}
+.feature__src{margin:.8rem 0 0; font-size:.875rem; color:var(--ink-2); text-align:center}
+.feature__src a{color:var(--bauxite); padding-block:.75rem}
+.feature__copy .stops{margin-top:.25rem}
+
+/* a single "latest" line that points at a feature page */
+.latest{display:grid; grid-template-columns:1fr auto; gap:.25rem 1.5rem; align-items:center;
+  padding:1rem 1.2rem; background:var(--paper-hi); border-left:3px solid var(--bauxite);
+  color:var(--ink); text-decoration:none; transition:box-shadow .16s ease}
+.latest:hover{box-shadow:0 10px 24px rgba(10,20,14,.10)}
+.latest:focus-visible{outline:2px solid var(--bauxite); outline-offset:3px}
+.latest__k{grid-column:1; font-family:var(--mono); font-size:.625rem; letter-spacing:.18em; text-transform:uppercase; color:var(--bauxite)}
+.latest__t{grid-column:1; font-family:var(--display); font-size:clamp(1.1rem,2.6vw,1.35rem); line-height:1.25}
+.latest__go{grid-column:2; grid-row:1 / span 2; font-family:var(--mono); font-size:.6875rem; letter-spacing:.14em; text-transform:uppercase; color:var(--bauxite); white-space:nowrap}
+@media (max-width:520px){ .latest{grid-template-columns:1fr} .latest__go{grid-column:1; grid-row:auto} }
+.kv__v a,.lede a{padding-block:.75rem}
+.feature__src a{display:inline-flex; align-items:center; min-height:44px; padding:0 .15rem}
+/* the film's original Tamil title, under its English translation */
+.feature__ta{margin:.5rem 0 0; font-size:clamp(1.05rem,2.2vw,1.25rem); line-height:1.5; color:var(--ink-2)}
+
+/* ==========================================================================
+   Buying: reassurance where the decision is made (Sep 2026 conversion pass)
+   ========================================================================== */
+.assure{list-style:none; margin:1.25rem 0 0; padding:1rem 0 0; border-top:var(--hair); display:grid; gap:.55rem}
+.assure li{position:relative; padding-left:1.6rem; font-size:.9375rem; color:var(--ink-2); line-height:1.45}
+.assure li::before{content:""; position:absolute; left:.1rem; top:.35em; width:.8rem; height:.45rem;
+  border-left:2px solid var(--bauxite); border-bottom:2px solid var(--bauxite); transform:rotate(-45deg)}
+.assure b{color:var(--ink); font-weight:600}
+.assure a{color:var(--bauxite); padding-block:.75rem}
+.assure--row{margin:0; padding:.9rem 0; border-top:0; border-bottom:var(--hair); gap:.5rem 2rem}
+@media (min-width:760px){ .assure--row{grid-template-columns:repeat(4,auto); justify-content:start} }
+
+.opts__hint{margin:-.1rem 0 .7rem; font-size:.875rem; color:var(--ink-2)}
+.opts__hint a{color:var(--bauxite); padding-block:.75rem}
+
+/* homepage proof strip, straight under the hero */
+.proof{background:var(--paper-hi); border-bottom:var(--hair)}
+.proof__in{list-style:none; margin:0 auto; padding-block:1rem; display:grid; grid-template-columns:1fr 1fr; gap:1rem 1.5rem}
+@media (min-width:900px){ .proof__in{grid-template-columns:repeat(4,1fr)} }
+.proof li, .proof a{display:flex; flex-direction:column; gap:.15rem; text-decoration:none; color:var(--ink)}
+.proof b{font-family:var(--display); font-weight:400; font-size:1.05rem; line-height:1.2}
+.proof span{font-size:.8125rem; color:var(--ink-2)}
+.proof a b{color:var(--bauxite)}
+.proof a:hover b{text-decoration:underline; text-underline-offset:3px}
+
+/* basket: shipping line above the total */
+.cart__ship{display:flex; justify-content:space-between; margin:0 0 .4rem; font-size:.875rem; color:var(--ink-2)}
+.cart__ship b{font-weight:600; color:var(--ink)}
+.cart__empty a{color:var(--bauxite); padding-block:.75rem}
+
+/* product-page sticky bar: price + add */
+.sticky--buy{align-items:center}
+.sticky__p{margin:0; flex:0 0 auto; padding:0 .5rem; font-family:var(--display); font-size:1.5rem; color:var(--onDark)}
+.sticky--buy .btn{flex:1}
+/* shop and collection headers: a band, not a full screen — products first */
+.phero--shop{min-height:clamp(220px,30svh,340px)}
+.phero--shop .d1{font-size:clamp(2rem,5.5vw,3.4rem)}
+.phero--shop .lede{font-size:1rem}
+.opts__hint a{display:inline-flex; align-items:center; min-height:44px; padding-block:0}
+.pdp__about{margin-top:1.75rem; padding-top:1.1rem; border-top:var(--hair)} .pdp__about .body{margin-top:.5rem}
+/* desktop: the buy bar floats bottom-right instead of spanning the screen */
+@media (min-width:860px){
+  .sticky.sticky--buy{display:flex; left:auto; right:1.5rem; bottom:1.5rem; width:auto; gap:.75rem;
+    padding:.6rem .6rem .6rem 1rem; box-shadow:0 12px 32px rgba(10,20,14,.28)}
+  .sticky--buy .btn{flex:0 0 auto; padding:0 1.6rem}
+  .sticky.sticky--buy{transform:translateY(160%)}
+  .sticky.sticky--buy.is-on{transform:none}
+}
